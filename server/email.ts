@@ -78,36 +78,69 @@ export async function sendApplicationEmail(data: {
     phone: string;
     address: string;
     position: string;
-    experience: string;
-    drivers_license: string;
-    certificates: string[];
-    languages: string[];
-    skills: string[];
-    cover_letter: string;
-    resume_url?: string | null;
-}) {
+export async function sendApplicationEmail(data: any) {
     const html = `
-        <h2>New Job Application</h2>
-        <p><strong>Full Name:</strong> ${data.full_name}</p>
-        <p><strong>Gender:</strong> ${data.gender}</p>
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Phone:</strong> ${data.phone}</p>
-        <p><strong>Address:</strong> ${data.address}</p>
-        <p><strong>Position:</strong> ${data.position}</p>
-        <p><strong>Experience:</strong> ${data.experience}</p>
-        <p><strong>Driver's License:</strong> ${data.drivers_license}</p>
-        <p><strong>Certificates:</strong> ${data.certificates.join(', ')}</p>
-        <p><strong>Languages:</strong> ${data.languages.join(', ')}</p>
-        <p><strong>Skills:</strong> ${data.skills.join(', ')}</p>
-        <p><strong>Cover Letter:</strong></p>
-        <p>${data.cover_letter || 'No cover letter provided'}</p>
-        ${data.resume_url ? `<p><strong>Resume URL:</strong> <a href="${data.resume_url}">${data.resume_url}</a></p>` : '<p><strong>Resume:</strong> No resume uploaded</p>'}
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+            <div style="background-color: #2563eb; color: white; padding: 24px;">
+                <h1 style="margin: 0; font-size: 24px;">New Job Application</h1>
+            </div>
+            <div style="padding: 24px; color: #1e293b;">
+                <p>Hello HealthJoy Team,</p>
+                <p>A new job application has been submitted through the <strong>Apply Now</strong> page.</p>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 24px 0;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr><td style="padding: 8px 0; font-weight: bold; width: 140px;">Name:</td><td>${data.full_name}</td></tr>
+                    <tr><td style="padding: 8px 0; font-weight: bold;">Position:</td><td>${data.position}</td></tr>
+                    <tr><td style="padding: 8px 0; font-weight: bold;">Email:</td><td>${data.email}</td></tr>
+                    <tr><td style="padding: 8px 0; font-weight: bold;">Phone:</td><td>${data.phone}</td></tr>
+                    <tr><td style="padding: 8px 0; font-weight: bold;">Experience:</td><td>${data.experience}</td></tr>
+                    <tr><td style="padding: 8px 0; font-weight: bold;">Resume:</td><td>${data.resume_url ? `<a href="${data.resume_url}">Download Resume</a>` : 'Not provided'}</td></tr>
+                </table>
+            </div>
+        </div>
     `;
 
     return transporter.sendMail({
         from: FROM,
         to: DEFAULT_TO,
-        subject: `[Job Application] ${data.position} from ${data.full_name}`,
+        subject: `[JOB APPLICATION] ${data.position} - ${data.full_name}`,
+        html,
+    });
+}
+
+export async function sendSupportEmail(data: {
+    full_name: string;
+    email: string;
+    phone: string;
+    address?: string;
+    service_type?: string;
+    message?: string;
+}) {
+    const html = `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+            <div style="background-color: #2563eb; color: white; padding: 24px;">
+                <h1 style="margin: 0; font-size: 24px;">New Support Enquiry</h1>
+            </div>
+            <div style="padding: 24px; color: #1e293b;">
+                <p>Hello HealthJoy Team,</p>
+                <p>A new enquiry has been submitted through the <strong>Support At Home</strong> page.</p>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 24px 0;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr><td style="padding: 8px 0; font-weight: bold; width: 140px;">Name:</td><td>${data.full_name}</td></tr>
+                    <tr><td style="padding: 8px 0; font-weight: bold;">Email:</td><td>${data.email}</td></tr>
+                    <tr><td style="padding: 8px 0; font-weight: bold;">Phone:</td><td>${data.phone}</td></tr>
+                    <tr><td style="padding: 8px 0; font-weight: bold;">Address:</td><td>${data.address || 'N/A'}</td></tr>
+                    <tr><td style="padding: 8px 0; font-weight: bold;">Service:</td><td>${data.service_type || 'N/A'}</td></tr>
+                </table>
+                ${data.message ? `<div style="margin-top: 24px; padding: 16px; background-color: #f8fafc; border-radius: 4px;"><strong>Message:</strong><br>${data.message}</div>` : ''}
+            </div>
+        </div>
+    `;
+
+    return transporter.sendMail({
+        from: FROM,
+        to: DEFAULT_TO,
+        subject: `[SUPPORT ENQUIRY] ${data.full_name}`,
         html,
     });
 }

@@ -63,6 +63,25 @@ CREATE POLICY "Service role can insert job_applications" ON job_applications
 CREATE POLICY "Service role can select job_applications" ON job_applications
   FOR SELECT USING (true);
 
+-- 5. Support Enquiries (from /support-at-home page)
+CREATE TABLE IF NOT EXISTS support_enquiries (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  full_name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  phone TEXT NOT NULL,
+  address TEXT,
+  service_type TEXT,
+  message TEXT,
+  created_at TIMESTAMPTZ DEFAULT now()
+);
+
+ALTER TABLE support_enquiries ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Service role can insert support_enquiries" ON support_enquiries
+  FOR INSERT WITH CHECK (true);
+CREATE POLICY "Service role can select support_enquiries" ON support_enquiries
+  FOR SELECT USING (true);
+
 -- 4. Storage Setup (Resumes)
 -- Create the bucket if it doesn't exist (Note: Storage is in its own schema)
 INSERT INTO storage.buckets (id, name, public)

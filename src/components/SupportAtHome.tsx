@@ -1,8 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { CheckCircle2, Layout, Users, Home, ArrowRight } from 'lucide-react';
+import { CheckCircle2, Layout, Users, Home, ArrowRight, Loader2 } from 'lucide-react';
+import { submitSupport } from '../api';
 
 export const SupportAtHome: React.FC = () => {
+  const [formData, setFormData] = useState({
+    full_name: '',
+    email: '',
+    phone: '',
+    address: '',
+    service_type: 'Plan Management',
+    message: ''
+  });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('loading');
+    setErrorMessage('');
+
+    try {
+      await submitSupport(formData);
+      setStatus('success');
+      setFormData({
+        full_name: '',
+        email: '',
+        phone: '',
+        address: '',
+        service_type: 'Plan Management',
+        message: ''
+      });
+    } catch (err: any) {
+      console.error('Submission error:', err);
+      setStatus('error');
+      setErrorMessage(err.message || 'Failed to submit enquiry. Please try again.');
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
   return (
     <div className="flex flex-col bg-white">
       {/* Hero Section */}
@@ -20,9 +59,9 @@ export const SupportAtHome: React.FC = () => {
               Navigating the home care policies can be complex, but you don't have to do it alone. HealthJoy Home Care is dedicated to simplifying the process, providing personalized plan management, coordination, and professional daily support tailored specifically to your unique life goals.
             </p>
             <div className="rounded-3xl overflow-hidden shadow-xl">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4Gk3SqqjKb09daB4U1uLvcLpmKY9isDfF_WjWfOPgLP3JVH3vd7j8mQwnfiFLWd1GoHMxjxW0QvNMiva68FCdhhU5XS6oUvTXNPRMTHStm7mbBPEhcNEnFeiCw_p4ILVQhmcwjoBsLIZ5DlYt3VMIm5P7LoyQLNPobJMDyxE3TT3B1eaW2uc0-Qxqo5K0YZ6rJuhtLFQjEf_M7FAm6abucWxx9SYTEjgqPXFhhylSDU86AqE6qG5qR1D8K01mBq-I6NBFx77jzzEH" 
-                alt="Caregiver and senior" 
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4Gk3SqqjKb09daB4U1uLvcLpmKY9isDfF_WjWfOPgLP3JVH3vd7j8mQwnfiFLWd1GoHMxjxW0QvNMiva68FCdhhU5XS6oUvTXNPRMTHStm7mbBPEhcNEnFeiCw_p4ILVQhmcwjoBsLIZ5DlYt3VMIm5P7LoyQLNPobJMDyxE3TT3B1eaW2uc0-Qxqo5K0YZ6rJuhtLFQjEf_M7FAm6abucWxx9SYTEjgqPXFhhylSDU86AqE6qG5qR1D8K01mBq-I6NBFx77jzzEH"
+                alt="Caregiver and senior"
                 className="w-full h-auto object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -36,63 +75,120 @@ export const SupportAtHome: React.FC = () => {
               <p className="text-slate-500 text-sm mb-8 leading-relaxed">
                 Have questions? Fill out the form below and one of our HealthJoy specialists will contact you within 24 hours.
               </p>
-              
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Full Name</label>
-                  <input 
-                    type="text" 
-                    placeholder="John Doe" 
-                    className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all"
-                  />
+
+              {status === 'success' ? (
+                <div className="bg-green-50 border border-green-100 text-green-700 p-6 rounded-xl text-center">
+                  <CheckCircle2 className="mx-auto mb-4 w-12 h-12" />
+                  <h4 className="font-bold text-lg mb-2">Thank You!</h4>
+                  <p className="text-sm">Your enquiry has been sent successfully. We'll be in touch soon.</p>
+                  <button
+                    onClick={() => setStatus('idle')}
+                    className="mt-6 text-green-700 font-bold text-sm hover:underline"
+                  >
+                    Send another enquiry
+                  </button>
                 </div>
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Email Address</label>
-                  <input 
-                    type="email" 
-                    placeholder="john@example.com" 
-                    className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Phone Number</label>
-                  <input 
-                    type="tel" 
-                    placeholder="0493-334-910" 
-                    className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Home Address</label>
-                  <input 
-                    type="text" 
-                    placeholder="123 Example St, Suburb" 
-                    className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Service Required</label>
-                  <select className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all appearance-none">
-                    <option>Plan Management</option>
-                    <option>Support Coordination</option>
-                    <option>Daily Living Support</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Message</label>
-                  <textarea 
-                    rows={4}
-                    placeholder="How can HealthJoy help you today?" 
-                    className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all resize-none"
-                  ></textarea>
-                </div>
-                <button className="w-full bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20">
-                  Send Enquiry
-                </button>
-                <p className="text-[10px] text-slate-400 text-center leading-relaxed px-4">
-                  By submitting this form, you agree to the HealthJoy Home Care Privacy Policy.
-                </p>
-              </form>
+              ) : (
+                <form className="space-y-4" onSubmit={handleSubmit}>
+                  {status === 'error' && (
+                    <div className="p-3 bg-red-50 border border-red-100 text-red-600 text-xs rounded-lg">
+                      {errorMessage}
+                    </div>
+                  )}
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Full Name</label>
+                    <input
+                      type="text"
+                      name="full_name"
+                      required
+                      value={formData.full_name}
+                      onChange={handleChange}
+                      placeholder="John Doe"
+                      className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Email Address</label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="john@example.com"
+                      className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Phone Number</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      required
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="0493-334-910"
+                      className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Home Address</label>
+                    <input
+                      type="text"
+                      name="address"
+                      value={formData.address}
+                      onChange={handleChange}
+                      placeholder="123 Example St, Suburb"
+                      className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Service Required</label>
+                    <div className="relative">
+                      <select
+                        name="service_type"
+                        value={formData.service_type}
+                        onChange={handleChange}
+                        className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all appearance-none"
+                      >
+                        <option>Plan Management</option>
+                        <option>Support Coordination</option>
+                        <option>Daily Living Support</option>
+                      </select>
+                      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+                        <ArrowRight size={14} className="rotate-90" />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Message</label>
+                    <textarea
+                      name="message"
+                      rows={4}
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="How can HealthJoy help you today?"
+                      className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all resize-none"
+                    ></textarea>
+                  </div>
+                  <button
+                    disabled={status === 'loading'}
+                    className="w-full bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20 flex items-center justify-center gap-2"
+                  >
+                    {status === 'loading' ? (
+                      <>
+                        <Loader2 className="animate-spin" size={18} />
+                        Sending...
+                      </>
+                    ) : (
+                      'Send Enquiry'
+                    )}
+                  </button>
+                  <p className="text-[10px] text-slate-400 text-center leading-relaxed px-4">
+                    By submitting this form, you agree to the HealthJoy Home Care Privacy Policy.
+                  </p>
+                </form>
+              )}
             </div>
           </div>
         </div>
