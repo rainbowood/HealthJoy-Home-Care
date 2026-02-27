@@ -33,27 +33,17 @@ export const Navbar: React.FC = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-blue-600 ${
-                  location.pathname === link.path ? 'text-blue-600' : 'text-slate-600'
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-blue-600 ${location.pathname === link.path ? 'text-blue-600' : 'text-slate-600'
+                  }`}
               >
                 {link.name}
               </Link>
             ))}
           </div>
-          
-          <div className="flex items-center gap-4">
-            <div className="hidden xl:flex items-center bg-slate-50 border border-slate-100 rounded-lg px-3 py-1.5 gap-2 text-slate-400 focus-within:ring-2 focus-within:ring-blue-600/10 transition-all">
-              <Search size={16} />
-              <input 
-                type="text" 
-                placeholder="Search resou..." 
-                className="bg-transparent border-none outline-none text-sm text-slate-600 placeholder:text-slate-400 w-32"
-              />
-            </div>
 
+          <div className="flex items-center gap-4">
             <div className="relative">
-              <button 
+              <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
                 className="flex items-center gap-1.5 text-slate-600 text-sm font-medium hover:text-blue-600 transition-colors"
               >
@@ -61,7 +51,7 @@ export const Navbar: React.FC = () => {
                 {lang}
                 <svg className={`w-4 h-4 transition-transform ${isLangOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
               </button>
-              
+
               <AnimatePresence>
                 {isLangOpen && (
                   <motion.div
@@ -123,9 +113,8 @@ export const Navbar: React.FC = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`text-base font-medium ${
-                    location.pathname === link.path ? 'text-blue-600' : 'text-slate-600'
-                  }`}
+                  className={`text-base font-medium ${location.pathname === link.path ? 'text-blue-600' : 'text-slate-600'
+                    }`}
                 >
                   {link.name}
                 </Link>

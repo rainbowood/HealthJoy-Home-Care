@@ -5,7 +5,7 @@ export const NAV_LINKS: NavLink[] = [
   { name: 'About', path: '/about' },
   { name: 'Services', path: '/services' },
   { name: 'Caregivers', path: '/caregivers' },
-  { name: 'Support', path: '/support-at-home' },
+  { name: 'Support at Home', path: '/support-at-home' },
   { name: 'Quality', path: '/compliance' },
   { name: 'Career', path: '/careers' },
   { name: 'Links', path: '/links' },
