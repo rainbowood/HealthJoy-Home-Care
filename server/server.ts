@@ -27,7 +27,26 @@ app.use('/api/apply', applyRoutes);
 
 // Health check
 app.get('/api/health', (_req, res) => {
-    res.json({ status: 'ok', timestamp: new Date().toISOString() });
+    res.json({
+        status: 'ok',
+        timestamp: new Date().toISOString(),
+        env: {
+            hasSupabaseUrl: !!process.env.SUPABASE_URL,
+            hasSupabaseKey: !!process.env.SUPABASE_SERVICE_ROLE_KEY,
+            hasEmailUser: !!process.env.EMAIL_USER,
+            nodeEnv: process.env.NODE_ENV
+        }
+    });
+});
+
+// Global Error Handler
+app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
+    console.error('💥 Global Server Error:', err.stack);
+    res.status(500).json({
+        error: 'Internal Server Error',
+        message: err.message,
+        path: req.path
+    });
 });
 
 // For Vercel/Serverless: Export the app instead of calling app.listen()
