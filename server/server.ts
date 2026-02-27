@@ -7,6 +7,8 @@ import applyRoutes from './routes/apply.js';
 
 dotenv.config();
 
+import { sendContactEmail } from './email.js';
+
 const app = express();
 const PORT = process.env.SERVER_PORT || 3001;
 
@@ -26,7 +28,7 @@ app.use('/api/get-started', getStartedRoutes);
 app.use('/api/apply', applyRoutes);
 
 // Health check
-app.get('/api/health', (_req, res) => {
+app.get('/api/health', async (_req, res) => {
     res.json({
         status: 'ok',
         timestamp: new Date().toISOString(),
@@ -34,9 +36,27 @@ app.get('/api/health', (_req, res) => {
             hasSupabaseUrl: !!process.env.SUPABASE_URL,
             hasSupabaseKey: !!process.env.SUPABASE_SERVICE_ROLE_KEY,
             hasEmailUser: !!process.env.EMAIL_USER,
+            hasEmailPass: !!process.env.EMAIL_PASS,
             nodeEnv: process.env.NODE_ENV
         }
     });
+});
+
+// Test Email Route
+app.get('/api/test-email', async (_req, res) => {
+    try {
+        await sendContactEmail({
+            full_name: 'Test Tester',
+            email: 'test@example.com',
+            phone: '123456789',
+            subject: 'Vercel Diagnostic Test',
+            message: 'If you see this, email sending is working!'
+        });
+        res.json({ status: 'success', message: 'Test email attempted. Check logs and inbox.' });
+    } catch (err: any) {
+        console.error('🚨 Test email route failed:', err);
+        res.status(500).json({ status: 'error', message: err.message });
+    }
 });
 
 // Global Error Handler

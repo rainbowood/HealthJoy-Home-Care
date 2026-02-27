@@ -96,24 +96,27 @@ router.post('/', upload.single('resume'), async (req: Request, res: Response) =>
             return res.status(500).json({ error: 'Failed to submit application. Please try again.' });
         }
 
-        // Send email notification (async)
-        sendApplicationEmail({
-            full_name,
-            gender,
-            email,
-            phone,
-            address,
-            position,
-            experience,
-            drivers_license,
-            certificates: parsedCertificates,
-            languages: parsedLanguages,
-            skills: parsedSkills,
-            cover_letter,
-            resume_url
-        }).catch(err => {
-            console.error('Failed to send application email:', err);
-        });
+        // Send email notification (await for serverless)
+        try {
+            await sendApplicationEmail({
+                full_name,
+                gender,
+                email,
+                phone,
+                address,
+                position,
+                experience,
+                drivers_license,
+                certificates: parsedCertificates,
+                languages: parsedLanguages,
+                skills: parsedSkills,
+                cover_letter,
+                resume_url
+            });
+            console.log('✅ Application email sent successfully');
+        } catch (err) {
+            console.error('❌ Failed to send application email:', err);
+        }
 
         return res.status(201).json({ message: 'Application submitted successfully!', data });
     } catch (err) {

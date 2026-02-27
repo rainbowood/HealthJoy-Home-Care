@@ -23,10 +23,13 @@ router.post('/', async (req: Request, res: Response) => {
             return res.status(500).json({ error: 'Failed to submit care request. Please try again.' });
         }
 
-        // Send email notification (async)
-        sendCareRequestEmail({ care_for, support_type, best_time, full_name, phone }).catch(err => {
-            console.error('Failed to send care request email:', err);
-        });
+        // Send email notification (await for serverless)
+        try {
+            await sendCareRequestEmail({ care_for, support_type, best_time, full_name, phone });
+            console.log('✅ Care request email sent successfully');
+        } catch (err) {
+            console.error('❌ Failed to send care request email:', err);
+        }
 
         return res.status(201).json({ message: 'Care request submitted successfully!', data });
     } catch (err) {

@@ -23,10 +23,14 @@ router.post('/', async (req: Request, res: Response) => {
             return res.status(500).json({ error: 'Failed to submit inquiry. Please try again.' });
         }
 
-        // Send email notification (async, don't block response)
-        sendContactEmail({ full_name, email, phone, subject, message }).catch(err => {
-            console.error('Failed to send contact email:', err);
-        });
+        // Send email notification (await for serverless)
+        try {
+            await sendContactEmail({ full_name, email, phone, subject, message });
+            console.log('✅ Contact email sent successfully');
+        } catch (err) {
+            console.error('❌ Failed to send contact email:', err);
+            // We don't fail the whole request if email fails, but we log it
+        }
 
         return res.status(201).json({ message: 'Inquiry submitted successfully!', data });
     } catch (err) {
