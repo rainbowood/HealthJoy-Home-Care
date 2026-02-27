@@ -1,9 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import contactRoutes from './routes/contact';
-import getStartedRoutes from './routes/getstarted';
-import applyRoutes from './routes/apply';
+import contactRoutes from './routes/contact.js';
+import getStartedRoutes from './routes/getstarted.js';
+import applyRoutes from './routes/apply.js';
 
 dotenv.config();
 

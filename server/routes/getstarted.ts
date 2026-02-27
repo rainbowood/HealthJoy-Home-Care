@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
-import { supabase } from '../supabase';
-import { sendCareRequestEmail } from '../email';
+import { supabase } from '../supabase.js';
+import { sendCareRequestEmail } from '../email.js';
 
 const router = Router();
 

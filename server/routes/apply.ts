@@ -1,7 +1,7 @@
 import { Router, Request, Response } from 'express';
 import multer from 'multer';
-import { supabase } from '../supabase';
-import { sendApplicationEmail } from '../email';
+import { supabase } from '../supabase.js';
+import { sendApplicationEmail } from '../email.js';
 
 const router = Router();
 const upload = multer({ storage: multer.memoryStorage() });
