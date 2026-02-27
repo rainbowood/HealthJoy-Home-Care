@@ -4,14 +4,20 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const transporter = nodemailer.createTransport({
-    host: process.env.EMAIL_HOST,
+    host: process.env.EMAIL_HOST || 'smtp.gmail.com',
     port: parseInt(process.env.EMAIL_PORT || '587'),
     secure: process.env.EMAIL_PORT === '465',
     auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: process.env.EMAIL_USER || 'placeholder@example.com',
+        pass: process.env.EMAIL_PASS || 'placeholder',
     },
 });
+
+// Check if credentials are missing but don't crash the process immediately
+const hasEmailCreds = !!(process.env.EMAIL_USER && process.env.EMAIL_PASS);
+if (!hasEmailCreds) {
+    console.warn('⚠️ EMAIL WARNING: EMAIL_USER or EMAIL_PASS is missing. Emails will fail to send.');
+}
 
 const DEFAULT_TO = process.env.EMAIL_TO || 'info@healthjoy.com.au';
 const FROM = process.env.EMAIL_FROM || process.env.EMAIL_USER || 'healthjoyhomecare@gmail.com';
