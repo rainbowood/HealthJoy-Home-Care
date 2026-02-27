@@ -71,13 +71,6 @@ export async function sendCareRequestEmail(data: {
     });
 }
 
-export async function sendApplicationEmail(data: {
-    full_name: string;
-    gender: string;
-    email: string;
-    phone: string;
-    address: string;
-    position: string;
 export async function sendApplicationEmail(data: any) {
     const html = `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">

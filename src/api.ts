@@ -50,3 +50,14 @@ export async function submitApplication(data: FormData) {
     }
     return json;
 }
+
+export async function submitSupport(data: {
+    full_name: string;
+    email: string;
+    phone: string;
+    address?: string;
+    service_type?: string;
+    message?: string;
+}) {
+    return postJson('/support', data);
+}
