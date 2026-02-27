@@ -30,6 +30,12 @@ app.get('/api/health', (_req, res) => {
     res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-app.listen(PORT, () => {
-    console.log(`🚀 HealthJoy API server running at http://localhost:${PORT}`);
-});
+// For Vercel/Serverless: Export the app instead of calling app.listen()
+// Only listen if not in a serverless environment
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+    app.listen(PORT, () => {
+        console.log(`🚀 HealthJoy API server running at http://localhost:${PORT}`);
+    });
+}
+
+export default app;
