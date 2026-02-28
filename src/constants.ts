@@ -61,7 +61,7 @@ export const SERVICES: Service[] = [
   {
     id: 'health-wellness',
     title: 'Health & Wellness',
-    description: 'Promoting healthy lifestyles through balanced nutrition, physical activity, and preventative health support tailored for seniors.',
+    description: 'Promoting healthy lifestyles through acupuncture, traditional Chinese medicine, massage therapy, health monitoring, and preventative support tailored for seniors.',
     icon: 'Heart',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDe9fR_t9h_H8p_o5m9x-g9G_Z7F_2T5xJ_9G_Z7F_2T5xJ_9G_Z7F_2T5xJ_9G_Z7F' // Placeholder
   },
