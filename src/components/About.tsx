@@ -87,7 +87,7 @@ export const About: React.FC = () => {
             <h2 className="text-4xl font-black text-slate-900 mb-4">Meet Our Leadership Team</h2>
             <p className="text-slate-500 text-xl max-w-2xl mx-auto">The visionaries and experienced professionals ensuring HealthJoy delivers on its promise of excellence every day.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {TEAM.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -95,9 +95,9 @@ export const About: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group flex flex-col"
+                className="group flex flex-col items-center text-center"
               >
-                <div className="relative mb-6 overflow-hidden rounded-3xl aspect-square shadow-lg">
+                <div className="relative mb-6 overflow-hidden rounded-full w-48 h-48 shadow-lg border-4 border-slate-50">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -105,9 +105,9 @@ export const About: React.FC = () => {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <h4 className="text-2xl font-bold text-slate-900">{member.name}</h4>
-                <p className="text-blue-600 font-bold mb-4">{member.role}</p>
-                <p className="text-slate-600 leading-relaxed">{member.description}</p>
+                <h4 className="text-xl font-bold text-slate-900">{member.name}</h4>
+                <p className="text-blue-600 font-bold text-sm mb-3">{member.role}</p>
+                <p className="text-slate-500 text-sm leading-relaxed line-clamp-3 px-4">{member.description}</p>
               </motion.div>
             ))}
           </div>
