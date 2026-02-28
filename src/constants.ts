@@ -46,14 +46,14 @@ export const SERVICES: Service[] = [
     title: 'Assistive Technology',
     description: 'Smart solutions and specialised equipment to enhance independence and safety in your daily life.',
     icon: 'Settings',
-    image: 'https://i.postimg.cc/9M9B2S7t/assistive-tech.jpg'
+    image: '/images/assistive-tech.png'
   },
   {
     id: 'home-modifications',
     title: 'Home Modifications',
     description: 'Professional home adjustments including rails, ramps, and bathroom modifications to ensure your home remains safe and accessible.',
     icon: 'Wrench',
-    image: 'https://i.postimg.cc/7L4vK4S9/home-mods.jpg'
+    image: '/images/home-mods.png'
   }
 ];
 
@@ -62,7 +62,7 @@ export const TEAM: TeamMember[] = [
     name: 'Annie S.',
     role: 'Head of Intake Specialist',
     description: 'Dedicated professional guiding new clients through their journey with empathy and expertise, ensuring everyone receives the perfect care plan from day one.',
-    image: 'https://i.postimg.cc/85zK2Z3J/annie-s.jpg',
+    image: '/images/annie-avatar.png',
   },
   {
     name: 'James C.',
