@@ -26,7 +26,7 @@ export const SERVICES: Service[] = [
   {
     id: 'domestic-assistance',
     title: 'Domestic Assistance',
-    description: 'Helping with household chores, laundry, meal preparation, and maintaining a clean, safe living environment.',
+    description: 'Helping with household chores, laundry, meal preparation, and maintaining a clean, safe living environment, including gardening.',
     icon: 'Home',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBJC7Cm5kA84WvdQaf9J5_caozTdQ2LQxC7ceoDyGbHRYuQgjylMvSJQY5Dg-H7wWjhtyTNoPzPkUxQORgjebDAMd-Z0awmX95C4MhIMzvwlrnfWWSsj7VJ8ovWKPGD9efYPzHH_6AWbsnKAhvyfZNJMq9NA0-SbIvxpZUIVQyGb1K9ra2dOB8uHlrBR6-DeDarxCEuIc7ymUWvO8g1hiCIESWqVsdzb9pMiReUpbWgFr3gAY5HkleeT05eiUAbXysZ5MaztifC1vOz'
   },
@@ -57,6 +57,20 @@ export const SERVICES: Service[] = [
     description: 'Professional home adjustments including rails, ramps, and bathroom modifications to ensure your home remains safe and accessible.',
     icon: 'Wrench',
     image: homeModsImg
+  },
+  {
+    id: 'health-wellness',
+    title: 'Health & Wellness',
+    description: 'Promoting healthy lifestyles through balanced nutrition, physical activity, and preventative health support tailored for seniors.',
+    icon: 'Heart',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDe9fR_t9h_H8p_o5m9x-g9G_Z7F_2T5xJ_9G_Z7F_2T5xJ_9G_Z7F_2T5xJ_9G_Z7F' // Placeholder
+  },
+  {
+    id: 'mental-health',
+    title: 'Mental Health',
+    description: 'Empathetic emotional support and mental wellbeing services to help you navigate life changes and maintain mental clarity.',
+    icon: 'Brain',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDe9fR_t9h_H8p_o5m9x-g9G_Z7F_2T5xJ_9G_Z7F_2T5xJ_9G_Z7F_2T5xJ_9G_Z7F' // Placeholder
   }
 ];
 

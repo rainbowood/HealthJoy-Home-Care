@@ -4,8 +4,8 @@ export const PrivacyPolicy: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-6 py-24 prose prose-slate">
       <h1 className="text-4xl font-black text-slate-900 mb-8">Privacy Policy</h1>
-      <p className="text-slate-500 mb-8 italic">Last updated: May 20, 2026</p>
-      
+      <p className="text-slate-500">Last updated: July 20, 2025</p>
+
       <section className="space-y-6">
         <h2 className="text-2xl font-bold text-slate-900">1. Introduction</h2>
         <p>

@@ -157,6 +157,8 @@ export const SupportAtHome: React.FC = () => {
                         <option>Allied Health</option>
                         <option>Assistive Technology</option>
                         <option>Home Modifications</option>
+                        <option>Health&Wellness</option>
+                        <option>Mental Health</option>
                       </select>
                       <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                         <ArrowRight size={14} className="rotate-90" />
