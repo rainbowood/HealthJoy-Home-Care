@@ -39,8 +39,8 @@ export const SERVICES: Service[] = [
   },
   {
     id: 'allied-health',
-    title: 'Allied Health',
-    description: 'Specialized therapeutic services including physiotherapy, occupational therapy, and other healthcare supports tailored to your needs.',
+    title: 'Allied Health & Therapeutic Services',
+    description: 'Specialized therapeutic services including physiotherapy, occupational therapy, podiatry, dietitian services, and other healthcare supports tailored to your needs.',
     icon: 'Accessibility',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD_o7QkD8VfOkwBWcL7htsva-9X6WY4G_xC5YicP8pXJyu13J4SVGLI_WTMrUXlYl2BecP_IuGfvNaQKSE7ZzQrkG_OU_ddFDW244AO9qxSfbLyQBkAVIoCRgq3qrwooayEw0zZfiWm6gQI7dxyIlbcAExqyrSUBJceLtr4N1O4fawTaxLf_1zqvJ1AEKd4TFxpBC4cK-eWkJrxXlMjMj1A8xohGVO7nhcz3KCZWK9MnasZQ-9h4L1TWdpvbBPptJGbU1--jONzexIP'
   },

@@ -154,7 +154,7 @@ export const SupportAtHome: React.FC = () => {
                         <option>Personal Care</option>
                         <option>Residential Assistance</option>
                         <option>Social Support</option>
-                        <option>Allied Health</option>
+                        <option>Allied Health & Therapeutic Services</option>
                         <option>Assistive Technology</option>
                         <option>Home Modifications</option>
                         <option>Health&Wellness</option>
