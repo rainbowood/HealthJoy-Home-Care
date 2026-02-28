@@ -151,9 +151,12 @@ export const SupportAtHome: React.FC = () => {
                         onChange={handleChange}
                         className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all appearance-none"
                       >
-                        <option>Plan Management</option>
-                        <option>Support Coordination</option>
-                        <option>Daily Living Support</option>
+                        <option>Personal Care</option>
+                        <option>Residential Assistance</option>
+                        <option>Social Support</option>
+                        <option>Allied Health</option>
+                        <option>Assistive Technology</option>
+                        <option>Home Modifications</option>
                       </select>
                       <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                         <ArrowRight size={14} className="rotate-90" />

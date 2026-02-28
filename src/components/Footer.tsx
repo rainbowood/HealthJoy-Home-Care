@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-white text-slate-600 py-16 border-t border-slate-100 font-sans">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           {/* Brand Column */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
@@ -44,6 +44,25 @@ export const Footer: React.FC = () => {
               <li><Link to="/terms" className="hover:text-blue-600 transition-colors">Terms of Service</Link></li>
               <li><Link to="/compliance" className="hover:text-blue-600 transition-colors">Compliance</Link></li>
               <li><Link to="/contact" className="hover:text-blue-600 transition-colors">Feedback & Complaints</Link></li>
+            </ul>
+          </div>
+
+          {/* New Contact Column */}
+          <div>
+            <h4 className="text-slate-900 font-bold mb-8">Contact Information</h4>
+            <ul className="space-y-4 text-sm">
+              <li className="flex gap-2">
+                <span className="font-bold text-slate-900 shrink-0">Address:</span>
+                <span className="text-slate-500">{CONTACT_INFO.address}</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="font-bold text-slate-900 shrink-0">Phone:</span>
+                <a href={`tel:${CONTACT_INFO.phone}`} className="text-blue-600 hover:underline">{CONTACT_INFO.phone}</a>
+              </li>
+              <li className="flex gap-2">
+                <span className="font-bold text-slate-900 shrink-0">Email:</span>
+                <a href={`mailto:${CONTACT_INFO.email}`} className="text-blue-600 hover:underline">{CONTACT_INFO.email}</a>
+              </li>
             </ul>
           </div>
 

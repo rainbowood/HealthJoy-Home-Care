@@ -161,10 +161,13 @@ export const GetStarted: React.FC = () => {
                       className="w-full bg-white border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all appearance-none cursor-pointer"
                     >
                       <option>Select a service...</option>
-                      <option>Personal Care</option>
-                      <option>Domestic Assistance</option>
-                      <option>Social Support</option>
-                      <option>Nursing Care</option>
+                      <option>Support at Home(HCP)</option>
+                      <option>NDIS</option>
+                      <option>Plan and Service Re-assess</option>
+                      <option>Care Services</option>
+                      <option>New Application Re-assess</option>
+                      <option>Non-Gov funded Support</option>
+                      <option>Other Support</option>
                     </select>
                     <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none text-slate-400">
                       <ChevronDown size={18} />

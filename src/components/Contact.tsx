@@ -153,6 +153,7 @@ export const Contact: React.FC = () => {
                       <option>Support Services</option>
                       <option>Career Opportunities</option>
                       <option>Feedback</option>
+                      <option>Complaint and dispute</option>
                     </select>
                     <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none text-slate-400">
                       <ChevronDown size={18} />
