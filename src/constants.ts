@@ -1,4 +1,7 @@
 import { NavLink, Service, TeamMember, Value } from './types';
+import assistiveTechImg from './assets/images/assistive-tech.png';
+import homeModsImg from './assets/images/home-mods.png';
+import annieAvatarImg from './assets/images/annie-avatar.png';
 
 export const NAV_LINKS: NavLink[] = [
   { name: 'Home', path: '/' },
@@ -46,14 +49,14 @@ export const SERVICES: Service[] = [
     title: 'Assistive Technology',
     description: 'Smart solutions and specialised equipment to enhance independence and safety in your daily life.',
     icon: 'Settings',
-    image: '/images/assistive-tech.png'
+    image: assistiveTechImg
   },
   {
     id: 'home-modifications',
     title: 'Home Modifications',
     description: 'Professional home adjustments including rails, ramps, and bathroom modifications to ensure your home remains safe and accessible.',
     icon: 'Wrench',
-    image: '/images/home-mods.png'
+    image: homeModsImg
   }
 ];
 
@@ -62,7 +65,7 @@ export const TEAM: TeamMember[] = [
     name: 'Annie S.',
     role: 'Head of Intake Specialist',
     description: 'Dedicated professional guiding new clients through their journey with empathy and expertise, ensuring everyone receives the perfect care plan from day one.',
-    image: '/images/annie-avatar.png',
+    image: annieAvatarImg,
   },
   {
     name: 'James C.',
