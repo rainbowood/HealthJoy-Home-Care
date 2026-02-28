@@ -163,9 +163,9 @@ export const GetStarted: React.FC = () => {
                       <option>Select a service...</option>
                       <option>Support at Home(HCP)</option>
                       <option>NDIS</option>
-                      <option>Plan and Service Re-assess</option>
+                      <option>Plan and Service Reassess</option>
                       <option>Care Services</option>
-                      <option>New Application Re-assess</option>
+                      <option>Submitted Application Reassess</option>
                       <option>Non-Gov funded Support</option>
                       <option>Other Support</option>
                     </select>
