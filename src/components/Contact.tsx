@@ -149,11 +149,13 @@ export const Contact: React.FC = () => {
                       onChange={(e) => setSubject(e.target.value)}
                       className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all appearance-none cursor-pointer"
                     >
+                      <option>Book Consultation</option>
                       <option>General Inquiry</option>
                       <option>Support Services</option>
                       <option>Career Opportunities</option>
                       <option>Feedback</option>
-                      <option>Complaint and dispute</option>
+                      <option>Complaint and Dispute</option>
+                      <option>Other Inquiry</option>
                     </select>
                     <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none text-slate-400">
                       <ChevronDown size={18} />
