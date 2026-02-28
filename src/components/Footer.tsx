@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CONTACT_INFO } from '../constants';
 import { Phone, Mail, MessageSquare, Share2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Footer: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <footer className="bg-white text-slate-600 py-16 border-t border-slate-100 font-sans">
       <div className="max-w-7xl mx-auto px-6">
@@ -20,47 +22,47 @@ export const Footer: React.FC = () => {
               <h2 className="text-xl font-black tracking-tight text-slate-900 uppercase">HealthJoy</h2>
             </div>
             <p className="text-sm leading-relaxed text-slate-500">
-              Compassionate home care services tailored to your needs. Empowering lives through professional support.
+              {t('footer.desc')}
             </p>
             <p className="text-[10px] font-black text-slate-900 uppercase tracking-widest">ABN 626 886 163 55</p>
           </div>
 
           {/* Quick Links Column */}
           <div>
-            <h4 className="text-slate-900 font-bold mb-8">Quick Links</h4>
+            <h4 className="text-slate-900 font-bold mb-8">{t('footer.linksText')}</h4>
             <ul className="space-y-4 text-sm">
-              <li><Link to="/services" className="hover:text-blue-600 transition-colors">Our Services</Link></li>
-              <li><Link to="/about" className="hover:text-blue-600 transition-colors">About HealthJoy</Link></li>
-              <li><Link to="/careers" className="hover:text-blue-600 transition-colors">Career Opportunities</Link></li>
-              <li><Link to="/contact" className="hover:text-blue-600 transition-colors">Contact Us</Link></li>
+              <li><Link to="/services" className="hover:text-blue-600 transition-colors">{t('footer.links.services')}</Link></li>
+              <li><Link to="/about" className="hover:text-blue-600 transition-colors">{t('footer.links.about')}</Link></li>
+              <li><Link to="/careers" className="hover:text-blue-600 transition-colors">{t('footer.links.careers')}</Link></li>
+              <li><Link to="/contact" className="hover:text-blue-600 transition-colors">{t('footer.links.contact')}</Link></li>
             </ul>
           </div>
 
           {/* Legal & Quality Column */}
           <div>
-            <h4 className="text-slate-900 font-bold mb-8">Legal & Quality</h4>
+            <h4 className="text-slate-900 font-bold mb-8">{t('footer.legalText')}</h4>
             <ul className="space-y-4 text-sm">
-              <li><Link to="/privacy" className="hover:text-blue-600 transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="hover:text-blue-600 transition-colors">Terms of Service</Link></li>
-              <li><Link to="/compliance" className="hover:text-blue-600 transition-colors">Compliance</Link></li>
-              <li><Link to="/contact" className="hover:text-blue-600 transition-colors">Feedback & Complaints</Link></li>
+              <li><Link to="/privacy" className="hover:text-blue-600 transition-colors">{t('footer.links.privacy')}</Link></li>
+              <li><Link to="/terms" className="hover:text-blue-600 transition-colors">{t('footer.links.terms')}</Link></li>
+              <li><Link to="/compliance" className="hover:text-blue-600 transition-colors">{t('footer.links.compliance')}</Link></li>
+              <li><Link to="/contact" className="hover:text-blue-600 transition-colors">{t('footer.links.feedback')}</Link></li>
             </ul>
           </div>
 
           {/* New Contact Column */}
           <div>
-            <h4 className="text-slate-900 font-bold mb-8">Contact Information</h4>
+            <h4 className="text-slate-900 font-bold mb-8">{t('footer.contactText')}</h4>
             <ul className="space-y-4 text-sm">
               <li className="flex gap-2">
-                <span className="font-bold text-slate-900 shrink-0">Address:</span>
+                <span className="font-bold text-slate-900 shrink-0">{t('footer.address')}</span>
                 <span className="text-slate-500">{CONTACT_INFO.address}</span>
               </li>
               <li className="flex gap-2">
-                <span className="font-bold text-slate-900 shrink-0">Phone:</span>
+                <span className="font-bold text-slate-900 shrink-0">{t('footer.phone')}</span>
                 <a href={`tel:${CONTACT_INFO.phone}`} className="text-blue-600 hover:underline">{CONTACT_INFO.phone}</a>
               </li>
               <li className="flex gap-2">
-                <span className="font-bold text-slate-900 shrink-0">Email:</span>
+                <span className="font-bold text-slate-900 shrink-0">{t('footer.email')}</span>
                 <a href={`mailto:${CONTACT_INFO.email}`} className="text-blue-600 hover:underline">{CONTACT_INFO.email}</a>
               </li>
             </ul>
@@ -68,22 +70,22 @@ export const Footer: React.FC = () => {
 
           {/* Connect Column */}
           <div className="flex flex-col items-center lg:items-end">
-            <h4 className="text-slate-900 font-bold mb-8">Connect With Us</h4>
+            <h4 className="text-slate-900 font-bold mb-8">{t('footer.connect')}</h4>
             <div className="bg-blue-50/50 rounded-xl p-4 border border-blue-100/50 flex flex-col items-center gap-3">
               <div className="w-20 h-20 bg-white rounded-lg p-1 shadow-sm">
                 <img src={CONTACT_INFO.wechatQR} alt="WeChat QR" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
               </div>
-              <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">WeChat Support</span>
+              <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">{t('footer.wechat')}</span>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-medium text-slate-400">
-          <p>© 2026 HealthJoy Home Care. All rights reserved.</p>
+          <p>{t('footer.rights')}</p>
           <div className="flex gap-8">
-            <button className="hover:text-blue-600 transition-colors">Cookies</button>
-            <button className="hover:text-blue-600 transition-colors">Accessibility</button>
+            <button className="hover:text-blue-600 transition-colors">{t('footer.cookies')}</button>
+            <button className="hover:text-blue-600 transition-colors">{t('footer.accessibility')}</button>
           </div>
         </div>
       </div>

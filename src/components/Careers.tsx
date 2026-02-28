@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Clock, Wallet, GraduationCap, Briefcase, MapPin, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Careers: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col bg-white font-sans">
       {/* Hero Section */}
@@ -26,19 +28,19 @@ export const Careers: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           className="space-y-6"
         >
-          <span className="text-blue-600 font-bold tracking-widest text-sm uppercase">Join Our Mission</span>
+          <span className="text-blue-600 font-bold tracking-widest text-sm uppercase">{t('careers.heroBadge')}</span>
           <h1 className="text-4xl lg:text-6xl font-black text-slate-900 leading-tight">
-            Join the HealthJoy Family
+            {t('careers.heroTitle')}
           </h1>
           <p className="text-slate-600 text-lg leading-relaxed">
-            Make a meaningful difference in people's lives while building a rewarding career with a team that truly cares for your well-being.
+            {t('careers.heroDesc')}
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20">
-              View Openings
+              {t('careers.buttons.viewOpenings')}
             </button>
             <button className="bg-slate-100 text-slate-700 px-8 py-3 rounded-xl font-bold hover:bg-slate-200 transition-all">
-              Learn More
+              {t('careers.buttons.learnMore')}
             </button>
           </div>
         </motion.div>
@@ -47,26 +49,26 @@ export const Careers: React.FC = () => {
       {/* Why Work With Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-4">Why Work With Us</h2>
+          <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-4">{t('careers.why.title')}</h2>
           <p className="text-slate-500 text-lg max-w-3xl mx-auto mb-16">
-            We offer more than just a job; we provide a supportive environment where you can grow personally and professionally.
+            {t('careers.why.subtitle')}
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Flexible Hours',
-                desc: 'Work schedules that fit your lifestyle, whether you need morning, evening, or weekend shifts.',
+                title: t('careers.why.flexible.title'),
+                desc: t('careers.why.flexible.desc'),
                 icon: Clock,
               },
               {
-                title: 'Competitive Pay',
-                desc: 'We offer industry-leading compensation, performance bonuses, and comprehensive health benefits.',
+                title: t('careers.why.pay.title'),
+                desc: t('careers.why.pay.desc'),
                 icon: Wallet,
               },
               {
-                title: 'Ongoing Training',
-                desc: 'Access to continuous learning certifications and professional career development mentorship.',
+                title: t('careers.why.training.title'),
+                desc: t('careers.why.training.desc'),
                 icon: GraduationCap,
               },
             ].map((card, i) => (
@@ -85,17 +87,17 @@ export const Careers: React.FC = () => {
       {/* Application Process */}
       <section className="py-20 bg-blue-50/50">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-4">Our Application Process</h2>
-          <p className="text-slate-500 text-lg mb-16">Transparent steps to join our professional care team</p>
+          <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-4">{t('careers.process.title')}</h2>
+          <p className="text-slate-500 text-lg mb-16">{t('careers.process.subtitle')}</p>
 
           <div className="grid md:grid-cols-3 gap-12 relative">
             {/* Connector Lines (Desktop) */}
             <div className="hidden md:block absolute top-1/2 left-1/4 right-1/4 h-px bg-slate-200 -translate-y-12 z-0"></div>
-            
+
             {[
-              { step: '1', title: 'Apply', desc: 'Submit your resume and certifications through our online portal.' },
-              { step: '2', title: 'Interview', desc: 'Meet with our team for a personal interview and background check.' },
-              { step: '3', title: 'Onboarding', desc: 'Attend our orientation program and start your first placement.' },
+              { step: '1', title: t('careers.process.apply.title'), desc: t('careers.process.apply.desc') },
+              { step: '2', title: t('careers.process.interview.title'), desc: t('careers.process.interview.desc') },
+              { step: '3', title: t('careers.process.onboarding.title'), desc: t('careers.process.onboarding.desc') },
             ].map((item, i) => (
               <div key={i} className="relative z-10 flex flex-col items-center">
                 <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-black mb-6 shadow-lg shadow-blue-600/30">
@@ -114,37 +116,37 @@ export const Careers: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-end mb-12">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-black text-slate-900">Current Openings</h2>
+              <h2 className="text-3xl lg:text-4xl font-black text-slate-900">{t('careers.openings.title')}</h2>
             </div>
             <div className="bg-blue-50 text-blue-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-              12 Positions Available
+              {t('careers.openings.available')}
             </div>
           </div>
 
           <div className="space-y-6">
             {[
               {
-                role: 'Case Manager',
-                dept: 'CARE MANAGEMENT',
-                type: 'Remote/Field',
-                desc: 'Coordinate and manage individual care plans, ensuring our clients receive high-quality, personalized support and resources.',
-                meta: ['Full-time / Part-time', 'Sydney, NSW'],
+                role: t('careers.openings.jobs.caseManager.role'),
+                dept: t('careers.openings.jobs.caseManager.dept'),
+                type: t('careers.openings.jobs.caseManager.type'),
+                desc: t('careers.openings.jobs.caseManager.desc'),
+                meta: [t('careers.openings.jobs.caseManager.term'), t('careers.openings.jobs.caseManager.location')],
                 img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCI0rbTW7kpi0xS_F9ssd5Lb42KL0tVbcAju4r3EEUudC4kcu4VXcUzNnzPZIgI5QouAQ6lMW5CN0o4L8kDB06zV3pE9LLffF31K9eXT0QBPOP_jDlEHG-u8Gi5TvhsuC7O1x1M8D9wK0UiPHGHwDXFpHZ5TkFZKqNokO08bKoHwd00L5VSUjVAi1wr50LqHP_4sr4qb08c5tBFSNYUdjxt786o1_Ol10n_lU9nBlyPmak7eoQROsfzdUkWX5a6x0fjM1_C_DdzrTB-',
               },
               {
-                role: 'Registered Nurse (RN)',
-                dept: 'NURSING',
-                type: 'Field-based',
-                desc: 'Provide professional medical care, medication management, and patient assessments in home environments.',
-                meta: ['Full-time / Part-time', 'Sydney, NSW'],
+                role: t('careers.openings.jobs.rn.role'),
+                dept: t('careers.openings.jobs.rn.dept'),
+                type: t('careers.openings.jobs.rn.type'),
+                desc: t('careers.openings.jobs.rn.desc'),
+                meta: [t('careers.openings.jobs.rn.term'), t('careers.openings.jobs.rn.location')],
                 img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD_o7QkD8VfOkwBWcL7htsva-9X6WY4G_xC5YicP8pXJyu13J4SVGLI_WTMrUXlYl2BecP_IuGfvNaQKSE7ZzQrkG_OU_ddFDW244AO9qxSfbLyQBkAVIoCRgq3qrwooayEw0zZfiWm6gQI7dxyIlbcAExqyrSUBJceLtr4N1O4fawTaxLf_1zqvJ1AEKd4TFxpBC4cK-eWkJrxXlMjMj1A8xohGVO7nhcz3KCZWK9MnasZQ-9h4L1TWdpvbBPptJGbU1--jONzexIP',
               },
               {
-                role: 'Support Worker',
-                dept: 'SUPPORT',
-                type: 'Flexible',
-                desc: 'Assist with housekeeping, grocery shopping, and meal preparation for seniors living independently.',
-                meta: ['Part-time', 'Sydney, NSW'],
+                role: t('careers.openings.jobs.supportWorker.role'),
+                dept: t('careers.openings.jobs.supportWorker.dept'),
+                type: t('careers.openings.jobs.supportWorker.type'),
+                desc: t('careers.openings.jobs.supportWorker.desc'),
+                meta: [t('careers.openings.jobs.supportWorker.term'), t('careers.openings.jobs.supportWorker.location')],
                 img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBJC7Cm5kA84WvdQaf9J5_caozTdQ2LQxC7ceoDyGbHRYuQgjylMvSJQY5Dg-H7wWjhtyTNoPzPkUxQORgjebDAMd-Z0awmX95C4MhIMzvwlrnfWWSsj7VJ8ovWKPGD9efYPzHH_6AWbsnKAhvyfZNJMq9NA0-SbIvxpZUIVQyGb1K9ra2dOB8uHlrBR6-DeDarxCEuIc7ymUWvO8g1hiCIESWqVsdzb9pMiReUpbWgFr3gAY5HkleeT05eiUAbXysZ5MaztifC1vOz',
               },
             ].map((job, i) => (
@@ -164,11 +166,11 @@ export const Careers: React.FC = () => {
                     </div>
                   </div>
                   <div className="pt-4">
-                    <Link 
+                    <Link
                       to="/apply"
                       className="inline-block bg-blue-600 text-white px-8 py-2.5 rounded-xl font-bold hover:bg-blue-700 transition-all"
                     >
-                      Apply Now
+                      {t('careers.openings.applyNow')}
                     </Link>
                   </div>
                 </div>

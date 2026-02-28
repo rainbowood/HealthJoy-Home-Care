@@ -4,8 +4,10 @@ import { SERVICES } from '../constants';
 import { ArrowRight, CheckCircle2, Star, ShieldCheck, Clock, Award, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import * as Icons from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Home: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -18,26 +20,28 @@ export const Home: React.FC = () => {
             className="flex flex-col gap-6"
           >
             <div className="text-blue-600 text-sm font-bold uppercase tracking-widest">
-              Trusted Home Care Partner
+              {t('hero.badge')}
             </div>
             <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tight">
-              HealthJoy: Empowering Independent Living
+              {t('hero.title')}
+              <span className="text-blue-600">{t('hero.titleHighlight')}</span>
+              {t('hero.titleEnd')}
             </h1>
             <p className="text-lg text-slate-600 leading-relaxed max-w-xl">
-              Professional and compassionate home care services tailored to your unique needs. At HealthJoy, we help you or your loved ones maintain independence in the comfort of home.
+              {t('hero.subtitle')}
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Link
                 to="/get-started"
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-base hover:bg-blue-700 transition-all"
               >
-                Get Started
+                {t('hero.ctaPrimary')}
               </Link>
               <Link
                 to="/services"
                 className="bg-white border border-slate-200 text-slate-700 px-8 py-4 rounded-lg font-bold text-base hover:bg-slate-50 transition-all"
               >
-                Our Services
+                {t('hero.ctaSecondary')}
               </Link>
             </div>
           </motion.div>
@@ -66,19 +70,19 @@ export const Home: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="flex items-center gap-3 text-slate-400">
               <ShieldCheck size={20} />
-              <span className="text-[10px] font-bold uppercase tracking-widest">Well-Established Partners</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest">{t('trust.partners')}</span>
             </div>
             <div className="flex items-center gap-3 text-slate-400">
               <Users size={20} />
-              <span className="text-[10px] font-bold uppercase tracking-widest">Experienced Staff</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest">{t('trust.staff')}</span>
             </div>
             <div className="flex items-center gap-3 text-slate-400">
               <Clock size={20} />
-              <span className="text-[10px] font-bold uppercase tracking-widest">24/7 Support Available</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest">{t('trust.support')}</span>
             </div>
             <div className="flex items-center gap-3 text-slate-400">
               <Award size={20} />
-              <span className="text-[10px] font-bold uppercase tracking-widest">Certified Excellence</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest">{t('trust.excellence')}</span>
             </div>
           </div>
         </div>
@@ -87,9 +91,9 @@ export const Home: React.FC = () => {
       {/* Our Services Section */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Services</h2>
+          <h2 className="text-4xl font-bold text-slate-900 mb-4">{t('servicesSection.title')}</h2>
           <p className="text-slate-500 text-lg max-w-2xl mx-auto">
-            Comprehensive care solutions designed to support your lifestyle and health requirements.
+            {t('servicesSection.subtitle')}
           </p>
         </div>
 
@@ -108,15 +112,15 @@ export const Home: React.FC = () => {
                 <div className="w-12 h-12 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mb-6">
                   {IconComponent && <IconComponent size={24} />}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4">{service.title}</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">{t(service.title)}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed mb-6">
-                  {service.description}
+                  {t(service.description)}
                 </p>
                 <Link
                   to="/services"
                   className="inline-flex items-center text-blue-600 font-bold text-sm group"
                 >
-                  Learn more <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  {t('action.learnMore')} <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
             );
@@ -128,15 +132,15 @@ export const Home: React.FC = () => {
       <section className="py-24 px-6 bg-blue-50/50">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-slate-900 mb-12">Why Choose HealthJoy Home Care?</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-12">{t('whyChooseUs.title')}</h2>
             <div className="space-y-8">
               <div className="flex gap-4">
                 <div className="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center shrink-0 mt-1">
                   <CheckCircle2 size={14} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 mb-1">Personalized Care Plans</h4>
-                  <p className="text-slate-500 text-sm">We don't believe in one-size-fits-all. Every client receives a care plan tailored to their specific needs.</p>
+                  <h4 className="font-bold text-slate-900 mb-1">{t('whyChooseUs.points.personalized.title')}</h4>
+                  <p className="text-slate-500 text-sm">{t('whyChooseUs.points.personalized.desc')}</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -144,8 +148,8 @@ export const Home: React.FC = () => {
                   <CheckCircle2 size={14} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 mb-1">Vetted Caregivers</h4>
-                  <p className="text-slate-500 text-sm">Our team undergoes rigorous background checks and continuous training to ensure high-quality care.</p>
+                  <h4 className="font-bold text-slate-900 mb-1">{t('whyChooseUs.points.vetted.title')}</h4>
+                  <p className="text-slate-500 text-sm">{t('whyChooseUs.points.vetted.desc')}</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -153,8 +157,8 @@ export const Home: React.FC = () => {
                   <CheckCircle2 size={14} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 mb-1">Free Consultation Service</h4>
-                  <p className="text-slate-500 text-sm">We provide professional advice to help you or your family members navigate home care options and maximize your support benefits.</p>
+                  <h4 className="font-bold text-slate-900 mb-1">{t('whyChooseUs.points.consultation.title')}</h4>
+                  <p className="text-slate-500 text-sm">{t('whyChooseUs.points.consultation.desc')}</p>
                 </div>
               </div>
             </div>
@@ -163,19 +167,19 @@ export const Home: React.FC = () => {
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-white p-8 rounded-2xl text-center shadow-sm">
               <p className="text-3xl font-bold text-blue-600 mb-1">20+</p>
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Years Health Care</p>
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{t('stats.years')}</p>
             </div>
             <div className="bg-white p-8 rounded-2xl text-center shadow-sm">
               <p className="text-3xl font-bold text-blue-600 mb-1">2k+</p>
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Happy Families</p>
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{t('stats.families')}</p>
             </div>
             <div className="bg-white p-8 rounded-2xl text-center shadow-sm">
               <p className="text-3xl font-bold text-blue-600 mb-1">100%</p>
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Satisfaction</p>
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{t('stats.satisfaction')}</p>
             </div>
             <div className="bg-white p-8 rounded-2xl text-center shadow-sm">
               <p className="text-3xl font-bold text-blue-600 mb-1">24h</p>
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Response Time</p>
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{t('stats.response')}</p>
             </div>
           </div>
         </div>
@@ -184,30 +188,14 @@ export const Home: React.FC = () => {
       {/* Testimonials Section */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">What Our Clients Say</h2>
+          <h2 className="text-4xl font-bold text-slate-900 mb-4">{t('testimonials.title')}</h2>
           <p className="text-slate-500 text-lg max-w-2xl mx-auto">
-            We are proud to share the experiences of the families we support every day.
+            {t('testimonials.subtitle')}
           </p>
         </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              name: 'Sarah M.',
-              role: 'Daughter of Client',
-              quote: '"HealthJoy provided exceptional care for my mother. Their caregivers are not just professional but truly compassionate people who treated her like family."'
-            },
-            {
-              name: 'James R.',
-              role: 'Primary Guardian',
-              quote: '"The transition to home care was seamless thanks to the team. Their personalized care plan perfectly matches my father\'s daily needs and routine."'
-            },
-            {
-              name: 'L. W.',
-              role: 'Beecroft Resident',
-              quote: '"The nursing support we received post-surgery was top-notch. Efficient, professional, and very reassuring during a difficult recovery period."'
-            }
-          ].map((testimonial, index) => (
+          {(t('testimonials.list', { returnObjects: true }) as Array<{ name: string, role: string, quote: string }>).map((testimonial, index) => (
             <div key={index} className="bg-slate-50 p-10 rounded-2xl flex flex-col">
               <div className="flex gap-1 mb-6 text-blue-600">
                 {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}

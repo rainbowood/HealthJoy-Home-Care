@@ -3,10 +3,12 @@ import { motion } from 'motion/react';
 import { CONTACT_INFO } from '../constants';
 import { Clock, Phone, Mail, MessageSquare, ChevronDown, Loader2, CheckCircle, XCircle } from 'lucide-react';
 import { submitContact } from '../api';
+import { useTranslation } from 'react-i18next';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
 export const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -19,7 +21,7 @@ export const Contact: React.FC = () => {
     e.preventDefault();
     if (!fullName || !email) {
       setStatus('error');
-      setStatusMessage('Please fill in your name and email.');
+      setStatusMessage(t('contact.form.messages.errorFill'));
       return;
     }
     setStatus('submitting');
@@ -32,7 +34,7 @@ export const Contact: React.FC = () => {
         message,
       });
       setStatus('success');
-      setStatusMessage(res.message || 'Inquiry submitted successfully!');
+      setStatusMessage(res.message || t('contact.form.messages.success'));
       setFullName('');
       setEmail('');
       setPhone('');
@@ -40,7 +42,7 @@ export const Contact: React.FC = () => {
       setMessage('');
     } catch (err: any) {
       setStatus('error');
-      setStatusMessage(err.message || 'Failed to submit. Please try again.');
+      setStatusMessage(err.message || t('contact.form.messages.errorSubmit'));
     }
   };
 
@@ -49,10 +51,10 @@ export const Contact: React.FC = () => {
       {/* Header Section */}
       <section className="max-w-7xl mx-auto px-6 pt-16 pb-12 text-center space-y-4">
         <h1 className="text-4xl lg:text-6xl font-black text-slate-900 tracking-tight">
-          Contact Us
+          {t('contact.title')}
         </h1>
         <p className="text-slate-500 text-lg leading-relaxed max-w-2xl mx-auto">
-          We're here to help you and your loved ones with professional home care services. Reach out to our team today for personalized support.
+          {t('contact.desc')}
         </p>
       </section>
 
@@ -65,35 +67,35 @@ export const Contact: React.FC = () => {
               <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
                 <Clock size={20} />
               </div>
-              <h3 className="text-xl font-bold text-blue-600">Office Hours</h3>
+              <h3 className="text-xl font-bold text-blue-600">{t('contact.officeHours.title')}</h3>
             </div>
 
             <div className="space-y-8 flex-grow">
               <div className="flex justify-between items-center">
-                <span className="font-bold text-slate-900">Monday - Friday</span>
-                <span className="text-slate-500">9:00 AM - 5:00 PM</span>
+                <span className="font-bold text-slate-900">{t('contact.officeHours.weekday')}</span>
+                <span className="text-slate-500">{t('contact.officeHours.weekdayHours')}</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="font-bold text-slate-900">Saturday</span>
-                <span className="text-slate-500">By Appointment</span>
+                <span className="font-bold text-slate-900">{t('contact.officeHours.saturday')}</span>
+                <span className="text-slate-500">{t('contact.officeHours.saturdayHours')}</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="font-bold text-slate-900">Sunday</span>
-                <span className="font-bold text-red-500 uppercase">CLOSED</span>
+                <span className="font-bold text-slate-900">{t('contact.officeHours.sunday')}</span>
+                <span className="font-bold text-red-500 uppercase">{t('contact.officeHours.sundayHours')}</span>
               </div>
             </div>
 
             <div className="mt-12 bg-blue-50/50 rounded-2xl p-6 border border-blue-100/50">
-              <h4 className="text-sm font-bold text-blue-600 mb-2">Emergency Support:</h4>
+              <h4 className="text-sm font-bold text-blue-600 mb-2">{t('contact.officeHours.emergency')}</h4>
               <p className="text-xs text-slate-500 leading-relaxed">
-                For urgent care needs outside of regular hours, our phone line remains available 24/7.
+                {t('contact.officeHours.emergencyDesc')}
               </p>
             </div>
           </div>
 
           {/* Inquiry Form Card */}
           <div className="lg:col-span-2 bg-white rounded-[32px] shadow-sm border border-slate-100 p-8 lg:p-10">
-            <h3 className="text-2xl font-bold text-slate-900 mb-8">Send an Inquiry</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-8">{t('contact.form.title')}</h3>
 
             {/* Status Toast */}
             {status === 'success' && (
@@ -112,50 +114,50 @@ export const Contact: React.FC = () => {
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="block text-sm font-bold text-slate-900">Full Name</label>
+                  <label className="block text-sm font-bold text-slate-900">{t('contact.form.labels.fullName')}</label>
                   <input
                     type="text"
-                    placeholder="John Doe"
+                    placeholder={t('contact.form.placeholders.fullName')}
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-sm font-bold text-slate-900">Email Address</label>
+                  <label className="block text-sm font-bold text-slate-900">{t('contact.form.labels.email')}</label>
                   <input
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder={t('contact.form.placeholders.email')}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-sm font-bold text-slate-900">Phone Number</label>
+                  <label className="block text-sm font-bold text-slate-900">{t('contact.form.labels.phone')}</label>
                   <input
                     type="tel"
-                    placeholder="0493-334-910"
+                    placeholder={t('contact.form.placeholders.phone')}
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-sm font-bold text-slate-900">Subject</label>
+                  <label className="block text-sm font-bold text-slate-900">{t('contact.form.labels.subject')}</label>
                   <div className="relative">
                     <select
                       value={subject}
                       onChange={(e) => setSubject(e.target.value)}
                       className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all appearance-none cursor-pointer"
                     >
-                      <option>Book Consultation</option>
-                      <option>General Inquiry</option>
-                      <option>Support Services</option>
-                      <option>Career Opportunities</option>
-                      <option>Feedback</option>
-                      <option>Complaint and Dispute</option>
-                      <option>Other Inquiry</option>
+                      <option value="Book Consultation">{t('contact.form.subjects.bookConsultation')}</option>
+                      <option value="General Inquiry">{t('contact.form.subjects.general')}</option>
+                      <option value="Support Services">{t('contact.form.subjects.support')}</option>
+                      <option value="Career Opportunities">{t('contact.form.subjects.career')}</option>
+                      <option value="Feedback">{t('contact.form.subjects.feedback')}</option>
+                      <option value="Complaint and Dispute">{t('contact.form.subjects.complaint')}</option>
+                      <option value="Other Inquiry">{t('contact.form.subjects.other')}</option>
                     </select>
                     <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none text-slate-400">
                       <ChevronDown size={18} />
@@ -165,9 +167,9 @@ export const Contact: React.FC = () => {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-bold text-slate-900">Message</label>
+                <label className="block text-sm font-bold text-slate-900">{t('contact.form.labels.message')}</label>
                 <textarea
-                  placeholder="How can we help you?"
+                  placeholder={t('contact.form.placeholders.message')}
                   rows={6}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -183,10 +185,10 @@ export const Contact: React.FC = () => {
                 {status === 'submitting' ? (
                   <>
                     <Loader2 size={20} className="animate-spin" />
-                    Sending...
+                    {t('contact.form.buttons.sending')}
                   </>
                 ) : (
-                  'Send Message'
+                  t('contact.form.buttons.send')
                 )}
               </button>
             </form>
@@ -202,8 +204,8 @@ export const Contact: React.FC = () => {
             <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
               <Phone size={24} />
             </div>
-            <h4 className="text-xl font-bold text-slate-900 mb-2">Phone</h4>
-            <p className="text-sm text-slate-500 mb-6">Available 24/7 for urgent care needs.</p>
+            <h4 className="text-xl font-bold text-slate-900 mb-2">{t('contact.cards.phone.title')}</h4>
+            <p className="text-sm text-slate-500 mb-6">{t('contact.cards.phone.desc')}</p>
             <a href={`tel:${CONTACT_INFO.phone}`} className="text-2xl font-black text-blue-600 hover:underline">
               {CONTACT_INFO.phone}
             </a>
@@ -214,8 +216,8 @@ export const Contact: React.FC = () => {
             <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
               <Mail size={24} />
             </div>
-            <h4 className="text-xl font-bold text-slate-900 mb-2">Email</h4>
-            <p className="text-sm text-slate-500 mb-6">General inquiries and feedback.</p>
+            <h4 className="text-xl font-bold text-slate-900 mb-2">{t('contact.cards.email.title')}</h4>
+            <p className="text-sm text-slate-500 mb-6">{t('contact.cards.email.desc')}</p>
             <a href={`mailto:${CONTACT_INFO.email}`} className="text-lg font-bold text-blue-600 hover:underline">
               {CONTACT_INFO.email}
             </a>
@@ -226,11 +228,11 @@ export const Contact: React.FC = () => {
             <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
               <MessageSquare size={24} />
             </div>
-            <h4 className="text-xl font-bold text-slate-900 mb-2">WeChat</h4>
+            <h4 className="text-xl font-bold text-slate-900 mb-2">{t('contact.cards.wechat.title')}</h4>
             <div className="w-24 h-24 bg-slate-50 rounded-xl p-1 border border-slate-100 mb-4">
               <img src={CONTACT_INFO.wechatQR} alt="WeChat QR" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
             </div>
-            <p className="text-sm font-bold text-slate-900">ID: <span className="text-slate-500 font-medium">HealthJoy_Care</span></p>
+            <p className="text-sm font-bold text-slate-900">{t('contact.cards.wechat.id')} <span className="text-slate-500 font-medium">HealthJoy_Care</span></p>
           </div>
         </div>
       </section>

@@ -1,32 +1,34 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { 
-  Building2, 
-  Globe, 
-  HeartPulse, 
-  Brain, 
-  Apple, 
-  ShieldCheck, 
-  Briefcase, 
-  Shield, 
-  FileText, 
+import {
+  Building2,
+  Globe,
+  HeartPulse,
+  Brain,
+  Apple,
+  ShieldCheck,
+  Briefcase,
+  Shield,
+  FileText,
   Scale,
   ChevronRight,
   Search
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export const Links: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-6 pt-16 pb-12">
         <div className="max-w-3xl space-y-6">
           <h1 className="text-4xl lg:text-6xl font-black text-slate-900 tracking-tight">
-            Helpful Links & Resources
+            {t('linksPage.heroTitle')}
           </h1>
           <p className="text-slate-500 text-lg leading-relaxed">
-            A centralized directory of government, health, and internal resources to support your care journey. Find everything you need to navigate home care with confidence.
+            {t('linksPage.heroDesc')}
           </p>
         </div>
       </section>
@@ -35,30 +37,30 @@ export const Links: React.FC = () => {
       <section className="max-w-7xl mx-auto px-6 py-12">
         <div className="flex items-center gap-4 mb-8">
           <div className="w-1 h-8 bg-blue-600 rounded-full"></div>
-          <h2 className="text-2xl font-bold text-slate-900">Government Resources</h2>
+          <h2 className="text-2xl font-bold text-slate-900">{t('linksPage.gov.title')}</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              title: 'My Aged Care',
-              desc: 'Access government-funded aged care services and find information on eligibility and support.',
+              title: t('linksPage.gov.mac.title'),
+              desc: t('linksPage.gov.mac.desc'),
               icon: Building2,
               href: 'https://www.myagedcare.gov.au/'
             },
             {
-              title: 'NDIS Official Site',
-              desc: 'National Disability Insurance Scheme information, plan management, and participant support.',
+              title: t('linksPage.gov.ndis.title'),
+              desc: t('linksPage.gov.ndis.desc'),
               icon: Globe,
               href: 'https://www.ndis.gov.au/'
             },
             {
-              title: 'Department of Health',
-              desc: 'Latest public health updates, clinical guidelines, and national health policies.',
+              title: t('linksPage.gov.health.title'),
+              desc: t('linksPage.gov.health.desc'),
               icon: HeartPulse,
               href: 'https://www.health.gov.au/'
             }
           ].map((item, i) => (
-            <a 
+            <a
               key={i}
               href={item.href}
               target="_blank"
@@ -79,24 +81,24 @@ export const Links: React.FC = () => {
       <section className="max-w-7xl mx-auto px-6 py-12">
         <div className="flex items-center gap-4 mb-8">
           <div className="w-1 h-8 bg-blue-600 rounded-full"></div>
-          <h2 className="text-2xl font-bold text-slate-900">Health & Wellness</h2>
+          <h2 className="text-2xl font-bold text-slate-900">{t('linksPage.health.title')}</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {[
             {
-              title: 'Dementia Australia',
-              desc: 'Specialized support and resources for those living with dementia and their caregivers.',
+              title: t('linksPage.health.dementia.title'),
+              desc: t('linksPage.health.dementia.desc'),
               icon: Brain,
               href: 'https://www.dementia.org.au/'
             },
             {
-              title: 'Healthy Eating Guides',
-              desc: 'Nutritional advice and meal planning specifically designed for elderly wellness.',
+              title: t('linksPage.health.eating.title'),
+              desc: t('linksPage.health.eating.desc'),
               icon: Apple,
               href: 'https://www.eatforhealth.gov.au/'
             }
           ].map((item, i) => (
-            <a 
+            <a
               key={i}
               href={item.href}
               target="_blank"
@@ -119,15 +121,15 @@ export const Links: React.FC = () => {
       <section className="max-w-7xl mx-auto px-6 py-12">
         <div className="flex items-center gap-4 mb-8">
           <div className="w-1 h-8 bg-blue-600 rounded-full"></div>
-          <h2 className="text-2xl font-bold text-slate-900">Our Quick Links</h2>
+          <h2 className="text-2xl font-bold text-slate-900">{t('linksPage.quickLinks.title')}</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-4">
           {[
-            { title: 'Our Care Services', icon: HeartPulse, to: '/services' },
-            { title: 'Caregiver Standards', icon: ShieldCheck, to: '/caregivers' },
-            { title: 'Career Opportunities', icon: Briefcase, to: '/careers' }
+            { title: t('linksPage.quickLinks.services'), icon: HeartPulse, to: '/services' },
+            { title: t('linksPage.quickLinks.caregivers'), icon: ShieldCheck, to: '/caregivers' },
+            { title: t('linksPage.quickLinks.careers'), icon: Briefcase, to: '/careers' }
           ].map((item, i) => (
-            <Link 
+            <Link
               key={i}
               to={item.to}
               className="flex items-center gap-4 bg-blue-50/50 hover:bg-blue-50 border border-blue-100/50 rounded-xl p-5 transition-colors group"
@@ -145,15 +147,15 @@ export const Links: React.FC = () => {
       <section className="max-w-7xl mx-auto px-6 py-12 mb-24">
         <div className="flex items-center gap-4 mb-8">
           <div className="w-1 h-8 bg-blue-600 rounded-full"></div>
-          <h2 className="text-2xl font-bold text-slate-900">Legal & Compliance</h2>
+          <h2 className="text-2xl font-bold text-slate-900">{t('linksPage.legal.title')}</h2>
         </div>
         <div className="bg-white border border-slate-100 rounded-[24px] overflow-hidden shadow-sm">
           {[
-            { title: 'Privacy Policy', icon: Shield, to: '/privacy' },
-            { title: 'Terms of Service', icon: FileText, to: '/terms' },
-            { title: 'Consumer Rights & Advocacy', icon: Scale, to: '/terms' }
+            { title: t('linksPage.legal.privacy'), icon: Shield, to: '/privacy' },
+            { title: t('linksPage.legal.terms'), icon: FileText, to: '/terms' },
+            { title: t('linksPage.legal.advocacy'), icon: Scale, to: '/terms' }
           ].map((item, i) => (
-            <Link 
+            <Link
               key={i}
               to={item.to}
               className={`flex items-center justify-between p-6 hover:bg-slate-50 transition-colors ${i !== 2 ? 'border-bottom border-slate-100' : ''}`}

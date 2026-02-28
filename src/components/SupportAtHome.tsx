@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { CheckCircle2, Layout, Users, Home, ArrowRight, Loader2 } from 'lucide-react';
 import { submitSupport } from '../api';
+import { useTranslation } from 'react-i18next';
 
 export const SupportAtHome: React.FC = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     full_name: '',
     email: '',
@@ -34,7 +36,7 @@ export const SupportAtHome: React.FC = () => {
     } catch (err: any) {
       console.error('Submission error:', err);
       setStatus('error');
-      setErrorMessage(err.message || 'Failed to submit enquiry. Please try again.');
+      setErrorMessage(err.message || t('supportAtHome.form.errorSubmit'));
     }
   };
 
@@ -50,13 +52,13 @@ export const SupportAtHome: React.FC = () => {
           {/* Left Content */}
           <div className="lg:col-span-7 space-y-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-widest w-fit">
-              Home Care Service Provider
+              {t('supportAtHome.heroBadge')}
             </div>
             <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 leading-tight tracking-tight">
-              Empowering Your Independence with HealthJoy Home Care
+              {t('supportAtHome.heroTitle')}
             </h1>
             <p className="text-lg text-slate-600 leading-relaxed max-w-2xl">
-              Navigating the home care policies can be complex, but you don't have to do it alone. HealthJoy Home Care is dedicated to simplifying the process, providing personalized plan management, coordination, and professional daily support tailored specifically to your unique life goals.
+              {t('supportAtHome.heroDesc')}
             </p>
             <div className="rounded-3xl overflow-hidden shadow-xl">
               <img
@@ -71,21 +73,21 @@ export const SupportAtHome: React.FC = () => {
           {/* Right Form */}
           <div className="lg:col-span-5">
             <div className="bg-white rounded-2xl shadow-2xl p-8 border border-slate-100 sticky top-24">
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">Enquire Now</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">{t('supportAtHome.form.title')}</h3>
               <p className="text-slate-500 text-sm mb-8 leading-relaxed">
-                Have questions? Fill out the form below and one of our HealthJoy specialists will contact you within 24 hours.
+                {t('supportAtHome.form.desc')}
               </p>
 
               {status === 'success' ? (
                 <div className="bg-green-50 border border-green-100 text-green-700 p-6 rounded-xl text-center">
                   <CheckCircle2 className="mx-auto mb-4 w-12 h-12" />
-                  <h4 className="font-bold text-lg mb-2">Thank You!</h4>
-                  <p className="text-sm">Your enquiry has been sent successfully. We'll be in touch soon.</p>
+                  <h4 className="font-bold text-lg mb-2">{t('supportAtHome.form.successTitle')}</h4>
+                  <p className="text-sm">{t('supportAtHome.form.successDesc')}</p>
                   <button
                     onClick={() => setStatus('idle')}
                     className="mt-6 text-green-700 font-bold text-sm hover:underline"
                   >
-                    Send another enquiry
+                    {t('supportAtHome.form.sendAnother')}
                   </button>
                 </div>
               ) : (
@@ -96,54 +98,54 @@ export const SupportAtHome: React.FC = () => {
                     </div>
                   )}
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Full Name</label>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">{t('supportAtHome.form.labels.fullName')}</label>
                     <input
                       type="text"
                       name="full_name"
                       required
                       value={formData.full_name}
                       onChange={handleChange}
-                      placeholder="John Doe"
+                      placeholder={t('supportAtHome.form.placeholders.fullName')}
                       className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Email Address</label>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">{t('supportAtHome.form.labels.email')}</label>
                     <input
                       type="email"
                       name="email"
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="john@example.com"
+                      placeholder={t('supportAtHome.form.placeholders.email')}
                       className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Phone Number</label>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">{t('supportAtHome.form.labels.phone')}</label>
                     <input
                       type="tel"
                       name="phone"
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="0493-334-910"
+                      placeholder={t('supportAtHome.form.placeholders.phone')}
                       className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Home Address</label>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">{t('supportAtHome.form.labels.address')}</label>
                     <input
                       type="text"
                       name="address"
                       value={formData.address}
                       onChange={handleChange}
-                      placeholder="123 Example St, Suburb"
+                      placeholder={t('supportAtHome.form.placeholders.address')}
                       className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Service Required</label>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">{t('supportAtHome.form.labels.service')}</label>
                     <div className="relative">
                       <select
                         name="service_type"
@@ -151,14 +153,14 @@ export const SupportAtHome: React.FC = () => {
                         onChange={handleChange}
                         className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all appearance-none"
                       >
-                        <option>Personal Care</option>
-                        <option>Residential Assistance</option>
-                        <option>Social Support</option>
-                        <option>Allied Health & Therapeutic Services</option>
-                        <option>Assistive Technology</option>
-                        <option>Home Modifications</option>
-                        <option>Health&Wellness</option>
-                        <option>Mental Health</option>
+                        <option value="Personal Care">{t('supportAtHome.form.services.personal')}</option>
+                        <option value="Residential Assistance">{t('supportAtHome.form.services.residential')}</option>
+                        <option value="Social Support">{t('supportAtHome.form.services.social')}</option>
+                        <option value="Allied Health & Therapeutic Services">{t('supportAtHome.form.services.allied')}</option>
+                        <option value="Assistive Technology">{t('supportAtHome.form.services.assistive')}</option>
+                        <option value="Home Modifications">{t('supportAtHome.form.services.modifications')}</option>
+                        <option value="Health&Wellness">{t('supportAtHome.form.services.healthWellness')}</option>
+                        <option value="Mental Health">{t('supportAtHome.form.services.mentalHealth')}</option>
                       </select>
                       <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                         <ArrowRight size={14} className="rotate-90" />
@@ -166,13 +168,13 @@ export const SupportAtHome: React.FC = () => {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Message</label>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">{t('supportAtHome.form.labels.message')}</label>
                     <textarea
                       name="message"
                       rows={4}
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="How can HealthJoy help you today?"
+                      placeholder={t('supportAtHome.form.placeholders.message')}
                       className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 transition-all resize-none"
                     ></textarea>
                   </div>
@@ -183,14 +185,14 @@ export const SupportAtHome: React.FC = () => {
                     {status === 'loading' ? (
                       <>
                         <Loader2 className="animate-spin" size={18} />
-                        Sending...
+                        {t('supportAtHome.form.buttons.sending')}
                       </>
                     ) : (
-                      'Send Enquiry'
+                      t('supportAtHome.form.buttons.submit')
                     )}
                   </button>
                   <p className="text-[10px] text-slate-400 text-center leading-relaxed px-4">
-                    By submitting this form, you agree to the HealthJoy Home Care Privacy Policy.
+                    {t('supportAtHome.form.privacy')}
                   </p>
                 </form>
               )}
@@ -202,22 +204,22 @@ export const SupportAtHome: React.FC = () => {
       {/* Support Section */}
       <section className="py-24 px-6 bg-white border-t border-slate-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">How HealthJoy Home Care Supports You</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12">{t('supportAtHome.features.title')}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Plan Management',
-                description: 'Focus on your goals while HealthJoy Home Care handles the financial administration, provider payments, and budget tracking of your funding.',
+                title: t('supportAtHome.features.items.1.title'),
+                description: t('supportAtHome.features.items.1.desc'),
                 icon: Layout
               },
               {
-                title: 'Support Coordination',
-                description: 'Our specialists help you understand your plan, find the right local services, and coordinate your supports for maximum impact on your wellbeing.',
+                title: t('supportAtHome.features.items.2.title'),
+                description: t('supportAtHome.features.items.2.desc'),
                 icon: Users
               },
               {
-                title: 'Daily Living Support',
-                description: 'HealthJoy Home Care provides practical assistance with personal care, household tasks, and community participation to help you live life your way.',
+                title: t('supportAtHome.features.items.3.title'),
+                description: t('supportAtHome.features.items.3.desc'),
                 icon: Home
               }
             ].map((item, idx) => (
@@ -238,23 +240,23 @@ export const SupportAtHome: React.FC = () => {
       {/* Steps Section */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-3xl mx-auto bg-white rounded-3xl border border-slate-100 p-12 shadow-sm">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">Getting Started with HealthJoy Home Care</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12">{t('supportAtHome.steps.title')}</h2>
           <div className="space-y-12">
             {[
               {
                 step: 1,
-                title: 'Initial Consultation',
-                description: 'Reach out to the HealthJoy team for a friendly, no-obligation chat about your current home care plan and your personal aspirations.'
+                title: t('supportAtHome.steps.items.1.title'),
+                description: t('supportAtHome.steps.items.1.desc')
               },
               {
                 step: 2,
-                title: 'Tailored Service Plan',
-                description: 'We work together to design a support schedule that perfectly fits your lifestyle and maximizes the value of your funding.'
+                title: t('supportAtHome.steps.items.2.title'),
+                description: t('supportAtHome.steps.items.2.desc')
               },
               {
                 step: 3,
-                title: 'Seamless Transition',
-                description: 'HealthJoy Home Care manages the paperwork and coordination with existing providers to ensure a smooth start to your new support services.'
+                title: t('supportAtHome.steps.items.3.title'),
+                description: t('supportAtHome.steps.items.3.desc')
               }
             ].map((item, idx) => (
               <div key={idx} className="flex gap-6">

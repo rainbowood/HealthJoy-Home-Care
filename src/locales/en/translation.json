@@ -1,0 +1,732 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "caregivers": "Caregivers",
+        "support": "Support@Home",
+        "quality": "Quality",
+        "career": "Career",
+        "links": "Links",
+        "contact": "Contact",
+        "getStarted": "Get Started"
+    },
+    "hero": {
+        "badge": "Trusted Home Care Partner",
+        "title": "HealthJoy: ",
+        "titleHighlight": "Empowering",
+        "titleEnd": " Independent Living",
+        "subtitle": "Professional and compassionate home care services tailored to your unique needs. At HealthJoy, we help you or your loved ones maintain independence in the comfort of home.",
+        "ctaPrimary": "Get Started",
+        "ctaSecondary": "Our Services"
+    },
+    "trust": {
+        "partners": "Well-Established Partners",
+        "staff": "Experienced Staff",
+        "support": "24/7 Support Available",
+        "excellence": "Certified Excellence"
+    },
+    "servicesSection": {
+        "title": "Our Services",
+        "subtitle": "Comprehensive care solutions designed to support your lifestyle and health requirements."
+    },
+    "whyChooseUs": {
+        "title": "Why Choose HealthJoy Home Care?",
+        "points": {
+            "personalized": {
+                "title": "Personalized Care Plans",
+                "desc": "We don't believe in one-size-fits-all. Every client receives a care plan tailored to their specific needs."
+            },
+            "vetted": {
+                "title": "Vetted Caregivers",
+                "desc": "Our team undergoes rigorous background checks and continuous training to ensure high-quality care."
+            },
+            "consultation": {
+                "title": "Free Consultation Service",
+                "desc": "We provide professional advice to help you or your family members navigate home care options and maximize your support benefits."
+            }
+        }
+    },
+    "stats": {
+        "years": "Years Health Care",
+        "families": "Happy Families",
+        "satisfaction": "Satisfaction",
+        "response": "Response Time"
+    },
+    "testimonials": {
+        "title": "What Our Clients Say",
+        "subtitle": "We are proud to share the experiences of the families we support every day.",
+        "list": [
+            {
+                "name": "Sarah M.",
+                "role": "Daughter of Client",
+                "quote": "\"HealthJoy provided exceptional care for my mother. Their caregivers are not just professional but truly compassionate people who treated her like family.\""
+            },
+            {
+                "name": "James R.",
+                "role": "Primary Guardian",
+                "quote": "\"The transition to home care was seamless thanks to the team. Their personalized care plan perfectly matches my father's daily needs and routine.\""
+            },
+            {
+                "name": "L. W.",
+                "role": "Beecroft Resident",
+                "quote": "\"The nursing support we received post-surgery was top-notch. Efficient, professional, and very reassuring during a difficult recovery period.\""
+            }
+        ]
+    },
+    "services": {
+        "personalCare": {
+            "title": "Personal Care",
+            "desc": "Assistance with daily living activities including hygiene, dressing, and mobility to maintain confidence and well-being."
+        },
+        "domesticAssistance": {
+            "title": "Domestic Assistance",
+            "desc": "Helping with household chores, laundry, meal preparation, and maintaining a clean, safe living environment, including gardening."
+        },
+        "socialSupport": {
+            "title": "Social Support",
+            "desc": "Providing companionship and support for social activities to help clients stay connected and engaged with their community."
+        },
+        "alliedHealth": {
+            "title": "Allied Health & Therapeutic Services",
+            "desc": "Specialized therapeutic services including physiotherapy, occupational therapy, podiatry, dietitian services, and other healthcare supports tailored to your needs."
+        },
+        "assistiveTechnology": {
+            "title": "Assistive Technology",
+            "desc": "Smart solutions and specialised equipment to enhance independence and safety in your daily life."
+        },
+        "homeModifications": {
+            "title": "Home Modifications",
+            "desc": "Professional home adjustments including rails, ramps, and bathroom modifications to ensure your home remains safe and accessible."
+        },
+        "healthWellness": {
+            "title": "Health & Wellness",
+            "desc": "Promoting healthy lifestyles through acupuncture, traditional Chinese medicine, massage therapy, health monitoring, and preventative support tailored for seniors."
+        },
+        "mentalHealth": {
+            "title": "Mental Health",
+            "desc": "Empathetic emotional support and mental wellbeing services to help you navigate life changes and maintain mental clarity."
+        }
+    },
+    "action": {
+        "learnMore": "Learn more"
+    },
+    "servicesPage": {
+        "heroBadge": "Professional Support",
+        "heroTitle": "Dedicated Home Care for Your Loved Ones",
+        "heroDesc": "HealthJoy Home Care provides compassionate, professional support tailored to unique needs, helping individuals live independently with dignity, comfort, and safety in their own homes.",
+        "bookConsultation": "Book Free Consultation",
+        "viewPricing": "View Core Services",
+        "activePlans": "ACTIVE CARE PLANS",
+        "personalizationTitle": "Tailored Care Plans",
+        "personalizationSubtitle": "Every individual is unique",
+        "personalizationDesc": "At HealthJoy Home Care, we believe in personalized care that respects individual preferences. Our team works closely with you to develop a plan that fits your lifestyle perfectly.",
+        "personalizationButton": "Get Started",
+        "specializedTitle": "Our Specialized Services",
+        "specializedSubtitle": "Professional, compassionate support covering all aspects of daily living."
+    },
+    "footer": {
+        "desc": "Compassionate home care services tailored to your needs. Empowering lives through professional support.",
+        "linksText": "Quick Links",
+        "legalText": "Legal & Quality",
+        "contactText": "Contact Information",
+        "address": "Address:",
+        "phone": "Phone:",
+        "email": "Email:",
+        "connect": "Connect With Us",
+        "wechat": "WeChat Support",
+        "rights": "© 2026 HealthJoy Home Care. All rights reserved.",
+        "cookies": "Cookies",
+        "accessibility": "Accessibility",
+        "links": {
+            "services": "Our Services",
+            "about": "About HealthJoy",
+            "careers": "Career Opportunities",
+            "contact": "Contact Us",
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Service",
+            "compliance": "Compliance",
+            "feedback": "Feedback & Complaints"
+        }
+    },
+    "about": {
+        "heroTitle": "Compassionate Care for Your ",
+        "heroHighlight": "Loved Ones",
+        "heroSubtitle": "Meet the team behind HealthJoy Home Care, dedicated to providing professional support and trust.",
+        "storyTitle": "Our Story",
+        "storyP1": "Founded with a mission to redefine home care, HealthJoy began as a small family initiative after our founders struggled to find high-quality, reliable support for their own elderly relatives. We realized that true care goes beyond medical tasks; it's about dignity, companionship, and preserving the comfort of home.",
+        "storyP2": "Today, we are a leading provider committed to quality care, ensuring every client feels like family through our personalized approach and professional expertise. From our humble beginnings to a team of over 100 dedicated caregivers, our heart remains in the same place: your home.",
+        "valuesTitle": "Our Values",
+        "valuesSubtitle": "The core principles that guide every interaction we have with our clients.",
+        "teamTitle": "Meet Our Leadership Team",
+        "teamSubtitle": "The visionaries and experienced professionals ensuring HealthJoy delivers on its promise of excellence every day."
+    },
+    "team": {
+        "annie": {
+            "role": "Head of Intake Specialist",
+            "desc": "Dedicated professional guiding new clients through their journey with empathy and expertise, ensuring everyone receives the perfect care plan from day one."
+        },
+        "james": {
+            "role": "Operating Manager",
+            "desc": "Ensures seamless coordination between our families and our team of skilled caregivers."
+        },
+        "tsing": {
+            "role": "Head of Advisory",
+            "desc": "Over 20 years of experience in geriatric medicine and community healthcare leadership."
+        },
+        "selina": {
+            "role": "Financial Manager",
+            "desc": "Expert in strategic financial planning and healthcare management, ensuring long-term stability and excellence for our families."
+        }
+    },
+    "values": {
+        "compassion": {
+            "title": "Compassion",
+            "desc": "We lead with heart in everything we do, treating every client with the same warmth we would give our own parents."
+        },
+        "integrity": {
+            "title": "Integrity",
+            "desc": "Honesty and transparency are our foundation. We believe that trust is earned through consistent, ethical actions every day."
+        },
+        "excellence": {
+            "title": "Excellence",
+            "desc": "Setting the highest standards for home care through continuous training, professional growth, and attention to detail."
+        }
+    },
+    "getStarted": {
+        "heroTitle": "Start Your Care Journey",
+        "heroDesc": "Follow our simple three-step process to receive the professional, compassionate home care you deserve.",
+        "steps": {
+            "1": {
+                "title": "1. Initial Consultation",
+                "desc": "Book a free talk with our experts to discuss your specific needs."
+            },
+            "2": {
+                "title": "2. Care Plan Design",
+                "desc": "Receive a tailored support strategy designed specifically for your lifestyle."
+            },
+            "3": {
+                "title": "3. Commencing Care",
+                "desc": "Meet your dedicated professional caregiver and begin your journey to better living."
+            }
+        },
+        "formTitle": "Quick Start Form",
+        "formDesc": "Tell us a bit about what you're looking for and we'll handle the rest.",
+        "labels": {
+            "careFor": "Who is this care for?",
+            "supportType": "Type of Support Needed",
+            "bestTime": "Best Time to Call",
+            "fullName": "Full Name",
+            "phone": "Phone Number"
+        },
+        "options": {
+            "careFor": {
+                "self": "Self",
+                "selfDesc": "For myself",
+                "family": "Family",
+                "familyDesc": "For a relative",
+                "friend": "Friend",
+                "friendDesc": "For a neighbor"
+            },
+            "supportTypePlaceholder": "Select a service...",
+            "time": {
+                "anytime": "Anytime",
+                "morning": "Morning",
+                "afternoon": "Afternoon",
+                "evening": "Evening"
+            },
+            "services": {
+                "hcp": "Support at Home(HCP)",
+                "ndis": "NDIS",
+                "hcpUpgrade": "Support at Home(HCP) Package Upgrade",
+                "careServices": "Care Services",
+                "reassessment": "Application Reassessment",
+                "nonGov": "Non-Gov funded Support",
+                "other": "Other Support"
+            }
+        },
+        "placeholders": {
+            "fullName": "John Doe",
+            "phone": "0493-334-910"
+        },
+        "buttons": {
+            "submit": "Submit Request & Book Consultation",
+            "submitting": "Submitting..."
+        },
+        "messages": {
+            "errorFill": "Please fill in your name and phone number.",
+            "errorSubmit": "Failed to submit. Please try again.",
+            "successSubmit": "Care request submitted successfully!"
+        }
+    },
+    "caregivers": {
+        "heroTitle": "Our Caregiver ",
+        "heroHighlight": "Standards",
+        "heroDesc": "We only hire the best, so you can have peace of mind.",
+        "standards": {
+            "screening": {
+                "title": "Rigorous Screening",
+                "desc": "Every caregiver undergoes a comprehensive background check, including national police checks, working with children checks, and professional reference verification."
+            },
+            "certified": {
+                "title": "Certified Excellence",
+                "desc": "Our team consists of qualified professionals with certifications in Individual Support, Nursing, or related healthcare fields, ensuring expert care delivery."
+            },
+            "matching": {
+                "title": "Personalized Matching",
+                "desc": "We don't just assign a caregiver; we match them based on personality, language, interests, and specific care needs to foster genuine connections."
+            },
+            "training": {
+                "title": "Ongoing Training",
+                "desc": "HealthJoy provides continuous professional development to our staff, keeping them updated on the latest best practices in dementia care, mobility support, and more."
+            },
+            "compassion": {
+                "title": "Compassion First",
+                "desc": "Beyond skills, we look for empathy. Our caregivers are chosen for their heart and their genuine desire to make a positive difference in people's lives."
+            }
+        },
+        "cta": {
+            "title": "Are You a Passionate Caregiver?",
+            "desc": "We are always looking for dedicated individuals to join our growing team. If you have the skills and the heart for care, we'd love to hear from you.",
+            "button": "Apply to Join Our Team"
+        }
+    },
+    "careers": {
+        "heroBadge": "Join Our Mission",
+        "heroTitle": "Join the HealthJoy Family",
+        "heroDesc": "Make a meaningful difference in people's lives while building a rewarding career with a team that truly cares for your well-being.",
+        "buttons": {
+            "viewOpenings": "View Openings",
+            "learnMore": "Learn More"
+        },
+        "why": {
+            "title": "Why Work With Us",
+            "subtitle": "We offer more than just a job; we provide a supportive environment where you can grow personally and professionally.",
+            "flexible": {
+                "title": "Flexible Hours",
+                "desc": "Work schedules that fit your lifestyle, whether you need morning, evening, or weekend shifts."
+            },
+            "pay": {
+                "title": "Competitive Pay",
+                "desc": "We offer industry-leading compensation, performance bonuses, and comprehensive health benefits."
+            },
+            "training": {
+                "title": "Ongoing Training",
+                "desc": "Access to continuous learning certifications and professional career development mentorship."
+            }
+        },
+        "process": {
+            "title": "Our Application Process",
+            "subtitle": "Transparent steps to join our professional care team",
+            "apply": {
+                "title": "Apply",
+                "desc": "Submit your resume and certifications through our online portal."
+            },
+            "interview": {
+                "title": "Interview",
+                "desc": "Meet with our team for a personal interview and background check."
+            },
+            "onboarding": {
+                "title": "Onboarding",
+                "desc": "Attend our orientation program and start your first placement."
+            }
+        },
+        "openings": {
+            "title": "Current Openings",
+            "available": "12 Positions Available",
+            "applyNow": "Apply Now",
+            "jobs": {
+                "caseManager": {
+                    "role": "Case Manager",
+                    "dept": "CARE MANAGEMENT",
+                    "type": "Remote/Field",
+                    "desc": "Coordinate and manage individual care plans, ensuring our clients receive high-quality, personalized support and resources.",
+                    "term": "Full-time / Part-time",
+                    "location": "Sydney, NSW"
+                },
+                "rn": {
+                    "role": "Registered Nurse (RN)",
+                    "dept": "NURSING",
+                    "type": "Field-based",
+                    "desc": "Provide professional medical care, medication management, and patient assessments in home environments.",
+                    "term": "Full-time / Part-time",
+                    "location": "Sydney, NSW"
+                },
+                "supportWorker": {
+                    "role": "Support Worker",
+                    "dept": "SUPPORT",
+                    "type": "Flexible",
+                    "desc": "Assist with housekeeping, grocery shopping, and meal preparation for seniors living independently.",
+                    "term": "Part-time",
+                    "location": "Sydney, NSW"
+                }
+            }
+        }
+    },
+    "compliance": {
+        "heroBadge": "Verified Excellence",
+        "heroTitle": "HealthJoy Compliance & Quality Standards",
+        "heroDesc": "Our unwavering commitment to delivering safe, high-quality home care services through rigorous standards, continuous staff vetting, and regulatory excellence.",
+        "buttons": {
+            "viewCertifications": "View Certifications",
+            "contactQuality": "Contact Quality Team"
+        },
+        "commitment": {
+            "title": "Our Commitment to Quality",
+            "subtitle": "We adhere to the highest industry benchmarks to ensure your safety and wellbeing through a structured framework of excellence.",
+            "improvement": {
+                "title": "Continuous Improvement",
+                "desc": "Regular internal audits and external service reviews to constantly enhance our care delivery processes."
+            },
+            "personCentered": {
+                "title": "Person-Centered Care",
+                "desc": "Tailored care plans designed around individual needs, cultural backgrounds, and personal preferences."
+            },
+            "safetyFirst": {
+                "title": "Safety First",
+                "desc": "Rigorous risk management and incident prevention protocols monitored 24/7 by our dedicated team."
+            }
+        },
+        "regulatory": {
+            "title": "Regulatory Compliance",
+            "subtitle": "We are fully registered and compliant with Australian healthcare regulatory bodies, ensuring that our services meet the strict national standards for aged care and disability support.",
+            "points": {
+                "sah": "Support at Home Service Provider",
+                "mac": "My Aged Care Approved",
+                "acqs": "Aged Care Quality Standards Compliant"
+            },
+            "badges": {
+                "sah": "SUPPORT AT HOME",
+                "mac": "MY AGED CARE",
+                "quality": "QUALITY STANDARD",
+                "iso": "ISO 9001:2015"
+            }
+        },
+        "insurance": {
+            "title": "Insurance & Protection",
+            "subtitle": "Complete peace of mind through comprehensive insurance coverage for both our clients and staff.",
+            "points": {
+                "publicLiability": "Public Liability",
+                "publicLiabilityValue": "$20M Cover",
+                "professionalIndemnity": "Professional Indemnity",
+                "professionalIndemnityValue": "$10M Cover",
+                "workersComp": "Workers Compensation",
+                "workersCompValue": "Full Coverage"
+            }
+        },
+        "vetting": {
+            "title": "Rigorous Staff Vetting",
+            "subtitle": "We employ only the most qualified and trustworthy individuals after a multi-stage screening process.",
+            "points": {
+                "police": {
+                    "title": "Police Checks",
+                    "desc": "National criminal history clearance"
+                },
+                "wwcc": {
+                    "title": "WWCC",
+                    "desc": "Working with Children Check"
+                },
+                "screen": {
+                    "title": "Care Worker Screen",
+                    "desc": "Verification before care service"
+                },
+                "quals": {
+                    "title": "Quals Verification",
+                    "desc": "Certificate III/IV & Nursing Degrees"
+                }
+            }
+        },
+        "feedback": {
+            "title": "Feedback & Grievances",
+            "subtitle": "Your feedback is essential to our quality improvement. If you have any concerns or wish to raise a grievance, we have a clear, transparent process to ensure your voice is heard and issues are resolved promptly.",
+            "internal": {
+                "title": "Internal Resolution",
+                "desc": "Response within 48 hours",
+                "button": "Submit Feedback"
+            },
+            "advocacy": {
+                "title": "Advocacy Services",
+                "desc": "Independent support",
+                "button": "External Rights"
+            }
+        }
+    },
+    "linksPage": {
+        "heroTitle": "Helpful Links & Resources",
+        "heroDesc": "A centralized directory of government, health, and internal resources to support your care journey. Find everything you need to navigate home care with confidence.",
+        "gov": {
+            "title": "Government Resources",
+            "mac": {
+                "title": "My Aged Care",
+                "desc": "Access government-funded aged care services and find information on eligibility and support."
+            },
+            "ndis": {
+                "title": "NDIS Official Site",
+                "desc": "National Disability Insurance Scheme information, plan management, and participant support."
+            },
+            "health": {
+                "title": "Department of Health",
+                "desc": "Latest public health updates, clinical guidelines, and national health policies."
+            }
+        },
+        "health": {
+            "title": "Health & Wellness",
+            "dementia": {
+                "title": "Dementia Australia",
+                "desc": "Specialized support and resources for those living with dementia and their caregivers."
+            },
+            "eating": {
+                "title": "Healthy Eating Guides",
+                "desc": "Nutritional advice and meal planning specifically designed for elderly wellness."
+            }
+        },
+        "quickLinks": {
+            "title": "Our Quick Links",
+            "services": "Our Care Services",
+            "caregivers": "Caregiver Standards",
+            "careers": "Career Opportunities"
+        },
+        "legal": {
+            "title": "Legal & Compliance",
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Service",
+            "advocacy": "Consumer Rights & Advocacy"
+        }
+    },
+    "contact": {
+        "title": "Contact Us",
+        "desc": "We're here to help you and your loved ones with professional home care services. Reach out to our team today for personalized support.",
+        "officeHours": {
+            "title": "Office Hours",
+            "weekday": "Monday - Friday",
+            "weekdayHours": "9:00 AM - 5:00 PM",
+            "saturday": "Saturday",
+            "saturdayHours": "By Appointment",
+            "sunday": "Sunday",
+            "sundayHours": "CLOSED",
+            "emergency": "Emergency Support:",
+            "emergencyDesc": "For urgent care needs outside of regular hours, our phone line remains available 24/7."
+        },
+        "form": {
+            "title": "Send an Inquiry",
+            "labels": {
+                "fullName": "Full Name",
+                "email": "Email Address",
+                "phone": "Phone Number",
+                "subject": "Subject",
+                "message": "Message"
+            },
+            "placeholders": {
+                "fullName": "John Doe",
+                "email": "john@example.com",
+                "phone": "0493-334-910",
+                "message": "How can we help you?"
+            },
+            "subjects": {
+                "bookConsultation": "Book Consultation",
+                "general": "General Inquiry",
+                "support": "Support Services",
+                "career": "Career Opportunities",
+                "feedback": "Feedback",
+                "complaint": "Complaint and Dispute",
+                "other": "Other Inquiry"
+            },
+            "buttons": {
+                "sending": "Sending...",
+                "send": "Send Message"
+            },
+            "messages": {
+                "errorFill": "Please fill in your name and email.",
+                "success": "Inquiry submitted successfully!",
+                "errorSubmit": "Failed to submit. Please try again."
+            }
+        },
+        "cards": {
+            "phone": {
+                "title": "Phone",
+                "desc": "Available 24/7 for urgent care needs."
+            },
+            "email": {
+                "title": "Email",
+                "desc": "General inquiries and feedback."
+            },
+            "wechat": {
+                "title": "WeChat",
+                "id": "ID:"
+            }
+        }
+    },
+    "supportAtHome": {
+        "heroBadge": "Home Care Service Provider",
+        "heroTitle": "Empowering Your Independence with HealthJoy Home Care",
+        "heroDesc": "Navigating the home care policies can be complex, but you don't have to do it alone. HealthJoy Home Care is dedicated to simplifying the process, providing personalized plan management, coordination, and professional daily support tailored specifically to your unique life goals.",
+        "form": {
+            "title": "Enquire Now",
+            "desc": "Have questions? Fill out the form below and one of our HealthJoy specialists will contact you within 24 hours.",
+            "successTitle": "Thank You!",
+            "successDesc": "Your enquiry has been sent successfully. We'll be in touch soon.",
+            "sendAnother": "Send another enquiry",
+            "errorSubmit": "Failed to submit enquiry. Please try again.",
+            "labels": {
+                "fullName": "Full Name",
+                "email": "Email Address",
+                "phone": "Phone Number",
+                "address": "Home Address",
+                "service": "Service Required",
+                "message": "Message"
+            },
+            "placeholders": {
+                "fullName": "John Doe",
+                "email": "john@example.com",
+                "phone": "0493-334-910",
+                "address": "123 Example St, Suburb",
+                "message": "How can HealthJoy help you today?"
+            },
+            "services": {
+                "personal": "Personal Care",
+                "residential": "Residential Assistance",
+                "social": "Social Support",
+                "allied": "Allied Health & Therapeutic Services",
+                "assistive": "Assistive Technology",
+                "modifications": "Home Modifications",
+                "healthWellness": "Health&Wellness",
+                "mentalHealth": "Mental Health"
+            },
+            "buttons": {
+                "sending": "Sending...",
+                "submit": "Send Enquiry"
+            },
+            "privacy": "By submitting this form, you agree to the HealthJoy Home Care Privacy Policy."
+        },
+        "features": {
+            "title": "How HealthJoy Home Care Supports You",
+            "items": {
+                "1": {
+                    "title": "Plan Management",
+                    "desc": "Focus on your goals while HealthJoy Home Care handles the financial administration, provider payments, and budget tracking of your funding."
+                },
+                "2": {
+                    "title": "Support Coordination",
+                    "desc": "Our specialists help you understand your plan, find the right local services, and coordinate your supports for maximum impact on your wellbeing."
+                },
+                "3": {
+                    "title": "Daily Living Support",
+                    "desc": "HealthJoy Home Care provides practical assistance with personal care, household tasks, and community participation to help you live life your way."
+                }
+            }
+        },
+        "steps": {
+            "title": "Getting Started with HealthJoy Home Care",
+            "items": {
+                "1": {
+                    "title": "Initial Consultation",
+                    "desc": "Reach out to the HealthJoy team for a friendly, no-obligation chat about your current home care plan and your personal aspirations."
+                },
+                "2": {
+                    "title": "Tailored Service Plan",
+                    "desc": "We work together to design a support schedule that perfectly fits your lifestyle and maximizes the value of your funding."
+                },
+                "3": {
+                    "title": "Seamless Transition",
+                    "desc": "HealthJoy Home Care manages the paperwork and coordination with existing providers to ensure a smooth start to your new support services."
+                }
+            }
+        }
+    },
+    "applyNow": {
+        "heroBadge": "Join Our Team",
+        "heroTitle": "Apply Now",
+        "heroDesc": "Help us provide exceptional care. Join a team dedicated to making a real difference in people's lives every single day.",
+        "status": {
+            "missingFields": "Please fill in your name, email, and phone number.",
+            "success": "Application submitted successfully!",
+            "error": "Failed to submit. Please try again."
+        },
+        "sections": {
+            "personalInfo": "Personal Information",
+            "professionalBackground": "Professional Background",
+            "qualifications": "Qualifications & Skills",
+            "materials": "Application Materials"
+        },
+        "labels": {
+            "fullName": "Full Name",
+            "gender": "Gender",
+            "male": "Male",
+            "female": "Female",
+            "email": "Email Address",
+            "phone": "Phone Number",
+            "address": "Home Address",
+            "position": "Position Applied For",
+            "experience": "Care Support Experience",
+            "license": "Driver's License",
+            "certificates": "Certificates (Multiple choice)",
+            "languages": "Languages (Multiple choice)",
+            "skills": "Skills (Multiple choice)",
+            "coverLetter": "Cover Letter (Optional)",
+            "resume": "Submit Resume"
+        },
+        "placeholders": {
+            "fullName": "John Doe",
+            "email": "john@example.com",
+            "phone": "0400 000 000",
+            "address": "123 Care Street, Suburb, State, Postcode",
+            "position": "Select a position",
+            "experience": "Select experience level",
+            "license": "Select license type",
+            "coverLetter": "Tell us why you'd be a great fit for HealthJoy..."
+        },
+        "options": {
+            "positions": {
+                "caseManager": "Case Manager",
+                "nurse": "Registered Nurse",
+                "supportWorker": "Support Worker"
+            },
+            "experience": {
+                "0-1": "0-1 years",
+                "1-3": "1-3 years",
+                "3-5": "3-5 years",
+                "5+": "5+ years"
+            },
+            "license": {
+                "full": "Full License",
+                "p2": "Provisional P2",
+                "p1": "Provisional P1",
+                "international": "International",
+                "none": "No License"
+            },
+            "certificates": {
+                "support3": "Individual Support III",
+                "support4": "Individual Support IV",
+                "community": "Community Service",
+                "firstAid": "First Aid",
+                "others": "Others"
+            },
+            "languages": {
+                "mandarin": "Mandarin",
+                "cantonese": "Cantonese",
+                "shanghainese": "Shanghainese",
+                "english": "English",
+                "korean": "Korean",
+                "others": "Others"
+            },
+            "skills": {
+                "cooking": "Cooking",
+                "cleaning": "Cleaning",
+                "personalCare": "Personal Care",
+                "others": "Others"
+            }
+        },
+        "upload": {
+            "idle": "Drag & drop your resume or <span class=\"text-blue-600 font-bold\">browse files</span>",
+            "selected": "File selected - click to change",
+            "hint": "PDF, DOCX up to 10MB"
+        },
+        "buttons": {
+            "submit": "Submit Application",
+            "submitting": "Submitting..."
+        },
+        "footer": {
+            "agree": "By submitting, you agree to our <Link to=\"/terms\" class=\"text-slate-600 font-bold hover:underline\">Terms of Service</Link> and <Link to=\"/privacy\" class=\"text-slate-600 font-bold hover:underline\">Privacy Policy</Link>."
+        }
+    }
+}

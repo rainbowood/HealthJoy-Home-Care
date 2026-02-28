@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { TEAM, VALUES } from '../constants';
 import * as Icons from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const About: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col">
       {/* Hero */}
@@ -21,7 +23,7 @@ export const About: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-white text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight"
           >
-            Compassionate Care for Your <span className="text-blue-400">Loved Ones</span>
+            {t('about.heroTitle')} <span className="text-blue-400">{t('about.heroHighlight')}</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -29,7 +31,7 @@ export const About: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="text-white/90 text-xl md:text-2xl font-medium max-w-2xl mx-auto"
           >
-            Meet the team behind HealthJoy Home Care, dedicated to providing professional support and trust.
+            {t('about.heroSubtitle')}
           </motion.p>
         </div>
       </section>
@@ -37,13 +39,13 @@ export const About: React.FC = () => {
       {/* Story */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-black text-slate-900 mb-8">Our Story</h2>
+          <h2 className="text-4xl font-black text-slate-900 mb-8">{t('about.storyTitle')}</h2>
           <div className="space-y-8 text-slate-600 text-lg leading-relaxed">
             <p>
-              Founded with a mission to redefine home care, HealthJoy began as a small family initiative after our founders struggled to find high-quality, reliable support for their own elderly relatives. We realized that true care goes beyond medical tasks; it's about dignity, companionship, and preserving the comfort of home.
+              {t('about.storyP1')}
             </p>
             <p>
-              Today, we are a leading provider committed to quality care, ensuring every client feels like family through our personalized approach and professional expertise. From our humble beginnings to a team of over 100 dedicated caregivers, our heart remains in the same place: your home.
+              {t('about.storyP2')}
             </p>
           </div>
         </div>
@@ -53,8 +55,8 @@ export const About: React.FC = () => {
       <section className="py-24 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 text-center">
-            <h2 className="text-4xl font-black text-slate-900 mb-4">Our Values</h2>
-            <p className="text-slate-500 text-xl">The core principles that guide every interaction we have with our clients.</p>
+            <h2 className="text-4xl font-black text-slate-900 mb-4">{t('about.valuesTitle')}</h2>
+            <p className="text-slate-500 text-xl">{t('about.valuesSubtitle')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {VALUES.map((value, index) => {
@@ -71,8 +73,8 @@ export const About: React.FC = () => {
                   <div className="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-8">
                     {IconComponent && <IconComponent size={28} />}
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-slate-900">{value.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{value.description}</p>
+                  <h3 className="text-2xl font-bold mb-4 text-slate-900">{t(value.title)}</h3>
+                  <p className="text-slate-600 leading-relaxed">{t(value.description)}</p>
                 </motion.div>
               );
             })}
@@ -84,8 +86,8 @@ export const About: React.FC = () => {
       <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl font-black text-slate-900 mb-4">Meet Our Leadership Team</h2>
-            <p className="text-slate-500 text-xl max-w-2xl mx-auto">The visionaries and experienced professionals ensuring HealthJoy delivers on its promise of excellence every day.</p>
+            <h2 className="text-4xl font-black text-slate-900 mb-4">{t('about.teamTitle')}</h2>
+            <p className="text-slate-500 text-xl max-w-2xl mx-auto">{t('about.teamSubtitle')}</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {TEAM.map((member, index) => (
@@ -106,8 +108,8 @@ export const About: React.FC = () => {
                   />
                 </div>
                 <h4 className="text-xl font-bold text-slate-900">{member.name}</h4>
-                <p className="text-blue-600 font-bold text-sm mb-3">{member.role}</p>
-                <p className="text-slate-500 text-sm leading-relaxed px-4">{member.description}</p>
+                <p className="text-blue-600 font-bold text-sm mb-3">{t(member.role)}</p>
+                <p className="text-slate-500 text-sm leading-relaxed px-4">{t(member.description)}</p>
               </motion.div>
             ))}
           </div>

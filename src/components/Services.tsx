@@ -4,8 +4,10 @@ import { SERVICES } from '../constants';
 import { ArrowRight, CheckCircle2, Users, Settings } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import * as Icons from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Services: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -18,26 +20,26 @@ export const Services: React.FC = () => {
             className="flex flex-col gap-6"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-widest w-fit">
-              <CheckCircle2 size={12} /> Professional Support
+              <CheckCircle2 size={12} /> {t('servicesPage.heroBadge')}
             </div>
             <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tight">
-              Dedicated Home Care for Your Loved Ones
+              {t('servicesPage.heroTitle')}
             </h1>
             <p className="text-lg text-slate-600 leading-relaxed max-w-xl">
-              HealthJoy Home Care provides compassionate, professional support tailored to unique needs, helping individuals live independently with dignity, comfort, and safety in their own homes.
+              {t('servicesPage.heroDesc')}
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Link
                 to="/contact"
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-base hover:bg-blue-700 transition-all"
               >
-                Book a Consultation
+                {t('servicesPage.bookConsultation')}
               </Link>
               <Link
                 to="/services"
                 className="bg-white border border-slate-200 text-slate-700 px-8 py-4 rounded-lg font-bold text-base hover:bg-slate-50 transition-all"
               >
-                View Pricing
+                {t('servicesPage.viewPricing')}
               </Link>
             </div>
           </motion.div>
@@ -63,7 +65,7 @@ export const Services: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-slate-900 font-bold text-xl">500+</p>
-                  <p className="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Active Care Plans</p>
+                  <p className="text-slate-500 text-[10px] font-bold uppercase tracking-widest">{t('servicesPage.activePlans')}</p>
                 </div>
               </div>
             </div>
@@ -78,18 +80,18 @@ export const Services: React.FC = () => {
             <div className="flex-1 space-y-4">
               <div className="flex items-center gap-2 text-blue-600 font-bold text-sm uppercase tracking-widest">
                 <Settings size={18} />
-                <span>Tailored Care Plans</span>
+                <span>{t('servicesPage.personalizationTitle')}</span>
               </div>
-              <h3 className="text-3xl font-bold text-slate-900 tracking-tight">Every individual is unique</h3>
+              <h3 className="text-3xl font-bold text-slate-900 tracking-tight">{t('servicesPage.personalizationSubtitle')}</h3>
               <p className="text-slate-500 text-lg leading-relaxed max-w-2xl">
-                At HealthJoy Home Care, we believe in personalized care that respects individual preferences. Our team works closely with you to develop a plan that fits your lifestyle perfectly.
+                {t('servicesPage.personalizationDesc')}
               </p>
             </div>
             <Link
-              to="/caregivers"
+              to="/get-started"
               className="w-full md:w-auto bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-base hover:bg-blue-700 transition-all text-center"
             >
-              Personalization Options
+              {t('servicesPage.personalizationButton')}
             </Link>
           </div>
         </div>
@@ -98,8 +100,8 @@ export const Services: React.FC = () => {
       {/* Services Grid */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Specialized Services</h2>
-          <p className="text-slate-500 text-lg">Comprehensive support options to meet every stage of care requirements.</p>
+          <h2 className="text-4xl font-bold text-slate-900 mb-4">{t('servicesPage.specializedTitle')}</h2>
+          <p className="text-slate-500 text-lg">{t('servicesPage.specializedSubtitle')}</p>
         </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -127,16 +129,16 @@ export const Services: React.FC = () => {
                     <div className="text-blue-600">
                       {IconComponent && <IconComponent size={20} />}
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
+                    <h3 className="text-xl font-bold text-slate-900">{t(service.title)}</h3>
                   </div>
                   <p className="text-slate-500 text-sm leading-relaxed mb-8 grow">
-                    {service.description}
+                    {t(service.description)}
                   </p>
                   <Link
                     to="/contact"
                     className="inline-flex items-center text-blue-600 font-bold text-sm group/link"
                   >
-                    Learn More <ArrowRight size={16} className="ml-2 group-hover/link:translate-x-1 transition-transform" />
+                    {t('action.learnMore')} <ArrowRight size={16} className="ml-2 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </motion.div>

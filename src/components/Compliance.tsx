@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { 
-  ShieldCheck, 
-  TrendingUp, 
-  UserCircle, 
-  Shield, 
-  CheckCircle2, 
-  FileCheck, 
-  Users, 
+import {
+  ShieldCheck,
+  TrendingUp,
+  UserCircle,
+  Shield,
+  CheckCircle2,
+  FileCheck,
+  Users,
   Award,
   Stethoscope,
   Scale,
@@ -17,8 +17,10 @@ import {
 } from 'lucide-react';
 
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export const Compliance: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* Hero Section */}
@@ -27,28 +29,28 @@ export const Compliance: React.FC = () => {
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-widest">
               <ShieldCheck size={12} />
-              Verified Excellence
+              {t('compliance.heroBadge')}
             </div>
             <h1 className="text-4xl lg:text-6xl font-black text-slate-900 leading-[1.1] tracking-tight">
-              HealthJoy Compliance & Quality Standards
+              {t('compliance.heroTitle')}
             </h1>
             <p className="text-slate-500 text-lg leading-relaxed max-w-xl">
-              Our unwavering commitment to delivering safe, high-quality home care services through rigorous standards, continuous staff vetting, and regulatory excellence.
+              {t('compliance.heroDesc')}
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-sm hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20">
-                View Certifications
+                {t('compliance.buttons.viewCertifications')}
               </button>
               <button className="bg-white border border-slate-200 text-slate-600 px-8 py-4 rounded-lg font-bold text-sm hover:bg-slate-50 transition-all">
-                Contact Quality Team
+                {t('compliance.buttons.contactQuality')}
               </button>
             </div>
           </div>
           <div className="relative">
             <div className="aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1000" 
-                alt="Healthcare Professional" 
+              <img
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1000"
+                alt="Healthcare Professional"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -60,26 +62,26 @@ export const Compliance: React.FC = () => {
       {/* Commitment Section */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="max-w-3xl mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Our Commitment to Quality</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">{t('compliance.commitment.title')}</h2>
           <p className="text-slate-500 leading-relaxed">
-            We adhere to the highest industry benchmarks to ensure your safety and wellbeing through a structured framework of excellence.
+            {t('compliance.commitment.subtitle')}
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
-              title: 'Continuous Improvement',
-              desc: 'Regular internal audits and external service reviews to constantly enhance our care delivery processes.',
+              title: t('compliance.commitment.improvement.title'),
+              desc: t('compliance.commitment.improvement.desc'),
               icon: TrendingUp
             },
             {
-              title: 'Person-Centered Care',
-              desc: 'Tailored care plans designed around individual needs, cultural backgrounds, and personal preferences.',
+              title: t('compliance.commitment.personCentered.title'),
+              desc: t('compliance.commitment.personCentered.desc'),
               icon: UserCircle
             },
             {
-              title: 'Safety First',
-              desc: 'Rigorous risk management and incident prevention protocols monitored 24/7 by our dedicated team.',
+              title: t('compliance.commitment.safetyFirst.title'),
+              desc: t('compliance.commitment.safetyFirst.desc'),
               icon: Shield
             }
           ].map((item, i) => (
@@ -99,15 +101,15 @@ export const Compliance: React.FC = () => {
         <div className="bg-[#0A1128] rounded-[40px] p-8 lg:p-20 overflow-hidden relative">
           <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
             <div className="space-y-8">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white">Regulatory Compliance</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white">{t('compliance.regulatory.title')}</h2>
               <p className="text-slate-400 leading-relaxed">
-                We are fully registered and compliant with Australian healthcare regulatory bodies, ensuring that our services meet the strict national standards for aged care and disability support.
+                {t('compliance.regulatory.subtitle')}
               </p>
               <div className="space-y-4">
                 {[
-                  'Support at Home Service Provider',
-                  'My Aged Care Approved',
-                  'Aged Care Quality Standards Compliant'
+                  t('compliance.regulatory.points.sah'),
+                  t('compliance.regulatory.points.mac'),
+                  t('compliance.regulatory.points.acqs')
                 ].map((text, i) => (
                   <div key={i} className="flex items-center gap-3 text-white">
                     <CheckCircle2 size={20} className="text-blue-500" />
@@ -118,10 +120,10 @@ export const Compliance: React.FC = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: 'SUPPORT AT HOME', icon: ShieldCheck },
-                { label: 'MY AGED CARE', icon: Users },
-                { label: 'QUALITY STANDARD', icon: Award },
-                { label: 'ISO 9001:2015', icon: FileCheck }
+                { label: t('compliance.regulatory.badges.sah'), icon: ShieldCheck },
+                { label: t('compliance.regulatory.badges.mac'), icon: Users },
+                { label: t('compliance.regulatory.badges.quality'), icon: Award },
+                { label: t('compliance.regulatory.badges.iso'), icon: FileCheck }
               ].map((item, i) => (
                 <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 text-center group hover:bg-white/10 transition-colors">
                   <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-[#0A1128]">
@@ -143,16 +145,16 @@ export const Compliance: React.FC = () => {
             <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center">
               <Shield size={24} />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900">Insurance & Protection</h3>
+            <h3 className="text-2xl font-bold text-slate-900">{t('compliance.insurance.title')}</h3>
           </div>
           <p className="text-slate-500 text-sm mb-8">
-            Complete peace of mind through comprehensive insurance coverage for both our clients and staff.
+            {t('compliance.insurance.subtitle')}
           </p>
           <div className="space-y-4">
             {[
-              { label: 'Public Liability', value: '$20M Cover' },
-              { label: 'Professional Indemnity', value: '$10M Cover' },
-              { label: 'Workers Compensation', value: 'Full Coverage' }
+              { label: t('compliance.insurance.points.publicLiability'), value: t('compliance.insurance.points.publicLiabilityValue') },
+              { label: t('compliance.insurance.points.professionalIndemnity'), value: t('compliance.insurance.points.professionalIndemnityValue') },
+              { label: t('compliance.insurance.points.workersComp'), value: t('compliance.insurance.points.workersCompValue') }
             ].map((item, i) => (
               <div key={i} className="flex items-center justify-between p-5 bg-slate-50 rounded-xl">
                 <span className="font-bold text-slate-900">{item.label}</span>
@@ -168,17 +170,17 @@ export const Compliance: React.FC = () => {
             <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center">
               <UserCircle size={24} />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900">Rigorous Staff Vetting</h3>
+            <h3 className="text-2xl font-bold text-slate-900">{t('compliance.vetting.title')}</h3>
           </div>
           <p className="text-slate-500 text-sm mb-8">
-            We employ only the most qualified and trustworthy individuals after a multi-stage screening process.
+            {t('compliance.vetting.subtitle')}
           </p>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { title: 'Police Checks', desc: 'National criminal history clearance', icon: Scale },
-              { title: 'WWCC', desc: 'Working with Children Check', icon: Users },
-              { title: 'Care Worker Screen', desc: 'Verification before care service', icon: ShieldCheck },
-              { title: 'Quals Verification', desc: 'Certificate III/IV & Nursing Degrees', icon: Stethoscope }
+              { title: t('compliance.vetting.points.police.title'), desc: t('compliance.vetting.points.police.desc'), icon: Scale },
+              { title: t('compliance.vetting.points.wwcc.title'), desc: t('compliance.vetting.points.wwcc.desc'), icon: Users },
+              { title: t('compliance.vetting.points.screen.title'), desc: t('compliance.vetting.points.screen.desc'), icon: ShieldCheck },
+              { title: t('compliance.vetting.points.quals.title'), desc: t('compliance.vetting.points.quals.desc'), icon: Stethoscope }
             ].map((item, i) => (
               <div key={i} className="p-5 border border-slate-100 rounded-xl space-y-3">
                 <div className="text-blue-600">
@@ -198,26 +200,26 @@ export const Compliance: React.FC = () => {
           <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-8 shadow-xl shadow-blue-600/20">
             <MessageSquare size={32} />
           </div>
-          <h2 className="text-3xl lg:text-4xl font-black text-slate-900">Feedback & Grievances</h2>
+          <h2 className="text-3xl lg:text-4xl font-black text-slate-900">{t('compliance.feedback.title')}</h2>
           <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
-            Your feedback is essential to our quality improvement. If you have any concerns or wish to raise a grievance, we have a clear, transparent process to ensure your voice is heard and issues are resolved promptly.
+            {t('compliance.feedback.subtitle')}
           </p>
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto pt-8">
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-4">
-              <h4 className="font-bold text-blue-600">Internal Resolution</h4>
-              <p className="text-xs text-slate-400">Response within 48 hours</p>
-              <Link 
+              <h4 className="font-bold text-blue-600">{t('compliance.feedback.internal.title')}</h4>
+              <p className="text-xs text-slate-400">{t('compliance.feedback.internal.desc')}</p>
+              <Link
                 to="/contact"
                 className="block w-full py-3 border-2 border-blue-600 text-blue-600 rounded-xl font-bold text-sm hover:bg-blue-600 hover:text-white transition-all text-center"
               >
-                Submit Feedback
+                {t('compliance.feedback.internal.button')}
               </Link>
             </div>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-4">
-              <h4 className="font-bold text-blue-600">Advocacy Services</h4>
-              <p className="text-xs text-slate-400">Independent support</p>
+              <h4 className="font-bold text-blue-600">{t('compliance.feedback.advocacy.title')}</h4>
+              <p className="text-xs text-slate-400">{t('compliance.feedback.advocacy.desc')}</p>
               <button className="w-full py-3 border-2 border-blue-600 text-blue-600 rounded-xl font-bold text-sm hover:bg-blue-600 hover:text-white transition-all">
-                External Rights
+                {t('compliance.feedback.advocacy.button')}
               </button>
             </div>
           </div>

@@ -4,18 +4,20 @@ import { HeartPulse, Globe, FileText, Briefcase, Award, Upload, Phone, Mail, Map
 import { Link } from 'react-router-dom';
 import { CONTACT_INFO } from '../constants';
 import { submitApplication } from '../api';
+import { useTranslation } from 'react-i18next';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
 export const ApplyNow: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [fullName, setFullName] = useState('');
   const [gender, setGender] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
-  const [position, setPosition] = useState('Select a position');
-  const [experience, setExperience] = useState('Select experience level');
-  const [driversLicense, setDriversLicense] = useState('Select license type');
+  const [position, setPosition] = useState('');
+  const [experience, setExperience] = useState('');
+  const [driversLicense, setDriversLicense] = useState('');
   const [certificates, setCertificates] = useState<string[]>([]);
   const [languages, setLanguages] = useState<string[]>([]);
   const [skills, setSkills] = useState<string[]>([]);
@@ -32,7 +34,7 @@ export const ApplyNow: React.FC = () => {
     e.preventDefault();
     if (!fullName || !email || !phone) {
       setStatus('error');
-      setStatusMessage('Please fill in your name, email, and phone number.');
+      setStatusMessage(t('applyNow.status.missingFields'));
       return;
     }
     setStatus('submitting');
@@ -56,16 +58,16 @@ export const ApplyNow: React.FC = () => {
 
       const res = await submitApplication(formData);
       setStatus('success');
-      setStatusMessage(res.message || 'Application submitted successfully!');
+      setStatusMessage(t('applyNow.status.success'));
       // Reset form
       setFullName('');
       setGender('');
       setEmail('');
       setPhone('');
       setAddress('');
-      setPosition('Select a position');
-      setExperience('Select experience level');
-      setDriversLicense('Select license type');
+      setPosition('');
+      setExperience('');
+      setDriversLicense('');
       setCertificates([]);
       setLanguages([]);
       setSkills([]);
@@ -73,7 +75,7 @@ export const ApplyNow: React.FC = () => {
       setResume(null);
     } catch (err: any) {
       setStatus('error');
-      setStatusMessage(err.message || 'Failed to submit. Please try again.');
+      setStatusMessage(err.message || t('applyNow.status.error'));
     }
   };
 
@@ -83,11 +85,11 @@ export const ApplyNow: React.FC = () => {
       <section className="py-12 lg:py-16 px-6 text-center">
         <div className="max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-widest">
-            Join Our Team
+            {t('applyNow.heroBadge')}
           </div>
-          <h1 className="text-4xl lg:text-6xl font-black text-slate-900 tracking-tight">Apply Now</h1>
+          <h1 className="text-4xl lg:text-6xl font-black text-slate-900 tracking-tight">{t('applyNow.heroTitle')}</h1>
           <p className="text-slate-500 text-lg leading-relaxed">
-            Help us provide exceptional care. Join a team dedicated to making a real difference in people's lives every single day.
+            {t('applyNow.heroDesc')}
           </p>
         </div>
       </section>
@@ -116,38 +118,38 @@ export const ApplyNow: React.FC = () => {
             <div className="space-y-8">
               <div className="flex items-center gap-3 text-blue-600">
                 <UserIcon size={18} />
-                <h3 className="text-xs font-black uppercase tracking-[0.2em]">Personal Information</h3>
+                <h3 className="text-xs font-black uppercase tracking-[0.2em]">{t('applyNow.sections.personalInfo')}</h3>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">Full Name</label>
-                  <input type="text" placeholder="John Doe" value={fullName} onChange={(e) => setFullName(e.target.value)} className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all" />
+                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">{t('applyNow.labels.fullName')}</label>
+                  <input type="text" placeholder={t('applyNow.placeholders.fullName')} value={fullName} onChange={(e) => setFullName(e.target.value)} className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all" />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">Gender</label>
+                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">{t('applyNow.labels.gender')}</label>
                   <div className="flex items-center gap-6 h-[54px]">
                     <label className="flex items-center gap-2 cursor-pointer group">
                       <input type="radio" name="gender" value="Male" checked={gender === 'Male'} onChange={(e) => setGender(e.target.value)} className="w-4 h-4 text-blue-600 border-slate-200 focus:ring-blue-600/20" />
-                      <span className="text-sm text-slate-600 group-hover:text-slate-900 transition-colors">Male</span>
+                      <span className="text-sm text-slate-600 group-hover:text-slate-900 transition-colors">{t('applyNow.labels.male')}</span>
                     </label>
                     <label className="flex items-center gap-2 cursor-pointer group">
                       <input type="radio" name="gender" value="Female" checked={gender === 'Female'} onChange={(e) => setGender(e.target.value)} className="w-4 h-4 text-blue-600 border-slate-200 focus:ring-blue-600/20" />
-                      <span className="text-sm text-slate-600 group-hover:text-slate-900 transition-colors">Female</span>
+                      <span className="text-sm text-slate-600 group-hover:text-slate-900 transition-colors">{t('applyNow.labels.female')}</span>
                     </label>
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">Email Address</label>
-                  <input type="email" placeholder="example@healthjoy.com" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all" />
+                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">{t('applyNow.labels.email')}</label>
+                  <input type="email" placeholder={t('applyNow.placeholders.email')} value={email} onChange={(e) => setEmail(e.target.value)} className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all" />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">Phone Number</label>
-                  <input type="tel" placeholder="0400 000 000" value={phone} onChange={(e) => setPhone(e.target.value)} className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all" />
+                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">{t('applyNow.labels.phone')}</label>
+                  <input type="tel" placeholder={t('applyNow.placeholders.phone')} value={phone} onChange={(e) => setPhone(e.target.value)} className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all" />
                 </div>
                 <div className="md:col-span-2 space-y-2">
-                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">Home Address</label>
-                  <input type="text" placeholder="123 Care Street, Suburb, State, Postcode" value={address} onChange={(e) => setAddress(e.target.value)} className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all" />
+                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">{t('applyNow.labels.address')}</label>
+                  <input type="text" placeholder={t('applyNow.placeholders.address')} value={address} onChange={(e) => setAddress(e.target.value)} className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all" />
                 </div>
               </div>
             </div>
@@ -156,38 +158,38 @@ export const ApplyNow: React.FC = () => {
             <div className="space-y-8">
               <div className="flex items-center gap-3 text-blue-600">
                 <Briefcase size={18} />
-                <h3 className="text-xs font-black uppercase tracking-[0.2em]">Professional Background</h3>
+                <h3 className="text-xs font-black uppercase tracking-[0.2em]">{t('applyNow.sections.professionalBackground')}</h3>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">Position Applied For</label>
+                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">{t('applyNow.labels.position')}</label>
                   <select value={position} onChange={(e) => setPosition(e.target.value)} className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all appearance-none">
-                    <option>Select a position</option>
-                    <option>Case Manager</option>
-                    <option>Registered Nurse</option>
-                    <option>Support Worker</option>
+                    <option value="">{t('applyNow.placeholders.position')}</option>
+                    <option value="Case Manager">{t('applyNow.options.positions.caseManager')}</option>
+                    <option value="Registered Nurse">{t('applyNow.options.positions.nurse')}</option>
+                    <option value="Support Worker">{t('applyNow.options.positions.supportWorker')}</option>
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">Care Support Experience</label>
+                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">{t('applyNow.labels.experience')}</label>
                   <select value={experience} onChange={(e) => setExperience(e.target.value)} className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all appearance-none">
-                    <option>Select experience level</option>
-                    <option>0-1 years</option>
-                    <option>1-3 years</option>
-                    <option>3-5 years</option>
-                    <option>5+ years</option>
+                    <option value="">{t('applyNow.placeholders.experience')}</option>
+                    <option value="0-1 years">{t('applyNow.options.experience.0-1')}</option>
+                    <option value="1-3 years">{t('applyNow.options.experience.1-3')}</option>
+                    <option value="3-5 years">{t('applyNow.options.experience.3-5')}</option>
+                    <option value="5+ years">{t('applyNow.options.experience.5+')}</option>
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">Driver's License</label>
+                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">{t('applyNow.labels.license')}</label>
                   <select value={driversLicense} onChange={(e) => setDriversLicense(e.target.value)} className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all appearance-none">
-                    <option>Select license type</option>
-                    <option>Full License</option>
-                    <option>Provisional P2</option>
-                    <option>Provisional P1</option>
-                    <option>International</option>
-                    <option>No License</option>
+                    <option value="">{t('applyNow.placeholders.license')}</option>
+                    <option value="Full License">{t('applyNow.options.license.full')}</option>
+                    <option value="Provisional P2">{t('applyNow.options.license.p2')}</option>
+                    <option value="Provisional P1">{t('applyNow.options.license.p1')}</option>
+                    <option value="International">{t('applyNow.options.license.international')}</option>
+                    <option value="No License">{t('applyNow.options.license.none')}</option>
                   </select>
                 </div>
               </div>
@@ -197,56 +199,74 @@ export const ApplyNow: React.FC = () => {
             <div className="space-y-8">
               <div className="flex items-center gap-3 text-blue-600">
                 <Award size={18} />
-                <h3 className="text-xs font-black uppercase tracking-[0.2em]">Qualifications & Skills</h3>
+                <h3 className="text-xs font-black uppercase tracking-[0.2em]">{t('applyNow.sections.qualifications')}</h3>
               </div>
 
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">Certificates (Multiple choice)</label>
+                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">{t('applyNow.labels.certificates')}</label>
                   <div className="flex flex-wrap gap-3">
-                    {['Individual Support III', 'Individual Support IV', 'Community Service', 'First Aid', 'Others'].map(cert => (
-                      <label key={cert} className="flex items-center gap-2 bg-white border border-slate-100 rounded-xl px-4 py-3 cursor-pointer hover:border-blue-600/30 transition-all group">
+                    {[
+                      { id: 'Individual Support III', label: t('applyNow.options.certificates.support3') },
+                      { id: 'Individual Support IV', label: t('applyNow.options.certificates.support4') },
+                      { id: 'Community Service', label: t('applyNow.options.certificates.community') },
+                      { id: 'First Aid', label: t('applyNow.options.certificates.firstAid') },
+                      { id: 'Others', label: t('applyNow.options.certificates.others') }
+                    ].map(cert => (
+                      <label key={cert.id} className="flex items-center gap-2 bg-white border border-slate-100 rounded-xl px-4 py-3 cursor-pointer hover:border-blue-600/30 transition-all group">
                         <input
                           type="checkbox"
-                          checked={certificates.includes(cert)}
-                          onChange={() => toggleArrayItem(certificates, setCertificates, cert)}
+                          checked={certificates.includes(cert.id)}
+                          onChange={() => toggleArrayItem(certificates, setCertificates, cert.id)}
                           className="w-4 h-4 rounded text-blue-600 border-slate-200 focus:ring-blue-600/20"
                         />
-                        <span className="text-sm text-slate-600 group-hover:text-slate-900">{cert}</span>
+                        <span className="text-sm text-slate-600 group-hover:text-slate-900">{cert.label}</span>
                       </label>
                     ))}
                   </div>
                 </div>
 
                 <div className="space-y-4">
-                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">Languages (Multiple choice)</label>
+                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">{t('applyNow.labels.languages')}</label>
                   <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
-                    {['Mandarin', 'Cantonese', 'Shanghainese', 'English', 'Korean', 'Others'].map(lang => (
-                      <label key={lang} className="flex flex-col items-center justify-center gap-2 bg-white border border-slate-100 rounded-xl p-4 cursor-pointer hover:border-blue-600/30 transition-all group">
+                    {[
+                      { id: 'Mandarin', label: t('applyNow.options.languages.mandarin') },
+                      { id: 'Cantonese', label: t('applyNow.options.languages.cantonese') },
+                      { id: 'Shanghainese', label: t('applyNow.options.languages.shanghainese') },
+                      { id: 'English', label: t('applyNow.options.languages.english') },
+                      { id: 'Korean', label: t('applyNow.options.languages.korean') },
+                      { id: 'Others', label: t('applyNow.options.languages.others') }
+                    ].map(lang => (
+                      <label key={lang.id} className="flex flex-col items-center justify-center gap-2 bg-white border border-slate-100 rounded-xl p-4 cursor-pointer hover:border-blue-600/30 transition-all group">
                         <input
                           type="checkbox"
-                          checked={languages.includes(lang)}
-                          onChange={() => toggleArrayItem(languages, setLanguages, lang)}
+                          checked={languages.includes(lang.id)}
+                          onChange={() => toggleArrayItem(languages, setLanguages, lang.id)}
                           className="w-4 h-4 rounded text-blue-600 border-slate-200 focus:ring-blue-600/20"
                         />
-                        <span className="text-xs text-slate-600 group-hover:text-slate-900">{lang}</span>
+                        <span className="text-[10px] text-center text-slate-600 group-hover:text-slate-900 leading-tight">{lang.label}</span>
                       </label>
                     ))}
                   </div>
                 </div>
 
                 <div className="space-y-4">
-                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">Skills (Multiple choice)</label>
+                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">{t('applyNow.labels.skills')}</label>
                   <div className="flex flex-wrap gap-3">
-                    {['Cooking', 'Cleaning', 'Personal Care', 'Others'].map(skill => (
-                      <label key={skill} className="flex items-center gap-2 bg-white border border-slate-100 rounded-xl px-6 py-3 cursor-pointer hover:border-blue-600/30 transition-all group">
+                    {[
+                      { id: 'Cooking', label: t('applyNow.options.skills.cooking') },
+                      { id: 'Cleaning', label: t('applyNow.options.skills.cleaning') },
+                      { id: 'Personal Care', label: t('applyNow.options.skills.personalCare') },
+                      { id: 'Others', label: t('applyNow.options.skills.others') }
+                    ].map(skill => (
+                      <label key={skill.id} className="flex items-center gap-2 bg-white border border-slate-100 rounded-xl px-6 py-3 cursor-pointer hover:border-blue-600/30 transition-all group">
                         <input
                           type="checkbox"
-                          checked={skills.includes(skill)}
-                          onChange={() => toggleArrayItem(skills, setSkills, skill)}
+                          checked={skills.includes(skill.id)}
+                          onChange={() => toggleArrayItem(skills, setSkills, skill.id)}
                           className="w-4 h-4 rounded text-blue-600 border-slate-200 focus:ring-blue-600/20"
                         />
-                        <span className="text-sm text-slate-600 group-hover:text-slate-900">{skill}</span>
+                        <span className="text-sm text-slate-600 group-hover:text-slate-900">{skill.label}</span>
                       </label>
                     ))}
                   </div>
@@ -258,17 +278,17 @@ export const ApplyNow: React.FC = () => {
             <div className="space-y-8">
               <div className="flex items-center gap-3 text-blue-600">
                 <FileText size={18} />
-                <h3 className="text-xs font-black uppercase tracking-[0.2em]">Application Materials</h3>
+                <h3 className="text-xs font-black uppercase tracking-[0.2em]">{t('applyNow.sections.materials')}</h3>
               </div>
 
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">Cover Letter (Optional)</label>
-                  <textarea rows={6} placeholder="Tell us why you'd be a great fit for HealthJoy..." value={coverLetter} onChange={(e) => setCoverLetter(e.target.value)} className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all resize-none"></textarea>
+                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">{t('applyNow.labels.coverLetter')}</label>
+                  <textarea rows={6} placeholder={t('applyNow.placeholders.coverLetter')} value={coverLetter} onChange={(e) => setCoverLetter(e.target.value)} className="w-full bg-[#F8FAFC] border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all resize-none"></textarea>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">Submit Resume</label>
+                  <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider">{t('applyNow.labels.resume')}</label>
                   <input
                     type="file"
                     id="resume-upload"
@@ -291,12 +311,12 @@ export const ApplyNow: React.FC = () => {
                       {resume ? (
                         <>
                           <p className="text-sm text-blue-600 font-bold">{resume.name}</p>
-                          <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">File selected - click to change</p>
+                          <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">{t('applyNow.upload.selected')}</p>
                         </>
                       ) : (
                         <>
-                          <p className="text-sm text-slate-600">Drag & drop your resume or <span className="text-blue-600 font-bold">browse files</span></p>
-                          <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">PDF, DOCX up to 10MB</p>
+                          <p className="text-sm text-slate-600" dangerouslySetInnerHTML={{ __html: t('applyNow.upload.idle') }}></p>
+                          <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">{t('applyNow.upload.hint')}</p>
                         </>
                       )}
                     </div>
@@ -314,14 +334,35 @@ export const ApplyNow: React.FC = () => {
                 {status === 'submitting' ? (
                   <>
                     <Loader2 size={20} className="animate-spin" />
-                    Submitting...
+                    {t('applyNow.buttons.submitting')}
                   </>
                 ) : (
-                  'Submit Application'
+                  t('applyNow.buttons.submit')
                 )}
               </button>
               <p className="text-[11px] text-slate-400 text-center leading-relaxed">
-                By submitting, you agree to our <Link to="/terms" className="text-slate-600 font-bold hover:underline">Terms of Service</Link> and <Link to="/privacy" className="text-slate-600 font-bold hover:underline">Privacy Policy</Link>.
+                {i18n.language.startsWith('zh') || i18n.language === 'ja' || i18n.language === 'ko' ? (
+                  <span>
+                    {i18n.language === 'zh-TW' ? '提交申請即表示您同意我們的 ' :
+                      i18n.language === 'ja' ? '応募を送信することで、当社の ' :
+                        i18n.language === 'ko' ? '지원서를 제출함으로써 귀하는 당사의 ' : '提交申请即表示您同意我们的 '}
+                    <Link to="/terms" className="text-slate-600 font-bold hover:underline">
+                      {i18n.language === 'zh-TW' ? '服務條款' :
+                        i18n.language === 'ja' ? '利用規約' :
+                          i18n.language === 'ko' ? '이용 약관' : '服务条款'}
+                    </Link>
+                    {i18n.language === 'zh-TW' ? '和' :
+                      i18n.language === 'ja' ? ' および ' :
+                        i18n.language === 'ko' ? ' 및 ' : '和'}
+                    <Link to="/privacy" className="text-slate-600 font-bold hover:underline">
+                      {i18n.language === 'zh-TW' ? '隱私政策' :
+                        i18n.language === 'ja' ? 'プライバシーポリシー' :
+                          i18n.language === 'ko' ? '개인정보 처리방침' : '隐私政策'}
+                    </Link>。
+                  </span>
+                ) : (
+                  <span>By submitting, you agree to our <Link to="/terms" className="text-slate-600 font-bold hover:underline">Terms of Service</Link> and <Link to="/privacy" className="text-slate-600 font-bold hover:underline">Privacy Policy</Link>.</span>
+                )}
               </p>
             </div>
           </form>

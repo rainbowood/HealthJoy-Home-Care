@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Calendar, ClipboardCheck, Heart, ChevronDown, Loader2, CheckCircle, XCircle } from 'lucide-react';
 import { submitGetStarted } from '../api';
+import { useTranslation } from 'react-i18next';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
 export const GetStarted: React.FC = () => {
+  const { t } = useTranslation();
   const [careFor, setCareFor] = useState('');
   const [supportType, setSupportType] = useState('Select a service...');
   const [bestTime, setBestTime] = useState('Anytime');
@@ -18,7 +20,7 @@ export const GetStarted: React.FC = () => {
     e.preventDefault();
     if (!fullName || !phone) {
       setStatus('error');
-      setStatusMessage('Please fill in your name and phone number.');
+      setStatusMessage(t('getStarted.messages.errorFill'));
       return;
     }
     setStatus('submitting');
@@ -31,7 +33,7 @@ export const GetStarted: React.FC = () => {
         phone,
       });
       setStatus('success');
-      setStatusMessage(res.message || 'Care request submitted successfully!');
+      setStatusMessage(res.message || t('getStarted.messages.successSubmit'));
       setCareFor('');
       setSupportType('Select a service...');
       setBestTime('Anytime');
@@ -39,7 +41,7 @@ export const GetStarted: React.FC = () => {
       setPhone('');
     } catch (err: any) {
       setStatus('error');
-      setStatusMessage(err.message || 'Failed to submit. Please try again.');
+      setStatusMessage(err.message || t('getStarted.messages.errorSubmit'));
     }
   };
 
@@ -49,10 +51,10 @@ export const GetStarted: React.FC = () => {
       <section className="py-16 lg:py-24 px-6 text-center bg-slate-50/50">
         <div className="max-w-4xl mx-auto space-y-6">
           <h1 className="text-4xl lg:text-6xl font-black text-slate-900 tracking-tight">
-            Start Your Care Journey
+            {t('getStarted.heroTitle')}
           </h1>
           <p className="text-slate-500 text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto">
-            Follow our simple three-step process to receive the professional, compassionate home care you deserve.
+            {t('getStarted.heroDesc')}
           </p>
         </div>
 
@@ -64,18 +66,18 @@ export const GetStarted: React.FC = () => {
           <div className="grid lg:grid-cols-3 gap-12 relative z-10">
             {[
               {
-                step: '1. Initial Consultation',
-                desc: 'Book a free talk with our experts to discuss your specific needs.',
+                step: t('getStarted.steps.1.title'),
+                desc: t('getStarted.steps.1.desc'),
                 icon: Calendar,
               },
               {
-                step: '2. Care Plan Design',
-                desc: 'Receive a tailored support strategy designed specifically for your lifestyle.',
+                step: t('getStarted.steps.2.title'),
+                desc: t('getStarted.steps.2.desc'),
                 icon: ClipboardCheck,
               },
               {
-                step: '3. Commencing Care',
-                desc: 'Meet your dedicated professional caregiver and begin your journey to better living.',
+                step: t('getStarted.steps.3.title'),
+                desc: t('getStarted.steps.3.desc'),
                 icon: Heart,
               }
             ].map((item, i) => (
@@ -98,9 +100,9 @@ export const GetStarted: React.FC = () => {
       {/* Quick Start Form Section */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-black text-slate-900 mb-4">Quick Start Form</h2>
+          <h2 className="text-4xl font-black text-slate-900 mb-4">{t('getStarted.formTitle')}</h2>
           <p className="text-slate-500 text-lg">
-            Tell us a bit about what you're looking for and we'll handle the rest.
+            {t('getStarted.formDesc')}
           </p>
         </div>
 
@@ -124,7 +126,7 @@ export const GetStarted: React.FC = () => {
             <form className="space-y-8" onSubmit={handleSubmit}>
               {/* Who is this care for? */}
               <div className="space-y-4">
-                <label className="block text-sm font-bold text-slate-900">Who is this care for?</label>
+                <label className="block text-sm font-bold text-slate-900">{t('getStarted.labels.careFor')}</label>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {['Self', 'Family', 'Friend'].map((option) => (
                     <label
@@ -140,9 +142,9 @@ export const GetStarted: React.FC = () => {
                         className="w-4 h-4 text-blue-600 border-slate-300 focus:ring-blue-600"
                       />
                       <div className="ml-4">
-                        <span className="block text-sm font-bold text-slate-900">{option}</span>
+                        <span className="block text-sm font-bold text-slate-900">{t(`getStarted.options.careFor.${option.toLowerCase()}`)}</span>
                         <span className="block text-[10px] text-slate-400">
-                          {option === 'Self' ? 'For myself' : option === 'Family' ? 'For a relative' : 'For a neighbor'}
+                          {t(`getStarted.options.careFor.${option.toLowerCase()}Desc`)}
                         </span>
                       </div>
                     </label>
@@ -153,21 +155,21 @@ export const GetStarted: React.FC = () => {
               {/* Support & Time */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="block text-sm font-bold text-slate-900">Type of Support Needed</label>
+                  <label className="block text-sm font-bold text-slate-900">{t('getStarted.labels.supportType')}</label>
                   <div className="relative">
                     <select
                       value={supportType}
                       onChange={(e) => setSupportType(e.target.value)}
                       className="w-full bg-white border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all appearance-none cursor-pointer"
                     >
-                      <option>Select a service...</option>
-                      <option>Support at Home(HCP)</option>
-                      <option>NDIS</option>
-                      <option>Support at Home(HCP) Package Upgrade</option>
-                      <option>Care Services</option>
-                      <option>Application Reassessment</option>
-                      <option>Non-Gov funded Support</option>
-                      <option>Other Support</option>
+                      <option value="Select a service...">{t('getStarted.options.supportTypePlaceholder')}</option>
+                      <option value="Support at Home(HCP)">{t('getStarted.options.services.hcp')}</option>
+                      <option value="NDIS">{t('getStarted.options.services.ndis')}</option>
+                      <option value="Support at Home(HCP) Package Upgrade">{t('getStarted.options.services.hcpUpgrade')}</option>
+                      <option value="Care Services">{t('getStarted.options.services.careServices')}</option>
+                      <option value="Application Reassessment">{t('getStarted.options.services.reassessment')}</option>
+                      <option value="Non-Gov funded Support">{t('getStarted.options.services.nonGov')}</option>
+                      <option value="Other Support">{t('getStarted.options.services.other')}</option>
                     </select>
                     <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none text-slate-400">
                       <ChevronDown size={18} />
@@ -175,17 +177,17 @@ export const GetStarted: React.FC = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-sm font-bold text-slate-900">Best Time to Call</label>
+                  <label className="block text-sm font-bold text-slate-900">{t('getStarted.labels.bestTime')}</label>
                   <div className="relative">
                     <select
                       value={bestTime}
                       onChange={(e) => setBestTime(e.target.value)}
                       className="w-full bg-white border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all appearance-none cursor-pointer"
                     >
-                      <option>Anytime</option>
-                      <option>Morning</option>
-                      <option>Afternoon</option>
-                      <option>Evening</option>
+                      <option value="Anytime">{t('getStarted.options.time.anytime')}</option>
+                      <option value="Morning">{t('getStarted.options.time.morning')}</option>
+                      <option value="Afternoon">{t('getStarted.options.time.afternoon')}</option>
+                      <option value="Evening">{t('getStarted.options.time.evening')}</option>
                     </select>
                     <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none text-slate-400">
                       <ChevronDown size={18} />
@@ -197,20 +199,20 @@ export const GetStarted: React.FC = () => {
               {/* Personal Info */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="block text-sm font-bold text-slate-900">Full Name</label>
+                  <label className="block text-sm font-bold text-slate-900">{t('getStarted.labels.fullName')}</label>
                   <input
                     type="text"
-                    placeholder="John Doe"
+                    placeholder={t('getStarted.placeholders.fullName')}
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     className="w-full bg-white border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-sm font-bold text-slate-900">Phone Number</label>
+                  <label className="block text-sm font-bold text-slate-900">{t('getStarted.labels.phone')}</label>
                   <input
                     type="tel"
-                    placeholder="0493-334-910"
+                    placeholder={t('getStarted.placeholders.phone')}
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     className="w-full bg-white border border-slate-100 rounded-xl px-5 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/10 transition-all"
@@ -226,10 +228,10 @@ export const GetStarted: React.FC = () => {
                 {status === 'submitting' ? (
                   <>
                     <Loader2 size={20} className="animate-spin" />
-                    Submitting...
+                    {t('getStarted.buttons.submitting')}
                   </>
                 ) : (
-                  'Submit Request & Book Consultation'
+                  t('getStarted.buttons.submit')
                 )}
               </button>
             </form>

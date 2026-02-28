@@ -1,0 +1,733 @@
+{
+    "nav": {
+        "home": "首頁",
+        "about": "關於我們",
+        "services": "服務項目",
+        "caregivers": "護理人員",
+        "support": "居家支持",
+        "quality": "合規與品質",
+        "career": "招賢納士",
+        "links": "相關連結",
+        "contact": "聯繫我們",
+        "getStarted": "立即開始"
+    },
+    "hero": {
+        "badge": "值得信賴的居家護伴",
+        "title": "安心頤養：",
+        "titleHighlight": "賦能",
+        "titleEnd": " 獨立生活",
+        "subtitle": "為您提供專業、貼心、量身定制的居家護理服務。在HealthJoy，我們幫助您或您的家人在最舒適的家中，保持獨立自主的生活體驗。",
+        "ctaPrimary": "立即開始",
+        "ctaSecondary": "我們的服務"
+    },
+    "trust": {
+        "partners": "權威機構合作",
+        "staff": "資深專業團隊",
+        "support": "全天候支持",
+        "excellence": "認證卓越服務"
+    },
+    "servicesSection": {
+        "title": "我們的服務",
+        "subtitle": "提供全方位、貼心的護理解決方案，全心支持您的生活方式與健康需求。"
+    },
+    "whyChooseUs": {
+        "title": "選擇 HealthJoy 的理由",
+        "points": {
+            "personalized": {
+                "title": "個性化護理方案",
+                "desc": "我們深知每位長者都是獨一無二的。我們為每位客戶提供量身定制、完美契合其需求的專屬護理計劃。"
+            },
+            "vetted": {
+                "title": "嚴格篩選的護理人員",
+                "desc": "我們的團隊不僅經過嚴格的背景調查，更接受持續的專業培訓，確保為您提供最優質、最安心的護理服務。"
+            },
+            "consultation": {
+                "title": "免費專業諮詢",
+                "desc": "我們竭誠提供專業的諮詢建議，協助您和您的家人全面了解居家護理方案，並實現養老化支持福利的最大化。"
+            }
+        }
+    },
+    "stats": {
+        "years": "年居家養老經驗",
+        "families": "個幸福家庭",
+        "satisfaction": "滿意度保證",
+        "response": "小時快速響應"
+    },
+    "testimonials": {
+        "title": "客戶心聲",
+        "subtitle": "很榮幸能夠與您分享我們每天服務家庭的真實體驗與感動。",
+        "list": [
+            {
+                "name": "Sarah M.",
+                "role": "客戶之女",
+                "quote": "\"HealthJoy為我的母親提供了超乎尋常的關懷。他們的護工不僅專業素養極高，更充滿同理心，讓她感受到了家人般的溫暖。\""
+            },
+            {
+                "name": "James R.",
+                "role": "主要監護人",
+                "quote": "\"在團隊的幫助下，過渡到居家護理的過程非常順利。他們量身定制的護理計劃完美契合了我父親的日常需求和生活習慣。\""
+            },
+            {
+                "name": "L. W.",
+                "role": "Beecroft 居民",
+                "quote": "\"我們在術後得到的護理支持是一流的。在艱難的康復期間，他們展現出的高效和專業讓我們倍感安心。\""
+            }
+        ]
+    },
+    "services": {
+        "personalCare": {
+            "title": "個人護理",
+            "desc": "協助日常起居，包括個人衛生、穿衣及行動輔助，幫助您保持自信和健康狀態。"
+        },
+        "domesticAssistance": {
+            "title": "日常家政與園藝協助",
+            "desc": "協助處理家務、洗衣、膳食準備並維護安全整洁的居住環境，包括提供園藝服務。"
+        },
+        "socialSupport": {
+            "title": "社交支持",
+            "desc": "提供陪伴及社交活動支持，幫助您保持與社區和社會的緊密聯繫。"
+        },
+        "alliedHealth": {
+            "title": "專職醫療與治療服務",
+            "desc": "提供針對性的專業治療服務，包括物理治療、作業治療、足病理療、營養師規劃等健康支持。"
+        },
+        "assistiveTechnology": {
+            "title": "輔助技術",
+            "desc": "智能輔具與專用設備，顯著提升您日常生活的安全性和獨立性。"
+        },
+        "homeModifications": {
+            "title": "房屋改造",
+            "desc": "專業的房屋改造計劃，包括安裝扶手、坡道及改造浴室，確保家中環境始終安全無障礙。"
+        },
+        "healthWellness": {
+            "title": "健康與福祉",
+            "desc": "推廣健康的生活方式，通過針灸、中醫、按摩治療、健康監測等服務，為您提供全方位的預防性健康保障。"
+        },
+        "mentalHealth": {
+            "title": "心理健康",
+            "desc": "提供富有同理心的情感支持與心理輔導服務，幫助您安然面對生活變遷，保持精神澄明健康。"
+        }
+    },
+    "action": {
+        "learnMore": "了解更多"
+    },
+    "servicesPage": {
+        "heroBadge": "專業支持",
+        "heroTitle": "為您的親人提供專屬居家護理",
+        "heroDesc": "HealthJoy Home Care 提供針對獨特需求量身定制的富有同情心的專業支持，幫助個人在自己的家中尊嚴、舒適、安全地獨立生活。",
+        "bookConsultation": "預約免費諮詢",
+        "viewPricing": "查看核心服務",
+        "activePlans": "活躍護理計劃",
+        "personalizationTitle": "定制護理方案",
+        "personalizationSubtitle": "每個人都是獨特的",
+        "personalizationDesc": "在 HealthJoy Home Care，我們相信尊重個人喜好的個性化護理。我們的團隊與您密切合作，制定完美適合您生活方式的計劃。",
+        "personalizationButton": "立即開始",
+        "specializedTitle": "我們的專業服務",
+        "specializedSubtitle": "專業而富有同理心的支持，涵蓋日常生活的方方面面。"
+    },
+    "footer": {
+        "desc": "為您提供量身定制的貼心居家護理服務。通過專業的支持，賦能您的美好生活。",
+        "linksText": "快速導航",
+        "legalText": "法律與合規",
+        "contactText": "聯繫方式",
+        "address": "地址:",
+        "phone": "電話:",
+        "email": "電子郵箱:",
+        "connect": "關注我們",
+        "wechat": "微信支持",
+        "rights": "© 2026 HealthJoy 居家養老. 保留所有權利.",
+        "cookies": "Cookie 政策",
+        "accessibility": "無障礙服務",
+        "links": {
+            "services": "我們的服務",
+            "about": "關於 HealthJoy",
+            "careers": "招賢納士",
+            "contact": "聯繫我們",
+            "privacy": "隱私政策",
+            "terms": "服務條款",
+            "compliance": "合規與品質",
+            "feedback": "意見與投訴"
+        }
+    },
+    "about": {
+        "heroTitle": "為您摯愛的家人提供",
+        "heroHighlight": "貼心關懷",
+        "heroSubtitle": "認識 HealthJoy 居家養老背後的專業團隊，我們致力於提供全方位的支持並贏得您的信任。",
+        "storyTitle": "我們的故事",
+        "storyP1": "HealthJoy 成立的初衷是重新定義居家護理。最初這只是一個小型家庭倡議，因為我們的創始人也曾艱難地為自己的長輩尋找高質量、可靠的養老支持。我們深刻意識到，真正的關懷遠不止於完成醫療任務；它關乎尊嚴、長情的陪伴，以及守護長者家中那份獨有的舒適感。",
+        "storyP2": "今天，我們已發展成為致力於優質護理的領先服務提供商，通過個性化的方法和專業的知識，確保每位客戶都能感受到家人般的溫暖。從我們起初的微薄之力，到如今擁有海量專業護理人員的團隊，我們的初心始終未變：讓愛，永遠留在您的家中。",
+        "storyP3": "今天，我們已發展成為致力於優質護理的領先服務提供商，通過個性化的方法和專業的知識，確保每位客戶都能感受到家人般的溫暖。從我们起初的微薄之力，到如今擁有海量專業護理人員的團隊，我们的初心始終未變：讓愛，永遠留在您的家中。",
+        "valuesTitle": "我們的價值觀",
+        "valuesSubtitle": "這些核心原則指引著我們與客戶每一次充滿溫度的互動。",
+        "teamTitle": "認識我們的領導團隊",
+        "teamSubtitle": "我們的願景踐行者與資深專家，確保 HealthJoy 每一天都在兌現卓越服務的承諾。"
+    },
+    "team": {
+        "annie": {
+            "role": "首席客戶接納專員",
+            "desc": "專注的護理專業人士，以同理心和專業精神引導新客戶，確保每位長者從第一天起就能獲得絕佳的護理計劃。"
+        },
+        "james": {
+            "role": "運營經理",
+            "desc": "確保我們的客戶家庭與技術精湛的護理團隊之間無縫協調，讓關懷無處不在。"
+        },
+        "tsing": {
+            "role": "首席顧問",
+            "desc": "憑藉20多年的前瞻經驗，專注老年醫學與社區醫療保健領域的卓越領導者。"
+        },
+        "selina": {
+            "role": "財務經理",
+            "desc": "戰略財務規劃和醫療保健管理的頂尖專家，確保我們為家庭提供長期穩定和卓越的服务。"
+        }
+    },
+    "values": {
+        "compassion": {
+            "title": "充滿同理心",
+            "desc": "我們用心去做每一件事，用對待自己父母般的熱情與溫暖對待每一位長者。"
+        },
+        "integrity": {
+            "title": "誠信為本",
+            "desc": "誠實與透明是我們立足的基礎。我們深信，信任是通過每天持續不斷、符合最高道德標準的行動贏得的。"
+        },
+        "excellence": {
+            "title": "追求卓越",
+            "desc": "通過持續的專業培訓和對細節的極致關注，不斷樹立居家護理行業的最高標準。"
+        }
+    },
+    "getStarted": {
+        "heroTitle": "開啟您的護理之旅",
+        "heroDesc": "只需簡單的三個步驟，即可獲得您應得的專業、貼心的居家護理服務。",
+        "steps": {
+            "1": {
+                "title": "1. 免費初次諮詢",
+                "desc": "預約與我們的專家進行免費溝通，詳細討論您的具體需求。"
+            },
+            "2": {
+                "title": "2. 專屬護理計劃",
+                "desc": "獲得專為您的生活方式及健康狀況量身定制的護理策略。"
+            },
+            "3": {
+                "title": "3. 正式啟動服務",
+                "desc": "與您專屬的專業護理人員見面，開啟更加美好愜意的生活之旅。"
+            }
+        },
+        "formTitle": "快速通道",
+        "formDesc": "請告訴我們您的基本需求，剩下的交給我們來處理。",
+        "labels": {
+            "careFor": "這項服務主要針對誰？",
+            "supportType": "您需要哪種類型的支持？",
+            "bestTime": "最佳聯繫時間",
+            "fullName": "您的全名",
+            "phone": "您的電話號碼"
+        },
+        "options": {
+            "careFor": {
+                "self": "本人",
+                "selfDesc": "為自己尋找護理",
+                "family": "家人",
+                "familyDesc": "為親屬尋找護理",
+                "friend": "朋友",
+                "friendDesc": "為朋友或鄰居尋找"
+            },
+            "supportTypePlaceholder": "請選擇一項服務...",
+            "time": {
+                "anytime": "隨時",
+                "morning": "上午",
+                "afternoon": "下午",
+                "evening": "晚上"
+            },
+            "services": {
+                "hcp": "居家綜合支持 (HCP)",
+                "ndis": "國家殘疾保險計劃 (NDIS)",
+                "hcpUpgrade": "居家綜合支持 (HCP) 等級提升",
+                "careServices": "專業護理服務",
+                "reassessment": "護理申請重新評估",
+                "nonGov": "非政府資助支持",
+                "other": "其他支持"
+            }
+        },
+        "placeholders": {
+            "fullName": "例如: 王大明",
+            "phone": "0412-345-678"
+        },
+        "buttons": {
+            "submit": "提交申請 & 預約諮詢",
+            "submitting": "提交中..."
+        },
+        "messages": {
+            "errorFill": "請填寫您的姓名和電話號碼。",
+            "errorSubmit": "提交失敗，請重試。",
+            "successSubmit": "護理申請提交成功！"
+        }
+    },
+    "caregivers": {
+        "heroTitle": "我們的護工",
+        "heroHighlight": "標準",
+        "heroDesc": "我們只聘用最優秀的護工，讓您安心無憂。",
+        "standards": {
+            "screening": {
+                "title": "嚴格篩查",
+                "desc": "每位護工都需經過全面的背景調查，包括國家犯罪記錄審查、兒童工作許可驗證以及專業推薦人核實。"
+            },
+            "certified": {
+                "title": "認證資質",
+                "desc": "我們的團隊由持有個人護理、護理學或相關醫療保健領域專業證書的合格人員組成，確保為您提供專家級的護理服務。"
+            },
+            "matching": {
+                "title": "個性化匹配",
+                "desc": "我們不僅僅是分配護工；我們會根據性格、語言、興趣和具體護理需求進行匹配，以培養真誠的聯結。"
+            },
+            "training": {
+                "title": "持續培訓",
+                "desc": "HealthJoy 為我们的員工提供持續的職業發展培訓，使他們隨時掌握在失智症護理、行動支持等方面的最新最佳實践。"
+            },
+            "compassion": {
+                "title": "同理心至上",
+                "desc": "除了技能，我們更看重同理心。我們之所以選擇這些護工，是因為他們有一顆充滿關愛的心，並真誠地希望為他人的生活帶來積極的改變。"
+            }
+        },
+        "cta": {
+            "title": "您是一位充滿熱情的護工嗎？",
+            "desc": "我們一直在尋找有奉獻精神的優秀人才加入我們不斷壯大的團隊。如果您有護理技能和愛心，我們非常期待聽到您的聲音。",
+            "button": "申請加入我們的團隊"
+        }
+    },
+    "careers": {
+        "heroBadge": "加入我們的使命",
+        "heroTitle": "加入 HealthJoy 大家庭",
+        "heroDesc": "在建立一份有回報的事業的同時，為他人的生活帶來有意義的區別，和一個真正關心您福祉的團隊一起成長。",
+        "buttons": {
+            "viewOpenings": "查看熱招職位",
+            "learnMore": "了解更多"
+        },
+        "why": {
+            "title": "為什麼選擇我們",
+            "subtitle": "我們提供的不僅僅是一份工作；我們為您提供一個充滿支持的環境，助力您實現個人與職業雙豐收。",
+            "flexible": {
+                "title": "彈性工作時間",
+                "desc": "工作安排靈活，適應您的生活方式，無論您需要早班、晚班還是週末班。"
+            },
+            "pay": {
+                "title": "有競爭力的薪酬",
+                "desc": "我們提供行業領先的薪酬、績效獎金以及全面的健康福利。"
+            },
+            "training": {
+                "title": "持續的培訓",
+                "desc": "幫您獲得持續的教育認證，並享受專業的職業發展指導。"
+            }
+        },
+        "process": {
+            "title": "我們的招聘流程",
+            "subtitle": "加入我們專業護理團隊的透明步驟",
+            "apply": {
+                "title": "線上申請",
+                "desc": "通過我們的線上平台提交您的簡歷和相關認證。"
+            },
+            "interview": {
+                "title": "面試與背景調查",
+                "desc": "與我們的團隊進行個人面試，並完成必要的背景調查。"
+            },
+            "onboarding": {
+                "title": "入職培訓",
+                "desc": "參加我們的入職培訓計劃，並開始您的第一次護理服務。"
+            }
+        },
+        "openings": {
+            "title": "當前熱招職位",
+            "available": "共有 12 個空缺職位",
+            "applyNow": "立即申請",
+            "jobs": {
+                "caseManager": {
+                    "role": "個案經理 (Case Manager)",
+                    "dept": "護理管理",
+                    "type": "遠程/地點",
+                    "desc": "協調與管理個人護理計劃，確保我們的客戶獲得高質量、個性化的支持及資源。",
+                    "term": "全職/兼職",
+                    "location": "悉尼, NSW"
+                },
+                "rn": {
+                    "role": "註冊護士 (RN)",
+                    "dept": "護理",
+                    "type": "地點辦公",
+                    "desc": "在家庭環境中提供專業的醫療護理、藥物管理以及患者評估。",
+                    "term": "全職/兼職",
+                    "location": "悉尼, NSW"
+                },
+                "supportWorker": {
+                    "role": "個人護工 (Support Worker)",
+                    "dept": "支持服務",
+                    "type": "靈活",
+                    "desc": "協助獨立居住的長者進行房屋清潔、採買日用品及準備膳食。",
+                    "term": "兼職",
+                    "location": "悉尼, NSW"
+                }
+            }
+        }
+    },
+    "compliance": {
+        "heroBadge": "卓越認證",
+        "heroTitle": "HealthJoy 合規與品質標準",
+        "heroDesc": "我們堅定不移地致力於通過嚴格的標準、持續的員工審查和卓越的監管合規，提供安全、高質量的居家護理服務。",
+        "buttons": {
+            "viewCertifications": "查看資質認證",
+            "contactQuality": "聯繫質控團隊"
+        },
+        "commitment": {
+            "title": "我們對品質的承諾",
+            "subtitle": "我們遵循行業最高準則，通過結構化的卓越框架，確保您的安全與福祉。",
+            "improvement": {
+                "title": "持續改進",
+                "desc": "定期的內部審計和外部服務評估，不斷改進我們的護理服務流程。"
+            },
+            "personCentered": {
+                "title": "以人為本的護理",
+                "desc": "圍繞個人需求、文化背景和個人偏好，量身定制護理計劃。"
+            },
+            "safetyFirst": {
+                "title": "安全第一",
+                "desc": "我們敬業的團隊提供全天候7x24小時對嚴格的風險管理和事故預防方案的監控。"
+            }
+        },
+        "regulatory": {
+            "title": "監管合規",
+            "subtitle": "我們已在澳大利亞醫療監督機構全面註冊並符合規定，確保我們的服務達到國家對老年護理和殘疾支持的嚴格標準。",
+            "points": {
+                "sah": "Support at Home 官方服務提供商",
+                "mac": "My Aged Care 認證機構",
+                "acqs": "完全符合老年護理品質標準"
+            },
+            "badges": {
+                "sah": "居家支持計劃",
+                "mac": "MY AGED CARE",
+                "quality": "品質標準",
+                "iso": "ISO 9001:2015"
+            }
+        },
+        "insurance": {
+            "title": "保險與保障",
+            "subtitle": "為客戶和員工提供全面的保險保障，確保讓您絕對安心。",
+            "points": {
+                "publicLiability": "公共責任險",
+                "publicLiabilityValue": "2000萬保額",
+                "professionalIndemnity": "職業責任險",
+                "professionalIndemnityValue": "1000萬保額",
+                "workersComp": "員工工傷保險",
+                "workersCompValue": "全額承保"
+            }
+        },
+        "vetting": {
+            "title": "嚴格的員工篩查",
+            "subtitle": "我們僅聘用通過多階端篩選測試後，最具備資質且值得信賴的員工。",
+            "points": {
+                "police": {
+                    "title": "警方背景調查",
+                    "desc": "全國犯罪記錄調查通過"
+                },
+                "wwcc": {
+                    "title": "防虐童核查證明 (WWCC)",
+                    "desc": "兒童工作許可證明"
+                },
+                "screen": {
+                    "title": "護工入職篩查 (NDIS)",
+                    "desc": "護理服務前的資格驗證"
+                },
+                "quals": {
+                    "title": "資質認證",
+                    "desc": "國家三/四級證書及護理學位背書"
+                }
+            }
+        },
+        "feedback": {
+            "title": "意見與投訴",
+            "subtitle": "您的反饋對我們品質的提升至關重要。如果您有任何擔憂想要提出申訴，我們有清晰、透明的流程，以確保您的聲音被聽到並迅速解決問題。",
+            "internal": {
+                "title": "內部處理通道",
+                "desc": "將在48小時內回復",
+                "button": "提交反饋"
+            },
+            "advocacy": {
+                "title": "宣傳與倡導服務",
+                "desc": "獨立的第三方支持",
+                "button": "外部權利監管"
+            }
+        }
+    },
+    "linksPage": {
+        "heroTitle": "實用連結及相關資源",
+        "heroDesc": "包含政府機構、健康支持和內部資源的集中互聯目錄，為您的護理之旅提供支持。找到您需要的一切資源，充滿信心地應對居家養老事務。",
+        "gov": {
+            "title": "政府機構及政策資源",
+            "mac": {
+                "title": "My Aged Care (我的養老服務)",
+                "desc": "訪問政府資助的無憂養老服務平台，從申請到資質審查。"
+            },
+            "ndis": {
+                "title": "NDIS (全澳殘疾保險計劃)",
+                "desc": "查閱國家殘疾保險計劃信息，管理計劃以及參與者支持服務。"
+            },
+            "health": {
+                "title": "澳大利亞衛生部",
+                "desc": "提供最新的公共衛生政策資訊分析、臨床指南和國家衛生指南查詢。"
+            }
+        },
+        "health": {
+            "title": "健康及福祉資源",
+            "dementia": {
+                "title": "Dementia Australia (失智症預防支持)",
+                "desc": "為阿爾茨海默病（失智症）患者及其看護者提供非常專業且必要的資訊和輔導。"
+            },
+            "eating": {
+                "title": "健康飲食指南",
+                "desc": "專門為預防老年人常見的慢性病以及保持身心健康的營養建議及膳食設計。"
+            }
+        },
+        "quickLinks": {
+            "title": "快速訪問站內連結",
+            "services": "我們的護理服務",
+            "caregivers": "護理人員執行標準",
+            "careers": "招賢納士與工作機會"
+        },
+        "legal": {
+            "title": "法律與合規",
+            "privacy": "隱私及信息保護政策",
+            "terms": "產品及相關服務條款",
+            "advocacy": "個人權益消費主張與倡導"
+        }
+    },
+    "contact": {
+        "title": "聯繫我們",
+        "desc": "我們致力於為您和您的家人提供專業的居家護理服務。今天就聯繫我們的團隊，獲取個性化支持。",
+        "officeHours": {
+            "title": "辦公時間",
+            "weekday": "星期一至星期五",
+            "weekdayHours": "上午 9:00 - 下午 5:00",
+            "saturday": "星期六",
+            "saturdayHours": "需提前預約",
+            "sunday": "星期日",
+            "sundayHours": "休息",
+            "emergency": "緊急支持服務:",
+            "emergencyDesc": "如在非辦公時間有緊急護理需求，我們的專線24小時為您開通。"
+        },
+        "form": {
+            "title": "發送諮詢",
+            "labels": {
+                "fullName": "全名",
+                "email": "電子郵箱",
+                "phone": "電話號碼",
+                "subject": "主題",
+                "message": "留言"
+            },
+            "placeholders": {
+                "fullName": "例如: 王大明",
+                "email": "zhangsan@example.com",
+                "phone": "0412-345-678",
+                "message": "我們能如何幫助您？"
+            },
+            "subjects": {
+                "bookConsultation": "預約諮詢",
+                "general": "一般諮詢",
+                "support": "護理服務",
+                "career": "工作機會",
+                "feedback": "提供反饋",
+                "complaint": "投訴與爭議",
+                "other": "其他諮詢"
+            },
+            "buttons": {
+                "sending": "發送中...",
+                "send": "發送留言"
+            },
+            "messages": {
+                "errorFill": "請填寫您的姓名和郵箱。",
+                "success": "諮詢提交成功！",
+                "errorSubmit": "提交失敗，請重試。"
+            }
+        },
+        "cards": {
+            "phone": {
+                "title": "電話",
+                "desc": "24小時提供緊急護理支持。"
+            },
+            "email": {
+                "title": "電子郵件",
+                "desc": "接收一般諮詢和意見反饋。"
+            },
+            "wechat": {
+                "title": "微信",
+                "id": "微信号:"
+            }
+        }
+    },
+    "supportAtHome": {
+        "heroBadge": "居家護理服務提供商",
+        "heroTitle": "攜手 HealthJoy，重塑獨立自主的居家生活",
+        "heroDesc": "了解並申請居家養老政策或許會讓人感到困惑，但您不必獨自面對。HealthJoy 居家養老致力於簡化這一流程，為您提供個性化的計劃管理、統籌協調以及專業的日常護理支持，所有服務均根據您獨特的生活目標量身定制。",
+        "form": {
+            "title": "立即諮詢",
+            "desc": "有任何疑問？請填寫下方表格，我們的 HealthJoy 專家將在24小時內與您取得聯繫。",
+            "successTitle": "提交成功！",
+            "successDesc": "您的諮詢已成功發送，我們將盡快與您聯繫。",
+            "sendAnother": "發送新的諮詢",
+            "errorSubmit": "提交諮詢失敗，請重試。",
+            "labels": {
+                "fullName": "您的全名",
+                "email": "電子郵箱",
+                "phone": "電話號碼",
+                "address": "家庭住址",
+                "service": "所需服務",
+                "message": "留言"
+            },
+            "placeholders": {
+                "fullName": "例如: 王大明",
+                "email": "zhangsan@example.com",
+                "phone": "0412-345-678",
+                "address": "例如: 123 Example St, Suburb",
+                "message": "HealthJoy 今天能為您提供什麼幫助？"
+            },
+            "services": {
+                "personal": "個人護理",
+                "residential": "居家協助",
+                "social": "社交支持",
+                "allied": "專職醫療與康复服务",
+                "assistive": "輔助技術",
+                "modifications": "房屋改造",
+                "healthWellness": "健康與養生",
+                "mentalHealth": "心理健康支持"
+            },
+            "buttons": {
+                "sending": "發送中...",
+                "submit": "發送諮詢"
+            },
+            "privacy": "提交此表格即表示您同意 HealthJoy 居家養老的隱私政策。"
+        },
+        "features": {
+            "title": "HealthJoy 居家養老如何為您提供支持",
+            "items": {
+                "1": {
+                    "title": "計劃管理",
+                    "desc": "您可以專注於實現自己的生活目標，而 HealthJoy 居家養老將幫您處理資金管理的繁琐事務，包括財務行政、向服務提供商付款以及預算跟蹤。"
+                },
+                "2": {
+                    "title": "支持協調",
+                    "desc": "我們的專家會幫助您深入了解您的護理計劃，尋找合適的本地服務，並協調各項支持资源，從而最大程度地提升您的健康與福祉。"
+                },
+                "3": {
+                    "title": "日常生活支持",
+                    "desc": "HealthJoy 居家養老提供實用的日常協助，涵蓋個人護理、家務處理以及社區參與，助您按照自己喜歡的方式生活。"
+                }
+            }
+        },
+        "steps": {
+            "title": "與 HealthJoy 居家養老攜手前行",
+            "items": {
+                "1": {
+                    "title": "初步諮詢",
+                    "desc": "聯繫 HealthJoy 團隊，進行一次友好、無壓力的免費諮詢，與我們討論您當前的居家護理計劃以及您的個人期待。"
+                },
+                "2": {
+                    "title": "量身定制的服務計劃",
+                    "desc": "我們將與您緊密合作，設計一份完美契合您生活方式的支持時間表，讓您的護理資金發揮最大價值。"
+                },
+                "3": {
+                    "title": "無縫過渡",
+                    "desc": "HealthJoy 居家養老將為您處理所有文書工作，並負責與現有服務提供商進行協調，確保您平穩、順利地開始享受新的支持服務。"
+                }
+            }
+        }
+    },
+    "applyNow": {
+        "heroBadge": "加入我們的團隊",
+        "heroTitle": "立即申請",
+        "heroDesc": "幫助我們提供卓越的護理服務。加入一支致力於每天切實改變他人生活的團隊。",
+        "status": {
+            "missingFields": "請填寫您的姓名、電子郵箱和電話號碼。",
+            "success": "申請提交成功！",
+            "error": "提交失敗，請重試。"
+        },
+        "sections": {
+            "personalInfo": "個人信息",
+            "professionalBackground": "職業背景",
+            "qualifications": "資質與技能",
+            "materials": "申請材料"
+        },
+        "labels": {
+            "fullName": "全名",
+            "gender": "性別",
+            "male": "男",
+            "female": "女",
+            "email": "電子郵箱",
+            "phone": "電話號碼",
+            "address": "家庭住址",
+            "position": "申請職位",
+            "experience": "護理經驗",
+            "license": "駕駛執照",
+            "certificates": "證書 (多選)",
+            "languages": "語言 (多選)",
+            "skills": "技能 (多選)",
+            "coverLetter": "個人陳述 (可選)",
+            "resume": "提交簡歷"
+        },
+        "placeholders": {
+            "fullName": "例如: 王大明",
+            "email": "zhangsan@example.com",
+            "phone": "0412-345-678",
+            "address": "例如: 123 Care Street, Suburb, NSW 2000",
+            "position": "請選擇職位",
+            "experience": "請選擇經驗水平",
+            "license": "請選擇執照類型",
+            "coverLetter": "告訴我們為什麼您適合 HealthJoy..."
+        },
+        "options": {
+            "positions": {
+                "caseManager": "個案經理 (Case Manager)",
+                "nurse": "註冊護士 (Registered Nurse)",
+                "supportWorker": "護工 (Support Worker)"
+            },
+            "experience": {
+                "0-1": "0-1 年",
+                "1-3": "1-3 年",
+                "3-5": "3-5 年",
+                "5+": "5 年以上"
+            },
+            "license": {
+                "full": "全照 (Full License)",
+                "p2": "臨時駕照 P2",
+                "p1": "臨時駕照 P1",
+                "international": "國際駕照",
+                "none": "無駕照"
+            },
+            "certificates": {
+                "support3": "個人支持三級證書 (Individual Support III)",
+                "support4": "個人支持四級證書 (Individual Support IV)",
+                "community": "社區服務 (Community Service)",
+                "firstAid": "急救證書 (First Aid)",
+                "others": "其他 (Others)"
+            },
+            "languages": {
+                "mandarin": "普通話 (Mandarin)",
+                "cantonese": "粵語 (Cantonese)",
+                "shanghainese": "上海話 (Shanghainese)",
+                "english": "英語 (English)",
+                "korean": "韓語 (Korean)",
+                "others": "其他 (Others)"
+            },
+            "skills": {
+                "cooking": "烹飪 (Cooking)",
+                "cleaning": "清潔 (Cleaning)",
+                "personalCare": "個人護理 (Personal Care)",
+                "others": "其他 (Others)"
+            }
+        },
+        "upload": {
+            "idle": "拖動並放置簡歷或 <span class=\"text-blue-600 font-bold\">瀏覽文件</span>",
+            "selected": "已選擇文件 - 點擊更換",
+            "hint": "PDF, DOCX 最大 10MB"
+        },
+        "buttons": {
+            "submit": "提交申請",
+            "submitting": "提交中..."
+        },
+        "footer": {
+            "agree": "提交申請即表示您同意我們的 <Link to=\"/terms\" class=\"text-slate-600 font-bold hover:underline\">服務條款</Link> 和 <Link to=\"/privacy\" class=\"text-slate-600 font-bold hover:underline\">隱私政策</Link>。"
+        }
+    }
+}
