@@ -63,14 +63,14 @@ export const SERVICES: Service[] = [
     title: 'Health & Wellness',
     description: 'Promoting healthy lifestyles through acupuncture, traditional Chinese medicine, massage therapy, health monitoring, and preventative support tailored for seniors.',
     icon: 'Heart',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDe9fR_t9h_H8p_o5m9x-g9G_Z7F_2T5xJ_9G_Z7F_2T5xJ_9G_Z7F_2T5xJ_9G_Z7F' // Placeholder
+    image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'mental-health',
     title: 'Mental Health',
     description: 'Empathetic emotional support and mental wellbeing services to help you navigate life changes and maintain mental clarity.',
     icon: 'Brain',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDe9fR_t9h_H8p_o5m9x-g9G_Z7F_2T5xJ_9G_Z7F_2T5xJ_9G_Z7F_2T5xJ_9G_Z7F' // Placeholder
+    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop'
   }
 ];
 
