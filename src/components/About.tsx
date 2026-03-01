@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { TEAM, VALUES } from '../constants';
 import * as Icons from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import heroAboutImg from '../assets/images/hero-about.png';
 
 export const About: React.FC = () => {
   const { t } = useTranslation();
@@ -12,7 +13,7 @@ export const About: React.FC = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-slate-900/40 z-10"></div>
         <img
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrpUNUSu9SIUsrkVPfBTnHjzC9eqTdbU8SCpkG2lHe7l_qq_iNSZN5OGLpSN7XI1t3pqpkquhH0wJvtD_IiunfGKtMMJQaj2apXFTmfpp9fKNiSW4KBPRy-YKJaKyNiu_0gqDBhEXD07EqNjr8BnGUO6XnA33zIZLz0LmoS_-4IIAefvXgsKWctsCqYx_xamGIzL78nh2NFvyjuDyPDCZjIx2q-FSW79FInMGzJkpBYC9YKzl0rPAFwCY06PDAm4-5aY_1YtFNmC8d"
+          src={heroAboutImg}
           alt="Healthcare team"
           className="absolute inset-0 w-full h-full object-cover"
           referrerPolicy="no-referrer"

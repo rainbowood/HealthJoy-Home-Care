@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { CheckCircle2, Layout, Users, Home, ArrowRight, Loader2 } from 'lucide-react';
 import { submitSupport } from '../api';
 import { useTranslation } from 'react-i18next';
+import heroSupportImg from '../assets/images/hero-support.png';
 
 export const SupportAtHome: React.FC = () => {
   const { t } = useTranslation();
@@ -62,7 +63,7 @@ export const SupportAtHome: React.FC = () => {
             </p>
             <div className="rounded-3xl overflow-hidden shadow-xl">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4Gk3SqqjKb09daB4U1uLvcLpmKY9isDfF_WjWfOPgLP3JVH3vd7j8mQwnfiFLWd1GoHMxjxW0QvNMiva68FCdhhU5XS6oUvTXNPRMTHStm7mbBPEhcNEnFeiCw_p4ILVQhmcwjoBsLIZ5DlYt3VMIm5P7LoyQLNPobJMDyxE3TT3B1eaW2uc0-Qxqo5K0YZ6rJuhtLFQjEf_M7FAm6abucWxx9SYTEjgqPXFhhylSDU86AqE6qG5qR1D8K01mBq-I6NBFx77jzzEH"
+                src={heroSupportImg}
                 alt="Caregiver and senior"
                 className="w-full h-auto object-cover"
                 referrerPolicy="no-referrer"

@@ -3,6 +3,8 @@ import { motion } from 'motion/react';
 import { ShieldCheck, UserCheck, Star, Award, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import heroCaregiversImg from '../assets/images/hero-caregivers.png';
+import joinTeamImg from '../assets/images/join-team.png';
 
 export const Caregivers: React.FC = () => {
   const { t } = useTranslation();
@@ -12,7 +14,7 @@ export const Caregivers: React.FC = () => {
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-slate-900/50 z-10"></div>
         <img
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb2pVkB6s3a_pfA_P2B_BtFICfaONLXaE9fpIxw_WHEJnYYCwGvvwfoKeXrK_kMdiOxucHVOCkYZQ4L6uEgunKT4HDeemrYjqaHOeaWz1geXliZp8NjseE7K7FrtdmunW5C45k5NWQmTNl1UW86imGBJUr7CtH89U6N6iLsb7waEqIziWHv7Iaojp6yhKmqvhd8Gcoz-rkSZyaSN0bl0zvFfEhEz-0p8Z9izqhcQMRlwB1Ygu3VfOCK7tJcNuYNbGDggEWCeXSyDUM"
+          src={heroCaregiversImg}
           alt="Caregiver standards"
           className="absolute inset-0 w-full h-full object-cover"
           referrerPolicy="no-referrer"
@@ -110,7 +112,7 @@ export const Caregivers: React.FC = () => {
           </div>
           <div className="w-full md:w-1/3 aspect-square rounded-2xl overflow-hidden shadow-lg">
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0PUbdgmWDiz9xfZDrEo-dSv9OpSbgkKwFKnxXY9FqGbdGdpEuR2xBYSGJpeIdoByVW12h7VwRIcmN_4gIgmgAZZ0Zp5Mcz-vK0px78JjPcirwRCByHRnyapkY19LwvE_QRkclXSW50_RpPqbsfQobLzx1gI0o7_oZgS3Ik77IBaEFnVC6IlIxFf_gfK1nTkeYdnq1OsYffgM2tcOEBEMROPNfE9vtxrom8uB6Kg0bW3hWlujH7K7ifkBSgmeezklLC1q-zRRdOlAl"
+              src={joinTeamImg}
               alt="Happy caregiver"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

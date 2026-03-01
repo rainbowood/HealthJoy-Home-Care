@@ -18,6 +18,7 @@ import {
 
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import heroComplianceImg from '../assets/images/hero-compliance.jpg';
 
 export const Compliance: React.FC = () => {
   const { t } = useTranslation();
@@ -49,7 +50,7 @@ export const Compliance: React.FC = () => {
           <div className="relative">
             <div className="aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1000"
+                src={heroComplianceImg}
                 alt="Healthcare Professional"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

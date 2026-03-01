@@ -5,6 +5,7 @@ import { ArrowRight, CheckCircle2, Star, ShieldCheck, Clock, Award, Users } from
 import { Link } from 'react-router-dom';
 import * as Icons from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import heroHomeImg from '../assets/images/hero-home.png';
 
 export const Home: React.FC = () => {
   const { t } = useTranslation();
@@ -54,7 +55,7 @@ export const Home: React.FC = () => {
           >
             <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative z-10">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK2h4Hz8Dzi7AsiDh3nydW08ryxrTSX5AxTW1yljEv5u_x2MjjPNUJeoqbkTu__AcaQ5PPI7aeoK2nOsCnxGZp09_ZX4f26gYMEOo2suUG48ywNIJuRAQdTq-JwkSFzEufqkwNDyTzV6d1eMtSw2h6-fXY6m4yGsfMGYQfXOPCk5N-AaVtdZ4XQRMPHUVhXj8qt_JX8WPmJd7AX5-42sh9wuflBlzaCXlW-PitzKu6WFNO898SBpinjXNWcWmTnnhvDSi4zj8PIh1t"
+                src={heroHomeImg}
                 alt="Caregiver with elderly person"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

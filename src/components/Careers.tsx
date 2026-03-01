@@ -3,6 +3,10 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Clock, Wallet, GraduationCap, Briefcase, MapPin, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import heroCareersImg from '../assets/images/hero-careers.png';
+import personalCareImg from '../assets/images/personal-care.png';
+import domesticAssistanceImg from '../assets/images/domestic-assistance.png';
+import alliedHealthImg from '../assets/images/allied-health.png';
 
 export const Careers: React.FC = () => {
   const { t } = useTranslation();
@@ -16,7 +20,7 @@ export const Careers: React.FC = () => {
           className="rounded-3xl overflow-hidden shadow-xl"
         >
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCurCzMUbe3aSt3R_F7ktMh9v8neU4crBt6ZiiDnAzkMKhtWj4KxRSU4cJYWmJGMkG5xbyJxI_sMa3jfGI0dYbwxA15yJLZwmmKInl5zJQ-6QvH046_fXZ3GSC5l9CgYuNSgKwjZtu2hLRnRKaJeL75BSH3ADr2X4eL8SLw4HFLb6GBwEJNV0d29nqFAVZpx17_PTI9KCr4cj4f-eIwcnmfG0nzHBFebzw7OioNoIQMujL9Aqo8jfk1fYXRLDEFYDAwTYiWuLyWR65"
+            src={heroCareersImg}
             alt="Caregiver and elderly woman"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -131,7 +135,7 @@ export const Careers: React.FC = () => {
                 type: t('careers.openings.jobs.caseManager.type'),
                 desc: t('careers.openings.jobs.caseManager.desc'),
                 meta: [t('careers.openings.jobs.caseManager.term'), t('careers.openings.jobs.caseManager.location')],
-                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCI0rbTW7kpi0xS_F9ssd5Lb42KL0tVbcAju4r3EEUudC4kcu4VXcUzNnzPZIgI5QouAQ6lMW5CN0o4L8kDB06zV3pE9LLffF31K9eXT0QBPOP_jDlEHG-u8Gi5TvhsuC7O1x1M8D9wK0UiPHGHwDXFpHZ5TkFZKqNokO08bKoHwd00L5VSUjVAi1wr50LqHP_4sr4qb08c5tBFSNYUdjxt786o1_Ol10n_lU9nBlyPmak7eoQROsfzdUkWX5a6x0fjM1_C_DdzrTB-',
+                img: personalCareImg,
               },
               {
                 role: t('careers.openings.jobs.rn.role'),
@@ -139,7 +143,7 @@ export const Careers: React.FC = () => {
                 type: t('careers.openings.jobs.rn.type'),
                 desc: t('careers.openings.jobs.rn.desc'),
                 meta: [t('careers.openings.jobs.rn.term'), t('careers.openings.jobs.rn.location')],
-                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD_o7QkD8VfOkwBWcL7htsva-9X6WY4G_xC5YicP8pXJyu13J4SVGLI_WTMrUXlYl2BecP_IuGfvNaQKSE7ZzQrkG_OU_ddFDW244AO9qxSfbLyQBkAVIoCRgq3qrwooayEw0zZfiWm6gQI7dxyIlbcAExqyrSUBJceLtr4N1O4fawTaxLf_1zqvJ1AEKd4TFxpBC4cK-eWkJrxXlMjMj1A8xohGVO7nhcz3KCZWK9MnasZQ-9h4L1TWdpvbBPptJGbU1--jONzexIP',
+                img: alliedHealthImg,
               },
               {
                 role: t('careers.openings.jobs.supportWorker.role'),
@@ -147,7 +151,7 @@ export const Careers: React.FC = () => {
                 type: t('careers.openings.jobs.supportWorker.type'),
                 desc: t('careers.openings.jobs.supportWorker.desc'),
                 meta: [t('careers.openings.jobs.supportWorker.term'), t('careers.openings.jobs.supportWorker.location')],
-                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBJC7Cm5kA84WvdQaf9J5_caozTdQ2LQxC7ceoDyGbHRYuQgjylMvSJQY5Dg-H7wWjhtyTNoPzPkUxQORgjebDAMd-Z0awmX95C4MhIMzvwlrnfWWSsj7VJ8ovWKPGD9efYPzHH_6AWbsnKAhvyfZNJMq9NA0-SbIvxpZUIVQyGb1K9ra2dOB8uHlrBR6-DeDarxCEuIc7ymUWvO8g1hiCIESWqVsdzb9pMiReUpbWgFr3gAY5HkleeT05eiUAbXysZ5MaztifC1vOz',
+                img: domesticAssistanceImg,
               },
             ].map((job, i) => (
               <div key={i} className="bg-white rounded-3xl border border-slate-100 p-8 flex flex-col lg:flex-row gap-8 hover:shadow-lg transition-all group">
