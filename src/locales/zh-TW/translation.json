@@ -12,7 +12,10 @@
         "career": "招賢納士",
         "links": "相關連結",
         "contact": "聯繫我們",
-        "getStarted": "立即開始"
+        "getStarted": "立即開始",
+        "accessibility": "無障礙設置",
+        "enlargeText": "放大字體",
+        "shrinkText": "縮小字體"
     },
     "hero": {
         "badge": "值得信賴的居家護伴",

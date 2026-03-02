@@ -4,13 +4,17 @@ import { NAV_LINKS } from '../constants';
 import { HeartPulse, Menu, X, Globe, User, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useTranslation } from 'react-i18next';
+import { Settings, Plus, Minus } from 'lucide-react';
+import { useAccessibility } from '../contexts/AccessibilityContext';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const location = useLocation();
   const { t, i18n } = useTranslation();
+  const { enlargeText, shrinkText } = useAccessibility();
 
   const [isLangOpen, setIsLangOpen] = React.useState(false);
+  const [isAccessOpen, setIsAccessOpen] = React.useState(false);
 
   const currentLangLabel = i18n.language === 'zh' ? '简体中文' : i18n.language === 'zh-TW' ? '繁體中文' : i18n.language === 'ja' ? '日本語' : i18n.language === 'ko' ? '한국어' : 'English';
 
@@ -114,6 +118,52 @@ export const Navbar: React.FC = () => {
               </AnimatePresence>
             </div>
 
+            <div className="relative">
+              <button
+                onClick={() => setIsAccessOpen(!isAccessOpen)}
+                className="flex items-center gap-1.5 text-slate-600 text-sm font-medium hover:text-blue-600 transition-colors"
+                title={t('nav.accessibility')}
+              >
+                <Settings size={16} />
+                <svg className={`w-4 h-4 transition-transform ${isAccessOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+              </button>
+
+              <AnimatePresence>
+                {isAccessOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute right-0 mt-2 w-48 bg-white border border-slate-100 rounded-xl shadow-xl py-2 z-50"
+                  >
+                    <div className="px-4 py-2 text-xs font-semibold text-slate-400 uppercase tracking-wider border-b border-slate-50 mb-1">
+                      {t('nav.accessibility')}
+                    </div>
+                    <button
+                      onClick={() => {
+                        enlargeText();
+                        setIsAccessOpen(false);
+                      }}
+                      className="w-full text-left px-4 py-2.5 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors flex items-center justify-between group"
+                    >
+                      <span>{t('nav.enlargeText')}</span>
+                      <Plus size={14} className="text-slate-400 group-hover:text-blue-500" />
+                    </button>
+                    <button
+                      onClick={() => {
+                        shrinkText();
+                        setIsAccessOpen(false);
+                      }}
+                      className="w-full text-left px-4 py-2.5 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors flex items-center justify-between group"
+                    >
+                      <span>{t('nav.shrinkText')}</span>
+                      <Minus size={14} className="text-slate-400 group-hover:text-blue-500" />
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
             <Link
               to="/get-started"
               className="bg-blue-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold hover:bg-blue-700 transition-all whitespace-nowrap"
@@ -156,10 +206,33 @@ export const Navbar: React.FC = () => {
                   {t(link.name)}
                 </Link>
               ))}
+
+              <div className="border-t border-slate-100 pt-4 flex flex-col gap-2">
+                <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-2">
+                  {t('nav.accessibility')}
+                </div>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => enlargeText()}
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-slate-50 text-slate-600 rounded-xl text-sm font-medium hover:bg-blue-50 hover:text-blue-600 transition-all"
+                  >
+                    <Plus size={16} />
+                    {t('nav.enlargeText')}
+                  </button>
+                  <button
+                    onClick={() => shrinkText()}
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-slate-50 text-slate-600 rounded-xl text-sm font-medium hover:bg-blue-50 hover:text-blue-600 transition-all"
+                  >
+                    <Minus size={16} />
+                    {t('nav.shrinkText')}
+                  </button>
+                </div>
+              </div>
+
               <Link
                 to="/get-started"
                 onClick={() => setIsOpen(false)}
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg text-center font-bold"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg text-center font-bold mt-2"
               >
                 {t('nav.getStarted')}
               </Link>

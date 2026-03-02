@@ -12,7 +12,10 @@
         "career": "Career",
         "links": "Links",
         "contact": "Contact",
-        "getStarted": "Get Started"
+        "getStarted": "Get Started",
+        "accessibility": "Accessibility",
+        "enlargeText": "Enlarge Text Size",
+        "shrinkText": "Shrink Text Size"
     },
     "hero": {
         "badge": "Trusted Home Care Partner",

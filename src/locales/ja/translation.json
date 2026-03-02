@@ -12,7 +12,10 @@
         "career": "採用情報",
         "links": "関連リンク",
         "contact": "お問い合わせ",
-        "getStarted": "今すぐ開始"
+        "getStarted": "今すぐ開始",
+        "accessibility": "アクセシビリティ",
+        "enlargeText": "テキスト拡大",
+        "shrinkText": "テキスト縮小"
     },
     "hero": {
         "badge": "信頼される在宅ケアパートナー",

@@ -17,6 +17,7 @@ import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { TermsOfService } from './components/TermsOfService';
 import { AnimatePresence, motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
+import { AccessibilityProvider } from './contexts/AccessibilityContext';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -47,31 +48,33 @@ export default function App() {
   }, [t, i18n.language]);
 
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="min-h-screen flex flex-col bg-white font-sans selection:bg-blue-100 selection:text-blue-900">
-        <Navbar />
-        <main className="flex-grow">
-          <AnimatePresence mode="wait">
-            <Routes>
-              <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
-              <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
-              <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
-              <Route path="/get-started" element={<PageWrapper><GetStarted /></PageWrapper>} />
-              <Route path="/caregivers" element={<PageWrapper><Caregivers /></PageWrapper>} />
-              <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
-              <Route path="/compliance" element={<PageWrapper><Compliance /></PageWrapper>} />
-              <Route path="/links" element={<PageWrapper><Links /></PageWrapper>} />
-              <Route path="/support-at-home" element={<PageWrapper><SupportAtHome /></PageWrapper>} />
-              <Route path="/careers" element={<PageWrapper><Careers /></PageWrapper>} />
-              <Route path="/apply" element={<PageWrapper><ApplyNow /></PageWrapper>} />
-              <Route path="/privacy" element={<PageWrapper><PrivacyPolicy /></PageWrapper>} />
-              <Route path="/terms" element={<PageWrapper><TermsOfService /></PageWrapper>} />
-            </Routes>
-          </AnimatePresence>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <AccessibilityProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="min-h-screen flex flex-col bg-white font-sans selection:bg-blue-100 selection:text-blue-900">
+          <Navbar />
+          <main className="flex-grow">
+            <AnimatePresence mode="wait">
+              <Routes>
+                <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
+                <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
+                <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
+                <Route path="/get-started" element={<PageWrapper><GetStarted /></PageWrapper>} />
+                <Route path="/caregivers" element={<PageWrapper><Caregivers /></PageWrapper>} />
+                <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+                <Route path="/compliance" element={<PageWrapper><Compliance /></PageWrapper>} />
+                <Route path="/links" element={<PageWrapper><Links /></PageWrapper>} />
+                <Route path="/support-at-home" element={<PageWrapper><SupportAtHome /></PageWrapper>} />
+                <Route path="/careers" element={<PageWrapper><Careers /></PageWrapper>} />
+                <Route path="/apply" element={<PageWrapper><ApplyNow /></PageWrapper>} />
+                <Route path="/privacy" element={<PageWrapper><PrivacyPolicy /></PageWrapper>} />
+                <Route path="/terms" element={<PageWrapper><TermsOfService /></PageWrapper>} />
+              </Routes>
+            </AnimatePresence>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </AccessibilityProvider>
   );
 }

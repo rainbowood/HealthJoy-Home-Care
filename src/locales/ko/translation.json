@@ -12,7 +12,10 @@
         "career": "채용 정보",
         "links": "관련 링크",
         "contact": "문의하기",
-        "getStarted": "지금 시작하기"
+        "getStarted": "지금 시작하기",
+        "accessibility": "접근성",
+        "enlargeText": "글자 크기 키우기",
+        "shrinkText": "글자 크기 줄이기"
     },
     "hero": {
         "badge": "신뢰할 수 있는 재가 케어 파트너",

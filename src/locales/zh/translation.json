@@ -12,7 +12,10 @@
         "career": "招贤纳士",
         "links": "相关链接",
         "contact": "联系我们",
-        "getStarted": "立即开始"
+        "getStarted": "立即开始",
+        "accessibility": "无障碍设置",
+        "enlargeText": "放大字体",
+        "shrinkText": "缩小字体"
     },
     "hero": {
         "badge": "值得信赖的居家护伴",
