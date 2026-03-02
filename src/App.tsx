@@ -45,6 +45,8 @@ export default function App() {
 
   React.useEffect(() => {
     document.title = t('site.title');
+    document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = i18n.language;
   }, [t, i18n.language]);
 
   return (

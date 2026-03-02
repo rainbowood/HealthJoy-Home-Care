@@ -16,7 +16,7 @@ export const Navbar: React.FC = () => {
   const [isLangOpen, setIsLangOpen] = React.useState(false);
   const [isAccessOpen, setIsAccessOpen] = React.useState(false);
 
-  const currentLangLabel = i18n.language === 'zh' ? '简体中文' : i18n.language === 'zh-TW' ? '繁體中文' : i18n.language === 'ja' ? '日本語' : i18n.language === 'ko' ? '한국어' : i18n.language === 'fr' ? 'Français' : i18n.language === 'es' ? 'Español' : 'English';
+  const currentLangLabel = i18n.language === 'zh' ? '简体中文' : i18n.language === 'zh-TW' ? '繁體中文' : i18n.language === 'ja' ? '日本語' : i18n.language === 'ko' ? '한국어' : i18n.language === 'fr' ? 'Français' : i18n.language === 'es' ? 'Español' : i18n.language === 'it' ? 'Italiano' : i18n.language === 'ar' ? 'العربية' : 'English';
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-slate-100">
@@ -73,7 +73,7 @@ export const Navbar: React.FC = () => {
                         i18n.changeLanguage('en');
                         setIsLangOpen(false);
                       }}
-                      className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      className="w-full text-start px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                     >
                       English
                     </button>
@@ -82,7 +82,7 @@ export const Navbar: React.FC = () => {
                         i18n.changeLanguage('zh');
                         setIsLangOpen(false);
                       }}
-                      className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      className="w-full text-start px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                     >
                       简体中文
                     </button>
@@ -91,7 +91,7 @@ export const Navbar: React.FC = () => {
                         i18n.changeLanguage('zh-TW');
                         setIsLangOpen(false);
                       }}
-                      className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      className="w-full text-start px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                     >
                       繁體中文
                     </button>
@@ -100,7 +100,7 @@ export const Navbar: React.FC = () => {
                         i18n.changeLanguage('ja');
                         setIsLangOpen(false);
                       }}
-                      className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      className="w-full text-start px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                     >
                       日本語
                     </button>
@@ -109,7 +109,7 @@ export const Navbar: React.FC = () => {
                         i18n.changeLanguage('ko');
                         setIsLangOpen(false);
                       }}
-                      className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      className="w-full text-start px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                     >
                       한국어
                     </button>
@@ -118,7 +118,7 @@ export const Navbar: React.FC = () => {
                         i18n.changeLanguage('fr');
                         setIsLangOpen(false);
                       }}
-                      className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      className="w-full text-start px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                     >
                       Français
                     </button>
@@ -127,9 +127,27 @@ export const Navbar: React.FC = () => {
                         i18n.changeLanguage('es');
                         setIsLangOpen(false);
                       }}
-                      className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      className="w-full text-start px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                     >
                       Español
+                    </button>
+                    <button
+                      onClick={() => {
+                        i18n.changeLanguage('it');
+                        setIsLangOpen(false);
+                      }}
+                      className="w-full text-start px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                      Italiano
+                    </button>
+                    <button
+                      onClick={() => {
+                        i18n.changeLanguage('ar');
+                        setIsLangOpen(false);
+                      }}
+                      className="w-full text-start px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors font-arabic"
+                    >
+                      العربية
                     </button>
                   </motion.div>
                 )}
@@ -162,7 +180,7 @@ export const Navbar: React.FC = () => {
                         enlargeText();
                         setIsAccessOpen(false);
                       }}
-                      className="w-full text-left px-4 py-2.5 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors flex items-center justify-between group"
+                      className="w-full text-start px-4 py-2.5 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors flex items-center justify-between group"
                     >
                       <span>{t('nav.enlargeText')}</span>
                       <Plus size={14} className="text-slate-400 group-hover:text-blue-500" />
@@ -172,7 +190,7 @@ export const Navbar: React.FC = () => {
                         shrinkText();
                         setIsAccessOpen(false);
                       }}
-                      className="w-full text-left px-4 py-2.5 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors flex items-center justify-between group"
+                      className="w-full text-start px-4 py-2.5 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors flex items-center justify-between group"
                     >
                       <span>{t('nav.shrinkText')}</span>
                       <Minus size={14} className="text-slate-400 group-hover:text-blue-500" />
@@ -237,7 +255,9 @@ export const Navbar: React.FC = () => {
                     { id: 'ja', label: '日本語' },
                     { id: 'ko', label: '한국어' },
                     { id: 'fr', label: 'Français' },
-                    { id: 'es', label: 'Español' }
+                    { id: 'es', label: 'Español' },
+                    { id: 'it', label: 'Italiano' },
+                    { id: 'ar', label: 'العربية' }
                   ].map((lang) => (
                     <button
                       key={lang.id}

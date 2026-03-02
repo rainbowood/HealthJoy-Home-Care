@@ -1,0 +1,738 @@
+{
+    "site": {
+        "title": "Supporto domiciliare per anziani con servizi professionali - HealthJoy"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "Chi siamo",
+        "services": "Servizi",
+        "caregivers": "Assistenti",
+        "support": "Supporto@Casa",
+        "quality": "Qualità",
+        "career": "Carriera",
+        "links": "Link",
+        "contact": "Contatti",
+        "getStarted": "Inizia",
+        "accessibility": "Accessibilità",
+        "enlargeText": "Aumenta testo",
+        "shrinkText": "Riduci testo"
+    },
+    "hero": {
+        "badge": "Partner fidato per l'assistenza domiciliare",
+        "title": "HealthJoy: ",
+        "titleHighlight": "Potenziare",
+        "titleEnd": " una vita indipendente",
+        "subtitle": "Servizi di assistenza domiciliare professionali e compassionevoli su misura per le tue esigenze uniche. In HealthJoy, aiutiamo te o i tuoi cari a mantenere l'indipendenza nel comfort della propria casa.",
+        "ctaPrimary": "Inizia",
+        "ctaSecondary": "I Nostri Servizi"
+    },
+    "trust": {
+        "partners": "Partner affermati",
+        "staff": "Personale esperto",
+        "support": "Supporto 24/7 disponibile",
+        "excellence": "Eccellenza certificata"
+    },
+    "servicesSection": {
+        "title": "I Nostri Servizi",
+        "subtitle": "Soluzioni di assistenza complete progettate per supportare il tuo stile di vita e le tue esigenze di salute."
+    },
+    "whyChooseUs": {
+        "title": "Perché scegliere HealthJoy Home Care?",
+        "points": {
+            "personalized": {
+                "title": "Piani di assistenza personalizzati",
+                "desc": "Non crediamo in soluzioni universali. Ogni cliente riceve un piano di assistenza adattato alle proprie esigenze specifiche."
+            },
+            "vetted": {
+                "title": "Assistenti verificati",
+                "desc": "Il nostro team è sottoposto a rigorosi controlli e formazione continua per garantire un'assistenza di alta qualità."
+            },
+            "consultation": {
+                "title": "Servizio di consulenza gratuito",
+                "desc": "Forniamo consulenza professionale per aiutare te o la tua famiglia a navigare tra le opzioni di assistenza domiciliare e massimizzare i benefici del supporto."
+            }
+        }
+    },
+    "stats": {
+        "years": "Anni di assistenza sanitaria",
+        "families": "Famiglie felici",
+        "satisfaction": "Soddisfazione",
+        "response": "Tempo di risposta"
+    },
+    "testimonials": {
+        "title": "Cosa dicono i nostri clienti",
+        "subtitle": "Siamo orgogliosi di condividere le esperienze delle famiglie che supportiamo ogni giorno.",
+        "list": [
+            {
+                "name": "Sarah M.",
+                "role": "Figlia di un cliente",
+                "quote": "\"HealthJoy ha fornito un'assistenza eccezionale a mia madre. I loro assistenti non sono solo professionisti, ma persone davvero compassionevoli che l'hanno trattata come una di famiglia.\""
+            },
+            {
+                "name": "James R.",
+                "role": "Tutore principale",
+                "quote": "\"Il passaggio all'assistenza domiciliare è stato agevole grazie al team. Il loro piano di assistenza personalizzato si adatta perfettamente alle esigenze e alla routine quotidiana di mio padre.\""
+            },
+            {
+                "name": "L. W.",
+                "role": "Residente di Beecroft",
+                "quote": "\"Il supporto infermieristico che abbiamo ricevuto dopo l'intervento è stato di prim'ordine. Efficiente, professionale e molto rassicurante durante un periodo di recupero difficile.\""
+            }
+        ]
+    },
+    "services": {
+        "personalCare": {
+            "title": "Cura della persona",
+            "desc": "Assistenza nelle attività della vita quotidiana, inclusa l'igiene, l'abbigliamento e la mobilità per mantenere fiducia e benessere."
+        },
+        "domesticAssistance": {
+            "title": "Assistenza domestica",
+            "desc": "Aiuto nelle faccende domestiche, lavanderia, preparazione dei pasti e mantenimento di un ambiente sicuro e pulito, compreso il giardinaggio."
+        },
+        "socialSupport": {
+            "title": "Supporto sociale",
+            "desc": "Fornire compagnia e supporto per le attività sociali per aiutare i clienti a rimanere connessi e impegnati nella loro comunità."
+        },
+        "alliedHealth": {
+            "title": "Salute alleata e servizi terapeutici",
+            "desc": "Servizi terapeutici specializzati tra cui fisioterapia, terapia occupazionale, podologia, servizi dietetici e altri supporti sanitari su misura per le tue esigenze."
+        },
+        "assistiveTechnology": {
+            "title": "Tecnologia assistiva",
+            "desc": "Soluzioni intelligenti e attrezzature specializzate per migliorare l'indipendenza e la sicurezza nella vita quotidiana."
+        },
+        "homeModifications": {
+            "title": "Modifiche domestiche",
+            "desc": "Adeguamenti domestici professionali, tra cui maniglioni, rampe e modifiche al bagno per garantire che la tua casa rimanga sicura e accessibile."
+        },
+        "healthWellness": {
+            "title": "Salute e benessere",
+            "desc": "Promozione di stili di vita sani attraverso l'agopuntura, la medicina tradizionale cinese, la massoterapia, il monitoraggio della salute e il supporto preventivo personalizzato per gli anziani."
+        },
+        "mentalHealth": {
+            "title": "Salute mentale",
+            "desc": "Supporto emotivo empatico e servizi di benessere mentale per aiutarti a navigare tra i cambiamenti della vita e mantenere la lucidità mentale."
+        }
+    },
+    "action": {
+        "learnMore": "Scopri di più"
+    },
+    "servicesPage": {
+        "heroBadge": "Supporto professionale",
+        "heroTitle": "Assistenza domiciliare dedicata per i tuoi cari",
+        "heroDesc": "HealthJoy Home Care fornisce un supporto professionale e compassionevole su misura per le esigenze uniche, aiutando le persone a vivere in modo indipendente con dignità, comfort e sicurezza nelle proprie case.",
+        "bookConsultation": "Prenota una consulenza gratuita",
+        "viewPricing": "Visualizza i servizi principali",
+        "activePlans": "PIANI DI ASSISTENZA ATTIVI",
+        "personalizationTitle": "Piani di assistenza personalizzati",
+        "personalizationSubtitle": "Ogni individuo è unico",
+        "personalizationDesc": "In HealthJoy Home Care, crediamo nell'assistenza personalizzata che rispetta le preferenze individuali. Il nostro team lavora a stretto contatto con te per sviluppare un piano che si adatti perfettamente al tuo stile di vita.",
+        "personalizationButton": "Inizia",
+        "specializedTitle": "I nostri servizi specializzati",
+        "specializedSubtitle": "Supporto professionale e compassionevole che copre tutti gli aspetti della vita quotidiana."
+    },
+    "footer": {
+        "desc": "Servizi di assistenza domiciliare compassionevoli su misura per le tue esigenze. Valorizzare le vite attraverso il supporto professionale.",
+        "linksText": "Link rapidi",
+        "legalText": "Legale e Qualità",
+        "contactText": "Informazioni di contatto",
+        "address": "Indirizzo:",
+        "phone": "Telefono:",
+        "email": "Email:",
+        "connect": "Connettiti con noi",
+        "wechat": "Supporto WeChat",
+        "rights": "© 2026 HealthJoy Home Care. Tutti i diritti riservati.",
+        "cookies": "Cookie",
+        "accessibility": "Accessibilità",
+        "links": {
+            "services": "I Nostri Servizi",
+            "about": "Informazioni su HealthJoy",
+            "careers": "Opportunità di carriera",
+            "contact": "Contattaci",
+            "privacy": "Informativa sulla privacy",
+            "terms": "Termini di servizio",
+            "compliance": "Conformità",
+            "feedback": "Feedback e reclami"
+        }
+    },
+    "about": {
+        "heroTitle": "Assistenza compassionevole per i tuoi ",
+        "heroHighlight": "cari",
+        "heroSubtitle": "Incontra il team dietro HealthJoy Home Care, dedicato a fornire supporto professionale e fiducia.",
+        "storyTitle": "La nostra storia",
+        "storyP1": "Fondata con la missione di ridefinire l'assistenza domiciliare, HealthJoy è iniziata come una piccola iniziativa guidata dalla famiglia dopo che i nostri fondatori hanno faticato a trovare un supporto affidabile e di alta qualità per i propri genitori anziani. Abbiamo capito che la vera assistenza va oltre i compiti medici; si tratta di dignità, compagnia e preservare il comfort di casa.",
+        "storyP2": "Oggi siamo un fornitore leader impegnato in un'assistenza di qualità, garantendo che ogni cliente si senta parte della famiglia attraverso il nostro approccio personalizzato e la nostra competenza professionale. Dalle nostre umili origini a un team di oltre 100 assistenti dedicati, il nostro cuore rimane nello stesso posto: casa tua.",
+        "valuesTitle": "I nostri valori",
+        "valuesSubtitle": "I principi fondamentali che guidano ogni interazione che abbiamo con i nostri clienti.",
+        "teamTitle": "Incontra il nostro team di leadership",
+        "teamSubtitle": "I visionari e i professionisti esperti che assicurano che HealthJoy mantenga la sua promessa di eccellenza ogni giorno."
+    },
+    "team": {
+        "annie": {
+            "role": "Responsabile delle ammissioni",
+            "desc": "Professionista dedicata che guida i nuovi clienti attraverso il loro percorso con empatia ed esperienza, assicurando che ognuno riceva il piano di assistenza perfetto dal primo giorno."
+        },
+        "james": {
+            "role": "Responsabile delle operazioni",
+            "desc": "Assicura un coordinamento fluido tra le nostre famiglie e il nostro team di assistenti qualificati."
+        },
+        "tsing": {
+            "role": "Consulente capo",
+            "desc": "Oltre 20 anni di esperienza nella medicina geriatrica e nella leadership sanitaria comunitaria."
+        },
+        "selina": {
+            "role": "Responsabile finanziaria",
+            "desc": "Esperta in pianificazione finanziaria strategica e gestione sanitaria, garantendo stabilità a lungo termine ed eccellenza per le nostre famiglie."
+        }
+    },
+    "values": {
+        "compassion": {
+            "title": "Compassione",
+            "desc": "Guidiamo con il cuore in tutto ciò che facciamo, trattando ogni cliente con lo stesso calore che daremmo ai nostri genitori."
+        },
+        "integrity": {
+            "title": "Integrità",
+            "desc": "Onestà e trasparenza sono le nostre fondamenta. Crediamo che la fiducia si guadagni attraverso azioni quotidiane etiche e coerenti."
+        },
+        "excellence": {
+            "title": "Eccellenza",
+            "desc": "Stabilire i più alti standard per l'assistenza domiciliare attraverso la formazione continua, la crescita professionale e l'attenzione ai dettagli."
+        }
+    },
+    "getStarted": {
+        "heroTitle": "Inizia il tuo percorso di assistenza",
+        "heroDesc": "Segui il nostro semplice processo in tre fasi per ricevere l'assistenza domiciliare professionale e compassionevole che meriti.",
+        "steps": {
+            "1": {
+                "title": "1. Consulenza iniziale",
+                "desc": "Prenota un colloquio gratuito con i nostri esperti per discutere le tue esigenze specifiche."
+            },
+            "2": {
+                "title": "2. Progettazione del piano di assistenza",
+                "desc": "Ricevi una strategia di supporto su misura progettata specificamente per il tuo stile di vita."
+            },
+            "3": {
+                "title": "3. Inizio dell'assistenza",
+                "desc": "Incontra il tuo assistente professionale dedicato e inizia il tuo viaggio verso una vita migliore."
+            }
+        },
+        "formTitle": "Modulo di avvio rapido",
+        "formDesc": "Raccontaci un po' cosa stai cercando e noi ci occuperemo del resto.",
+        "labels": {
+            "careFor": "Per chi è questa assistenza?",
+            "supportType": "Tipo di supporto necessario",
+            "bestTime": "Momento migliore per chiamare",
+            "fullName": "Nome completo",
+            "phone": "Numero di telefono"
+        },
+        "options": {
+            "careFor": {
+                "self": "Me stesso",
+                "selfDesc": "Per me stesso",
+                "family": "Famiglia",
+                "familyDesc": "Per un parente",
+                "friend": "Amico",
+                "friendDesc": "Per un vicino"
+            },
+            "supportTypePlaceholder": "Seleziona un servizio...",
+            "time": {
+                "anytime": "In qualsiasi momento",
+                "morning": "Mattina",
+                "afternoon": "Pomeriggio",
+                "evening": "Sera"
+            },
+            "services": {
+                "hcp": "Supporto domiciliare (HCP)",
+                "ndis": "NDIS",
+                "hcpUpgrade": "Aggiornamento pacchetto supporto domiciliare (HCP)",
+                "careServices": "Servizi di assistenza",
+                "reassessment": "Rivalutazione della domanda",
+                "nonGov": "Supporto non finanziato dal governo",
+                "other": "Altro supporto"
+            }
+        },
+        "placeholders": {
+            "fullName": "Mario Rossi",
+            "phone": "0493-334-910"
+        },
+        "buttons": {
+            "submit": "Invia richiesta e prenota consulenza",
+            "submitting": "Invio in corso..."
+        },
+        "messages": {
+            "errorFill": "Si prega di inserire nome e numero di telefono.",
+            "errorSubmit": "Invio fallito. Riprova.",
+            "successSubmit": "Richiesta di assistenza inviata con successo!"
+        }
+    },
+    "caregivers": {
+        "heroTitle": "I nostri standard per gli ",
+        "heroHighlight": "assistenti",
+        "heroDesc": "Assumiamo solo i migliori per garantirti la massima tranquillità.",
+        "standards": {
+            "screening": {
+                "title": "Screening rigoroso",
+                "desc": "Ogni assistente viene sottoposto a un controllo approfondito dei precedenti, inclusi controlli della polizia nazionale, controlli per il lavoro con i bambini e verifica delle referenze professionali."
+            },
+            "certified": {
+                "title": "Eccellenza certificata",
+                "desc": "Il nostro team è composto da professionisti qualificati con certificazioni in assistenza individuale, infermieristica o settori sanitari correlati, garantendo un'assistenza esperta."
+            },
+            "matching": {
+                "title": "Abbinamento personalizzato",
+                "desc": "Non assegniamo semplicemente un assistente; lo abbiniamo in base alla personalità, alla lingua, agli interessi e alle specifiche esigenze di cura per favorire legami genuini."
+            },
+            "training": {
+                "title": "Formazione continua",
+                "desc": "HealthJoy offre sviluppo professionale continuo al nostro personale, mantenendolo aggiornato sulle ultime migliori pratiche nell'assistenza alla demenza, nel supporto alla mobilità e altro ancora."
+            },
+            "compassion": {
+                "title": "La compassione prima di tutto",
+                "desc": "Oltre alle competenze, cerchiamo l'empatia. I nostri assistenti sono scelti per il loro grande cuore e il sincero desiderio di fare una differenza positiva nella vita delle persone."
+            }
+        },
+        "cta": {
+            "title": "Sei un assistente appassionato?",
+            "desc": "Siamo sempre alla ricerca di persone dedicate che si uniscano al nostro team in crescita. Se hai le competenze e il cuore per l'assistenza, ci farebbe piacere conoscerti.",
+            "button": "Candidati per unirti al nostro team"
+        }
+    },
+    "careers": {
+        "heroBadge": "Unisciti alla nostra missione",
+        "heroTitle": "Entra nella famiglia HealthJoy",
+        "heroDesc": "Fai una differenza significativa nella vita delle persone mentre costruisci una carriera gratificante con un team che si prende cura davvero del tuo benessere.",
+        "buttons": {
+            "viewOpenings": "Visualizza posizioni aperte",
+            "learnMore": "Scopri di più"
+        },
+        "why": {
+            "title": "Perché lavorare con noi",
+            "subtitle": "Offriamo più di un semplice lavoro; forniamo un ambiente di supporto in cui puoi crescere personalmente e professionalmente.",
+            "flexible": {
+                "title": "Orari flessibili",
+                "desc": "Orari di lavoro adatti al tuo stile di vita, che tu abbia bisogno di turni mattutini, serali o nel fine settimana."
+            },
+            "pay": {
+                "title": "Retribuzione competitiva",
+                "desc": "Offriamo compensi leader del settore, bonus basati sulle prestazioni e benefit sanitari completi."
+            },
+            "training": {
+                "title": "Formazione professionale",
+                "desc": "Accesso a certificazioni di apprendimento continuo e tutoraggio per lo sviluppo della carriera professionale."
+            }
+        },
+        "process": {
+            "title": "Il nostro processo di candidatura",
+            "subtitle": "Passaggi trasparenti per unirti al nostro team di assistenza professionale",
+            "apply": {
+                "title": "Candidati",
+                "desc": "Invia il tuo CV e le certificazioni tramite il nostro portale online."
+            },
+            "interview": {
+                "title": "Colloquio",
+                "desc": "Incontra il nostro team per un colloquio personale e il controllo dei precedenti."
+            },
+            "onboarding": {
+                "title": "Onboarding",
+                "desc": "Partecipa al nostro programma di orientamento e inizia il tuo primo incarico."
+            }
+        },
+        "openings": {
+            "title": "Posizioni aperte",
+            "available": "12 posizioni disponibili",
+            "applyNow": "Candidati ora",
+            "jobs": {
+                "caseManager": {
+                    "role": "Case Manager",
+                    "dept": "GESTIONE ASSISTENZA",
+                    "type": "Remoto/Sul campo",
+                    "desc": "Coordinare e gestire i piani di assistenza individuali, assicurando che i nostri clienti ricevano risorse e supporto personalizzati di alta qualità.",
+                    "term": "Tempo pieno / Tempo parziale",
+                    "location": "Sydney, NSW"
+                },
+                "rn": {
+                    "role": "Infermiere registrato (RN)",
+                    "dept": "INFERMIERISTICA",
+                    "type": "Sul campo",
+                    "desc": "Fornire assistenza medica professionale, gestione dei farmaci e valutazioni dei pazienti in contesti domiciliari.",
+                    "term": "Tempo pieno / Tempo parziale",
+                    "location": "Sydney, NSW"
+                },
+                "supportWorker": {
+                    "role": "Operatore di supporto",
+                    "dept": "SUPPORTO",
+                    "type": "Flessibile",
+                    "desc": "Assistere nelle faccende domestiche, nella spesa e nella preparazione dei pasti per gli anziani che vivono in modo indipendente.",
+                    "term": "Tempo parziale",
+                    "location": "Sydney, NSW"
+                }
+            }
+        }
+    },
+    "compliance": {
+        "heroBadge": "Eccellenza verificata",
+        "heroTitle": "Standard di qualità e conformità di HealthJoy",
+        "heroDesc": "Il nostro incrollabile impegno nel fornire servizi di assistenza domiciliare sicuri e di alta qualità attraverso standard rigorosi, verifica continua del personale ed eccellenza normativa.",
+        "buttons": {
+            "viewCertifications": "Visualizza certificazioni",
+            "contactQuality": "Contatta il team qualità"
+        },
+        "commitment": {
+            "title": "Il nostro impegno per la qualità",
+            "subtitle": "Aderiamo ai più alti parametri del settore per garantire la tua sicurezza e il tuo benessere attraverso un quadro di eccellenza strutturato.",
+            "improvement": {
+                "title": "Miglioramento continuo",
+                "desc": "Controlli interni periodici e revisioni dei servizi esterni per migliorare costantemente i nostri processi di erogazione dell'assistenza."
+            },
+            "personCentered": {
+                "title": "Assistenza centrata sulla persona",
+                "desc": "Piani di assistenza su misura progettati in base alle esigenze individuali, ai contesti culturali e alle preferenze personali."
+            },
+            "safetyFirst": {
+                "title": "La sicurezza prima di tutto",
+                "desc": "Protocolli rigorosi di gestione del rischio e prevenzione degli incidenti monitorati 24 ore su 24, 7 giorni su 7 dal nostro team dedicato."
+            }
+        },
+        "regulatory": {
+            "title": "Conformità normativa",
+            "subtitle": "Siamo pienamente registrati e conformi agli organismi di regolamentazione sanitaria australiani, garantendo che i nostri servizi soddisfino i severi standard nazionali per l'assistenza agli anziani e il supporto ai disabili.",
+            "points": {
+                "sah": "Fornitore di servizi di supporto domiciliare",
+                "mac": "Approvato da My Aged Care",
+                "acqs": "Conforme agli standard di qualità dell'assistenza agli anziani"
+            },
+            "badges": {
+                "sah": "SUPPORTO DOMICILIARE",
+                "mac": "MY AGED CARE",
+                "quality": "STANDARD DI QUALITÀ",
+                "iso": "ISO 9001:2015"
+            }
+        },
+        "insurance": {
+            "title": "Assicurazione e protezione",
+            "subtitle": "Tranquillità totale grazie a una copertura assicurativa completa per i nostri clienti e per il personale.",
+            "points": {
+                "publicLiability": "Responsabilità civile",
+                "publicLiabilityValue": "Copertura 20M$",
+                "professionalIndemnity": "Indennità professionale",
+                "professionalIndemnityValue": "Copertura 10M$",
+                "workersComp": "Infortuni sul lavoro",
+                "workersCompValue": "Copertura completa"
+            }
+        },
+        "vetting": {
+            "title": "Verifica rigorosa del personale",
+            "subtitle": "Impieghiamo solo le persone più qualificate e affidabili dopo un processo di selezione in più fasi.",
+            "points": {
+                "police": {
+                    "title": "Controlli di polizia",
+                    "desc": "Certificato penale nazionale"
+                },
+                "wwcc": {
+                    "title": "WWCC",
+                    "desc": "Controllo per il lavoro con i bambini"
+                },
+                "screen": {
+                    "title": "Screening dei lavoratori",
+                    "desc": "Verifica prima del servizio di assistenza"
+                },
+                "quals": {
+                    "title": "Verifica delle qualifiche",
+                    "desc": "Certificato III/IV e diplomi infermieristici"
+                }
+            }
+        },
+        "feedback": {
+            "title": "Feedback e reclami",
+            "subtitle": "Il tuo contributo è essenziale per il miglioramento della nostra qualità. Se hai dubbi o desideri presentare un reclamo, disponiamo di un processo chiaro e trasparente per garantire che la tua voce venga ascoltata e i problemi risolti rapidamente.",
+            "internal": {
+                "title": "Risoluzione interna",
+                "desc": "Risposta entro 48 ore",
+                "button": "Invia feedback"
+            },
+            "advocacy": {
+                "title": "Servizi di tutela",
+                "desc": "Supporto indipendente",
+                "button": "Diritti esterni"
+            }
+        }
+    },
+    "linksPage": {
+        "heroTitle": "Link e risorse utili",
+        "heroDesc": "Un elenco centralizzato di risorse governative, sanitarie e interne per supportare il tuo percorso di assistenza. Trova tutto ciò di cui hai bisogno per navigare nell'assistenza domiciliare con fiducia.",
+        "gov": {
+            "title": "Risorse governative",
+            "mac": {
+                "title": "My Aged Care",
+                "desc": "Accedi ai servizi di assistenza agli anziani finanziati dal governo e trova informazioni su idoneità e supporto."
+            },
+            "ndis": {
+                "title": "Sito ufficiale NDIS",
+                "desc": "Informazioni sul National Disability Insurance Scheme, gestione del piano e supporto ai partecipanti."
+            },
+            "health": {
+                "title": "Dipartimento della Salute",
+                "desc": "Ultimi aggiornamenti sulla salute pubblica, linee guida cliniche e politiche sanitarie nazionali."
+            }
+        },
+        "health": {
+            "title": "Salute e benessere",
+            "dementia": {
+                "title": "Dementia Australia",
+                "desc": "Supporto specialistico e risorse per chi vive con la demenza e per i loro assistenti."
+            },
+            "eating": {
+                "title": "Guide per un'alimentazione sana",
+                "desc": "Consulenza nutrizionale e pianificazione dei pasti progettate specificamente per il benessere degli anziani."
+            }
+        },
+        "quickLinks": {
+            "title": "I nostri link rapidi",
+            "services": "I nostri servizi di assistenza",
+            "caregivers": "Standard degli assistenti",
+            "careers": "Opportunità di carriera"
+        },
+        "legal": {
+            "title": "Legale e conformità",
+            "privacy": "Informativa sulla privacy",
+            "terms": "Termini di servizio",
+            "advocacy": "Diritti dei consumatori e tutela"
+        }
+    },
+    "contact": {
+        "title": "Contattaci",
+        "desc": "Siamo qui per aiutare te e i tuoi cari con servizi di assistenza domiciliare professionali. Contatta il nostro team oggi stesso per un supporto personalizzato.",
+        "officeHours": {
+            "title": "Orari di ufficio",
+            "weekday": "Lunedì - Venerdì",
+            "weekdayHours": "9:00 - 17:00",
+            "saturday": "Sabato",
+            "saturdayHours": "Su appuntamento",
+            "sunday": "Domenica",
+            "sundayHours": "CHIUSO",
+            "emergency": "Supporto di emergenza:",
+            "emergencyDesc": "Per esigenze di assistenza urgenti al di fuori dell'orario normale, la nostra linea telefonica rimane disponibile 24 ore su 24, 7 giorni su 7."
+        },
+        "form": {
+            "title": "Invia una richiesta",
+            "labels": {
+                "fullName": "Nome completo",
+                "email": "Indirizzo e-mail",
+                "phone": "Numero di telefono",
+                "subject": "Oggetto",
+                "message": "Messaggio"
+            },
+            "placeholders": {
+                "fullName": "Mario Rossi",
+                "email": "mario@esempio.it",
+                "phone": "0493-334-910",
+                "message": "Come possiamo aiutarti?"
+            },
+            "subjects": {
+                "bookConsultation": "Prenota consulenza",
+                "general": "Richiesta generale",
+                "support": "Servizi di supporto",
+                "career": "Opportunità di carriera",
+                "feedback": "Feedback",
+                "complaint": "Reclami e controversie",
+                "other": "Altra richiesta"
+            },
+            "buttons": {
+                "sending": "Invio in corso...",
+                "send": "Invia messaggio"
+            },
+            "messages": {
+                "errorFill": "Si prega di inserire nome e indirizzo e-mail.",
+                "success": "Richiesta inviata con successo!",
+                "errorSubmit": "Invio fallito. Riprova."
+            }
+        },
+        "cards": {
+            "phone": {
+                "title": "Telefono",
+                "desc": "Disponibile 24/7 per esigenze di assistenza urgenti."
+            },
+            "email": {
+                "title": "Email",
+                "desc": "Richieste generali e feedback."
+            },
+            "wechat": {
+                "title": "WeChat",
+                "id": "ID:"
+            }
+        }
+    },
+    "supportAtHome": {
+        "heroBadge": "Fornitore di servizi di supporto domiciliare",
+        "heroTitle": "Potenzia la tua indipendenza con HealthJoy Home Care",
+        "heroDesc": "Navigare tra le polizze di assistenza domiciliare può essere complesso, ma non devi farlo da solo. HealthJoy Home Care si impegna a semplificare il processo, fornendo gestione personalizzata del piano, coordinamento e supporto quotidiano professionale su misura per i tuoi obiettivi di vita unici.",
+        "form": {
+            "title": "Richiedi ora",
+            "desc": "Hai domande? Compila il modulo sottostante e uno specialista di HealthJoy ti contatterà entro 24 ore.",
+            "successTitle": "Grazie!",
+            "successDesc": "La tua richiesta è stata inviata con successo. Ti contatteremo a breve.",
+            "sendAnother": "Invia un'altra richiesta",
+            "errorSubmit": "Invio della richiesta fallito. Riprova.",
+            "labels": {
+                "fullName": "Nome completo",
+                "email": "Indirizzo e-mail",
+                "phone": "Numero di telefono",
+                "address": "Indirizzo di casa",
+                "service": "Servizio richiesto",
+                "message": "Messaggio"
+            },
+            "placeholders": {
+                "fullName": "Mario Rossi",
+                "email": "mario@esempio.it",
+                "phone": "0493-334-910",
+                "address": "Via Esempio 123, Quartiere",
+                "message": "Come può aiutarti HealthJoy oggi?"
+            },
+            "services": {
+                "personal": "Cura della persona",
+                "residential": "Assistenza residenziale",
+                "social": "Supporto sociale",
+                "allied": "Salute alleata e servizi terapeutici",
+                "assistive": "Tecnologia assistiva",
+                "modifications": "Modifiche domestiche",
+                "healthWellness": "Salute e benessere",
+                "mentalHealth": "Salute mentale"
+            },
+            "buttons": {
+                "sending": "Invio in corso...",
+                "submit": "Invia richiesta"
+            },
+            "privacy": "Inviando questo modulo, accetti l'Informativa sulla privacy di HealthJoy Home Care."
+        },
+        "features": {
+            "title": "Come HealthJoy Home Care ti supporta",
+            "items": {
+                "1": {
+                    "title": "Gestione del piano",
+                    "desc": "Concentrati sui tuoi obiettivi mentre HealthJoy Home Care si occupa dell'amministrazione finanziaria, dei pagamenti ai fornitori e del monitoraggio del budget dei tuoi fondi."
+                },
+                "2": {
+                    "title": "Coordinamento del supporto",
+                    "desc": "I nostri specialisti ti aiutano a capire il tuo piano, trovare i servizi locali giusti e coordinare i tuoi supporti per il massimo impatto sul tuo benessere."
+                },
+                "3": {
+                    "title": "Supporto alla vita quotidiana",
+                    "desc": "HealthJoy Home Care fornisce assistenza pratica per la cura personale, le faccende domestiche e la partecipazione alla comunità per aiutarti a vivere la vita alle tue condizioni."
+                }
+            }
+        },
+        "steps": {
+            "title": "Iniziare con HealthJoy Home Care",
+            "items": {
+                "1": {
+                    "title": "Consulenza iniziale",
+                    "desc": "Contatta il team HealthJoy per una chiacchierata amichevole e senza impegno sul tuo attuale piano di assistenza domiciliare e sulle tue aspirazioni personali."
+                },
+                "2": {
+                    "title": "Piano di assistenza su misura",
+                    "desc": "Lavoriamo insieme per progettare un programma di supporto che si adatti perfettamente al tuo stile di vita e massimizzi il valore del tuo finanziamento."
+                },
+                "3": {
+                    "title": "Transizione agevole",
+                    "desc": "HealthJoy Home Care gestisce i documenti e il coordinamento con i fornitori esistenti per garantire un avvio regolare dei nuovi servizi di supporto."
+                }
+            }
+        }
+    },
+    "applyNow": {
+        "heroBadge": "Unisciti al nostro team",
+        "heroTitle": "Candidati ora",
+        "heroDesc": "Aiutaci a fornire un'assistenza eccezionale. Unisciti a un team dedicato a fare la differenza reale nella vita delle persone ogni giorno.",
+        "status": {
+            "missingFields": "Si prega di inserire nome, e-mail e numero di telefono.",
+            "success": "Candidatura inviata con successo!",
+            "error": "Invio fallito. Riprova."
+        },
+        "sections": {
+            "personalInfo": "Informazioni personali",
+            "professionalBackground": "Background professionale",
+            "qualifications": "Qualifiche e competenze",
+            "materials": "Materiali per la candidatura"
+        },
+        "labels": {
+            "fullName": "Nome completo",
+            "gender": "Genere",
+            "male": "Maschio",
+            "female": "Femmina",
+            "email": "Indirizzo e-mail",
+            "phone": "Numero di telefono",
+            "address": "Indirizzo di casa",
+            "position": "Posizione richiesta",
+            "experience": "Esperienza nell'assistenza e nel supporto",
+            "license": "Patente di guida",
+            "certificates": "Certificazioni (Scelta multipla)",
+            "languages": "Lingue (Scelta multipla)",
+            "skills": "Competenze (Scelta multipla)",
+            "coverLetter": "Lettera di presentazione (Opzionale)",
+            "resume": "Invia il CV"
+        },
+        "placeholders": {
+            "fullName": "Mario Rossi",
+            "email": "mario@esempio.it",
+            "phone": "0400 000 000",
+            "address": "Via della Cura 123, Quartiere, Stato, Cap",
+            "position": "Seleziona una posizione",
+            "experience": "Seleziona il livello di esperienza",
+            "license": "Seleziona il tipo di patente",
+            "coverLetter": "Raccontaci perché saresti un ottimo acquisto per HealthJoy..."
+        },
+        "options": {
+            "positions": {
+                "caseManager": "Case Manager",
+                "nurse": "Infermiere registrato",
+                "supportWorker": "Operatore di supporto"
+            },
+            "experience": {
+                "0-1": "0-1 anni",
+                "1-3": "1-3 anni",
+                "3-5": "3-5 anni",
+                "5+": "5+ anni"
+            },
+            "license": {
+                "full": "Patente completa",
+                "p2": "Provvisoria P2",
+                "p1": "Provvisoria P1",
+                "international": "Internazionale",
+                "none": "Senza patente"
+            },
+            "certificates": {
+                "support3": "Assistenza Individuale III",
+                "support4": "Assistenza Individuale IV",
+                "community": "Servizio comunitario",
+                "firstAid": "Pronto soccorso",
+                "others": "Altri"
+            },
+            "languages": {
+                "mandarin": "Mandarino",
+                "cantonese": "Cantonese",
+                "shanghainese": "Shanghainese",
+                "english": "Inglese",
+                "korean": "Coreano",
+                "others": "Altri"
+            },
+            "skills": {
+                "cooking": "Cucina",
+                "cleaning": "Pulizia",
+                "personalCare": "Cura della persona",
+                "others": "Altri"
+            }
+        },
+        "upload": {
+            "idle": "Trascina e rilascia il tuo CV o <span class=\"text-blue-600 font-bold\">sfoglia i file</span>",
+            "selected": "File selezionato - clicca per cambiare",
+            "hint": "PDF, DOCX fino a 10MB"
+        },
+        "buttons": {
+            "submit": "Invia candidatura",
+            "submitting": "Invio in corso..."
+        },
+        "footer": {
+            "agree": "Inviando, accetti i nostri <Link to=\"/terms\" class=\"text-slate-600 font-bold hover:underline\">Termini di servizio</Link> e l'<Link to=\"/privacy\" class=\"text-slate-600 font-bold hover:underline\">Informativa sulla privacy</Link>."
+        }
+    }
+}

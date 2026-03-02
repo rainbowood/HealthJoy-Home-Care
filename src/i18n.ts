@@ -9,6 +9,8 @@ import jaTranslation from './locales/ja/translation.json';
 import koTranslation from './locales/ko/translation.json';
 import frTranslation from './locales/fr/translation.json';
 import esTranslation from './locales/es/translation.json';
+import itTranslation from './locales/it/translation.json';
+import arTranslation from './locales/ar/translation.json';
 
 i18n
     .use(LanguageDetector)
@@ -35,6 +37,12 @@ i18n
             },
             es: {
                 translation: esTranslation,
+            },
+            it: {
+                translation: itTranslation,
+            },
+            ar: {
+                translation: arTranslation,
             },
         },
         fallbackLng: 'en',
