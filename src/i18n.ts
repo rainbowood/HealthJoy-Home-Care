@@ -7,6 +7,8 @@ import zhTranslation from './locales/zh/translation.json';
 import zhTWTranslation from './locales/zh-TW/translation.json';
 import jaTranslation from './locales/ja/translation.json';
 import koTranslation from './locales/ko/translation.json';
+import frTranslation from './locales/fr/translation.json';
+import esTranslation from './locales/es/translation.json';
 
 i18n
     .use(LanguageDetector)
@@ -27,6 +29,12 @@ i18n
             },
             ko: {
                 translation: koTranslation,
+            },
+            fr: {
+                translation: frTranslation,
+            },
+            es: {
+                translation: esTranslation,
             },
         },
         fallbackLng: 'en',

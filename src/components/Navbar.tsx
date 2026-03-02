@@ -16,7 +16,7 @@ export const Navbar: React.FC = () => {
   const [isLangOpen, setIsLangOpen] = React.useState(false);
   const [isAccessOpen, setIsAccessOpen] = React.useState(false);
 
-  const currentLangLabel = i18n.language === 'zh' ? '简体中文' : i18n.language === 'zh-TW' ? '繁體中文' : i18n.language === 'ja' ? '日本語' : i18n.language === 'ko' ? '한국어' : 'English';
+  const currentLangLabel = i18n.language === 'zh' ? '简体中文' : i18n.language === 'zh-TW' ? '繁體中文' : i18n.language === 'ja' ? '日本語' : i18n.language === 'ko' ? '한국어' : i18n.language === 'fr' ? 'Français' : i18n.language === 'es' ? 'Español' : 'English';
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-slate-100">
@@ -113,6 +113,24 @@ export const Navbar: React.FC = () => {
                     >
                       한국어
                     </button>
+                    <button
+                      onClick={() => {
+                        i18n.changeLanguage('fr');
+                        setIsLangOpen(false);
+                      }}
+                      className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                      Français
+                    </button>
+                    <button
+                      onClick={() => {
+                        i18n.changeLanguage('es');
+                        setIsLangOpen(false);
+                      }}
+                      className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                      Español
+                    </button>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -206,6 +224,34 @@ export const Navbar: React.FC = () => {
                   {t(link.name)}
                 </Link>
               ))}
+
+              <div className="border-t border-slate-100 pt-4 flex flex-col gap-2">
+                <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-2">
+                  Language / Langue / Idioma
+                </div>
+                <div className="grid grid-cols-2 gap-2 px-2">
+                  {[
+                    { id: 'en', label: 'English' },
+                    { id: 'zh', label: '简体中文' },
+                    { id: 'zh-TW', label: '繁體中文' },
+                    { id: 'ja', label: '日本語' },
+                    { id: 'ko', label: '한국어' },
+                    { id: 'fr', label: 'Français' },
+                    { id: 'es', label: 'Español' }
+                  ].map((lang) => (
+                    <button
+                      key={lang.id}
+                      onClick={() => {
+                        i18n.changeLanguage(lang.id);
+                        setIsOpen(false);
+                      }}
+                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${i18n.language === lang.id ? 'bg-blue-600 text-white' : 'bg-slate-50 text-slate-600 hover:bg-blue-50'}`}
+                    >
+                      {lang.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
 
               <div className="border-t border-slate-100 pt-4 flex flex-col gap-2">
                 <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-2">
