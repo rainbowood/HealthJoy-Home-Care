@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import * as Icons from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import heroHomeImg from '../assets/images/hero-home.png';
+import { Robchat } from './Robchat';
 
 export const Home: React.FC = () => {
   const { t } = useTranslation();
@@ -212,6 +213,9 @@ export const Home: React.FC = () => {
           ))}
         </div>
       </section>
+
+      {/* Robchat Widget */}
+      <Robchat />
     </div>
   );
 };

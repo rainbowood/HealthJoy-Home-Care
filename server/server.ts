@@ -5,6 +5,7 @@ import contactRoutes from './routes/contact.js';
 import getStartedRoutes from './routes/getstarted.js';
 import applyRoutes from './routes/apply.js';
 import supportRoutes from './routes/support.js';
+import robchatRoutes from './routes/robchat.js';
 
 dotenv.config();
 
@@ -28,6 +29,7 @@ app.use('/api/contact', contactRoutes);
 app.use('/api/get-started', getStartedRoutes);
 app.use('/api/apply', applyRoutes);
 app.use('/api/support', supportRoutes);
+app.use('/api/robchat', robchatRoutes);
 
 // Health check
 app.get('/api/health', async (_req, res) => {

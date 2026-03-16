@@ -137,3 +137,43 @@ export async function sendSupportEmail(data: {
         html,
     });
 }
+
+export async function sendRobchatEmail(data: {
+    message?: string;
+    audio?: { filename: string; content: Buffer; contentType: string };
+}) {
+    const html = `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+            <div style="background-color: #2563eb; color: white; padding: 24px;">
+                <h1 style="margin: 0; font-size: 24px;">New Robchat Message</h1>
+            </div>
+            <div style="padding: 24px; color: #1e293b;">
+                <p>Hello WeChat Support Team,</p>
+                <p>A new message has been received from Robchat on the website.</p>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 24px 0;">
+                ${data.message ? `<div style="margin-top: 24px; padding: 16px; background-color: #f8fafc; border-radius: 4px;"><strong>Text Message:</strong><br>${data.message}</div>` : ''}
+                ${data.audio ? `<div style="margin-top: 24px; padding: 16px; background-color: #f8fafc; border-radius: 4px;"><strong>Voice Message:</strong><br>An audio file is attached to this email.</div>` : ''}
+            </div>
+        </div>
+    `;
+
+    const mailOptions: import('nodemailer').SendMailOptions = {
+        from: FROM,
+        to: DEFAULT_TO,
+        subject: `[ROBCHAT] New message`,
+        html,
+    };
+
+    if (data.audio) {
+        mailOptions.attachments = [
+            {
+                filename: data.audio.filename,
+                content: data.audio.content,
+                contentType: data.audio.contentType,
+            }
+        ];
+    }
+
+    return transporter.sendMail(mailOptions);
+}
+

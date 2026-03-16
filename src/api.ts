@@ -61,3 +61,15 @@ export async function submitSupport(data: {
 }) {
     return postJson('/support', data);
 }
+
+export async function submitRobchatMessage(data: FormData) {
+    const res = await fetch(`${API_BASE}/robchat`, {
+        method: 'POST',
+        body: data,
+    });
+    const json = await res.json();
+    if (!res.ok) {
+        throw new Error(json.error || 'Something went wrong.');
+    }
+    return json;
+}
